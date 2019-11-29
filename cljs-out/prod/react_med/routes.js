@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('react_med.routes');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('bidi.bidi');
 goog.require('pushy.core');
 goog.require('day8.re_frame.tracing');
@@ -13,270 +12,266 @@ goog.require('react_med.screens.lista_avaliacoes');
 goog.require('react_med.screens.paciente_relatorio.paciente_relatorio');
 goog.require('react_med.screens.lista_pacientes');
 goog.require('re_frame.core');
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
-react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__20437){
-var vec__20438 = p__20437;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20438,(0),null);
-var ui_route = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20438,(1),null);
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
+react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__14817){
+var vec__14818 = p__14817;
+var _ = cljs.core.nth.call(null,vec__14818,(0),null);
+var ui_route = cljs.core.nth.call(null,vec__14818,(1),null);
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null),cljs.core.cst$sym$ui_DASH_route));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new cljs.core.Symbol(null,"ui-route","ui-route",1828352800,null)));
 
-var opts__19692__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.assoc_in((function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__14242__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.assoc_in.call(null,(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = ui_route;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$ui_DASH_route,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = ui_route;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"ui-route","ui-route",1828352800,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null),cljs.core.cst$sym$ui_DASH_route),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new cljs.core.Symbol(null,"ui-route","ui-route",1828352800,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19693__auto__;
-}catch (e20441){var e = e20441;
+return result__14243__auto__;
+}catch (e14821){var e = e14821;
 throw e;
 }});
 } else {
-react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__20442){
-var vec__20443 = p__20442;
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20443,(0),null);
-var ui_route = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20443,(1),null);
-return cljs.core.assoc_in(app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null),ui_route);
+react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__14822){
+var vec__14823 = p__14822;
+var _ = cljs.core.nth.call(null,vec__14823,(0),null);
+var ui_route = cljs.core.nth.call(null,vec__14823,(1),null);
+return cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),ui_route);
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$routes_SLASH_set_DASH_route,react_med.routes.set_route);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.routes","set-route","react-med.routes/set-route",-701732541),react_med.routes.set_route);
 react_med.routes.current__GT_next_state = (function react_med$routes$current__GT_next_state(state_machine,current_state,transition){
-return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(state_machine,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [current_state,transition], null));
+return cljs.core.get_in.call(null,state_machine,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [current_state,transition], null));
 });
-react_med.routes.next_state_handler = (function react_med$routes$next_state_handler(db,p__20446){
-var vec__20447 = p__20446;
-var event = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20447,(0),null);
-var temp__5733__auto__ = react_med.routes.current__GT_next_state(react_med.routes.state_machine,cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null)),event);
+react_med.routes.next_state_handler = (function react_med$routes$next_state_handler(db,p__14826){
+var vec__14827 = p__14826;
+var event = cljs.core.nth.call(null,vec__14827,(0),null);
+var temp__5733__auto__ = react_med.routes.current__GT_next_state.call(null,react_med.routes.state_machine,cljs.core.get_in.call(null,db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null)),event);
 if(cljs.core.truth_(temp__5733__auto__)){
 var new_state = temp__5733__auto__;
-return cljs.core.assoc_in(db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null),new_state);
+return cljs.core.assoc_in.call(null,db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new_state);
 } else {
 return db;
 }
 });
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.routes.next_state = (function react_med$routes$next_state(db,event){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$next_DASH_state_DASH_handler,cljs.core.cst$sym$db,cljs.core.cst$sym$event));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"next-state-handler","next-state-handler",-503541646,null),new cljs.core.Symbol(null,"db","db",-1661185010,null),new cljs.core.Symbol(null,"event","event",1941966969,null)));
 
-var opts__19692__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = react_med.routes.next_state_handler((function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = db;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$db,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__14242__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = react_med.routes.next_state_handler.call(null,(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = db;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"db","db",-1661185010,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = event;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$event,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = event;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"event","event",1941966969,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$next_DASH_state_DASH_handler,cljs.core.cst$sym$db,cljs.core.cst$sym$event),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"next-state-handler","next-state-handler",-503541646,null),new cljs.core.Symbol(null,"db","db",-1661185010,null),new cljs.core.Symbol(null,"event","event",1941966969,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19693__auto__;
-}catch (e20450){var e = e20450;
+return result__14243__auto__;
+}catch (e14830){var e = e14830;
 throw e;
 }});
 } else {
 react_med.routes.next_state = (function react_med$routes$next_state(db,event){
-return react_med.routes.next_state_handler(db,event);
+return react_med.routes.next_state_handler.call(null,db,event);
 });
 }
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.routes.backup_domain = (function react_med$routes$backup_domain(app_state){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$let,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$domain_DASH_snapshot,cljs.core.list(cljs.core.cst$sym$get,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$domain)], null),cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null),cljs.core.cst$sym$domain_DASH_snapshot)));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null),cljs.core.list(new cljs.core.Symbol(null,"get","get",-971253014,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"domain","domain",1847214937))], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null))));
 
-var opts__19692__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = (function (){var domain_snapshot = (function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2((function (){var opts__19692__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(3)], null));
+var opts__14242__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = (function (){var domain_snapshot = (function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.get.call(null,(function (){var opts__14242__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(3)], null));
 
-return result__19693__auto__;
-})(),cljs.core.cst$kw$domain);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$get,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$domain),cljs.core.cst$kw$indent_DASH_level,(2)], null));
+return result__14243__auto__;
+})(),new cljs.core.Keyword(null,"domain","domain",1847214937));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"get","get",-971253014,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"domain","domain",1847214937)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })();
-var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.assoc_in((function (){var opts__19692__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(2)], null));
+var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.assoc_in.call(null,(function (){var opts__14242__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null),cljs.core.cst$kw$indent_DASH_level,(2)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = domain_snapshot;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$domain_DASH_snapshot,cljs.core.cst$kw$indent_DASH_level,(2)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = domain_snapshot;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null),cljs.core.cst$sym$domain_DASH_snapshot),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })();
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$let,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$domain_DASH_snapshot,cljs.core.list(cljs.core.cst$sym$get,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$domain)], null),cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null),cljs.core.cst$sym$domain_DASH_snapshot)),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null),cljs.core.list(new cljs.core.Symbol(null,"get","get",-971253014,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"domain","domain",1847214937))], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19693__auto__;
-}catch (e20451){var e = e20451;
+return result__14243__auto__;
+}catch (e14831){var e = e14831;
 throw e;
 }});
 } else {
 react_med.routes.backup_domain = (function react_med$routes$backup_domain(app_state){
-var domain_snapshot = cljs.core.get.cljs$core$IFn$_invoke$arity$2(app_state,cljs.core.cst$kw$domain);
-return cljs.core.assoc_in(app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null),domain_snapshot);
+var domain_snapshot = cljs.core.get.call(null,app_state,new cljs.core.Keyword(null,"domain","domain",1847214937));
+return cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),domain_snapshot);
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$routes_SLASH_backup_DASH_domain,react_med.routes.backup_domain);
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.routes","backup-domain","react-med.routes/backup-domain",-1000428949),react_med.routes.backup_domain);
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.routes.restore_domain = (function react_med$routes$restore_domain(app_state){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$if_DASH_let,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$old_DASH_domain,cljs.core.list(cljs.core.cst$sym$get_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null))], null),cljs.core.list(cljs.core.cst$sym$_DASH__GT_,cljs.core.cst$sym$app_DASH_state,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$kw$domain,cljs.core.cst$sym$old_DASH_domain),cljs.core.list(cljs.core.cst$sym$update_DASH_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$sym$dissoc,cljs.core.cst$kw$backup)),cljs.core.cst$sym$app_DASH_state));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"if-let","if-let",1803593690,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"old-domain","old-domain",-177558496,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null))], null),cljs.core.list(new cljs.core.Symbol(null,"->","->",-2139605430,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"old-domain","old-domain",-177558496,null)),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null)));
 
-var opts__19692__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = (function (){var temp__5733__auto__ = (function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2((function (){var opts__19692__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(3)], null));
+var opts__14242__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = (function (){var temp__5733__auto__ = (function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.get_in.call(null,(function (){var opts__14242__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(3)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null),cljs.core.cst$kw$indent_DASH_level,(3)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(3)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$get_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null)),cljs.core.cst$kw$indent_DASH_level,(2)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 })();
 if(cljs.core.truth_(temp__5733__auto__)){
 var old_domain = temp__5733__auto__;
-return debux.common.util.spy_first(cljs.core.update_in.cljs$core$IFn$_invoke$arity$4(debux.common.util.spy_first(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(debux.common.util.spy_first(app_state,cljs.core.cst$sym$app_DASH_state,(3)),cljs.core.cst$kw$domain,(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = old_domain;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$old_DASH_domain,cljs.core.cst$kw$indent_DASH_level,(3)], null));
+return debux.common.util.spy_first.call(null,cljs.core.update_in.call(null,debux.common.util.spy_first.call(null,cljs.core.assoc.call(null,debux.common.util.spy_first.call(null,app_state,new cljs.core.Symbol(null,"app-state","app-state",130568249,null),(3)),new cljs.core.Keyword(null,"domain","domain",1847214937),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = old_domain;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"old-domain","old-domain",-177558496,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(3)], null));
 
-return result__19693__auto__;
-})()),cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$kw$domain,cljs.core.cst$sym$old_DASH_domain),(2)),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$kw$indent_DASH_level,(2)], null));
+return result__14243__auto__;
+})()),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"old-domain","old-domain",-177558496,null)),(2)),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.dissoc;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$dissoc,cljs.core.cst$kw$indent_DASH_level,(2)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.dissoc;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19693__auto__;
-})(),cljs.core.cst$kw$backup),cljs.core.list(cljs.core.cst$sym$update_DASH_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$sym$dissoc,cljs.core.cst$kw$backup),(1));
+return result__14243__auto__;
+})(),new cljs.core.Keyword(null,"backup","backup",26347393)),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393)),(1));
 } else {
-var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
+return result__14243__auto__;
 }
 })();
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$if_DASH_let,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$sym$old_DASH_domain,cljs.core.list(cljs.core.cst$sym$get_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null))], null),cljs.core.list(cljs.core.cst$sym$quote,cljs.core.list(cljs.core.cst$sym$update_DASH_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$sym$dissoc,cljs.core.cst$kw$backup)),cljs.core.cst$sym$app_DASH_state),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"if-let","if-let",1803593690,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"old-domain","old-domain",-177558496,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null))], null),cljs.core.list(new cljs.core.Symbol(null,"quote","quote",1377916282,null),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19693__auto__;
-}catch (e20452){var e = e20452;
+return result__14243__auto__;
+}catch (e14832){var e = e14832;
 throw e;
 }});
 } else {
 react_med.routes.restore_domain = (function react_med$routes$restore_domain(app_state){
-var temp__5733__auto__ = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain,cljs.core.cst$kw$backup], null));
+var temp__5733__auto__ = cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null));
 if(cljs.core.truth_(temp__5733__auto__)){
 var old_domain = temp__5733__auto__;
-return cljs.core.update_in.cljs$core$IFn$_invoke$arity$4(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(app_state,cljs.core.cst$kw$domain,old_domain),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.dissoc,cljs.core.cst$kw$backup);
+return cljs.core.update_in.call(null,cljs.core.assoc.call(null,app_state,new cljs.core.Keyword(null,"domain","domain",1847214937),old_domain),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),cljs.core.dissoc,new cljs.core.Keyword(null,"backup","backup",26347393));
 } else {
 return app_state;
 }
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$routes_SLASH_restore_DASH_domain,react_med.routes.restore_domain);
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.routes","restore-domain","react-med.routes/restore-domain",1200856465),react_med.routes.restore_domain);
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.routes.discard_backup = (function react_med$routes$discard_backup(app_state){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$update_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$sym$dissoc,cljs.core.cst$kw$backup));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393)));
 
-var opts__19692__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.update_in.cljs$core$IFn$_invoke$arity$4((function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__14242__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.update_in.call(null,(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
-})(),(function (){var opts__19692__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19693__auto__ = cljs.core.dissoc;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$dissoc,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__14243__auto__;
+})(),(function (){var opts__14242__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14243__auto__ = cljs.core.dissoc;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19693__auto__;
-})(),cljs.core.cst$kw$backup);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19693__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$update_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.cst$sym$dissoc,cljs.core.cst$kw$backup),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+return result__14243__auto__;
+})(),new cljs.core.Keyword(null,"backup","backup",26347393));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14243__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19693__auto__;
-}catch (e20453){var e = e20453;
+return result__14243__auto__;
+}catch (e14833){var e = e14833;
 throw e;
 }});
 } else {
 react_med.routes.discard_backup = (function react_med$routes$discard_backup(app_state){
-return cljs.core.update_in.cljs$core$IFn$_invoke$arity$4(app_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$domain], null),cljs.core.dissoc,cljs.core.cst$kw$backup);
+return cljs.core.update_in.call(null,app_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),cljs.core.dissoc,new cljs.core.Keyword(null,"backup","backup",26347393));
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$routes_SLASH_discard_DASH_backup,react_med.routes.discard_backup);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.routes","discard-backup","react-med.routes/discard-backup",-1883862736),react_med.routes.discard_backup);
 react_med.routes.next_state_then = (function react_med$routes$next_state_then(events){
-return (function (p__20454,p__20455){
-var map__20456 = p__20454;
-var map__20456__$1 = (((((!((map__20456 == null))))?(((((map__20456.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20456.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20456):map__20456);
-var app_state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20456__$1,cljs.core.cst$kw$db);
-var vec__20457 = p__20455;
-var event = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20457,(0),null);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20457,(1),null);
-return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$db,react_med.routes.next_state_handler(app_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [event], null)),cljs.core.cst$kw$dispatch_DASH_n,events], null);
+return (function (p__14834,p__14835){
+var map__14836 = p__14834;
+var map__14836__$1 = (((((!((map__14836 == null))))?(((((map__14836.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__14836.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14836):map__14836);
+var app_state = cljs.core.get.call(null,map__14836__$1,new cljs.core.Keyword(null,"db","db",993250759));
+var vec__14837 = p__14835;
+var event = cljs.core.nth.call(null,vec__14837,(0),null);
+var _ = cljs.core.nth.call(null,vec__14837,(1),null);
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"db","db",993250759),react_med.routes.next_state_handler.call(null,app_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [event], null)),new cljs.core.Keyword(null,"dispatch-n","dispatch-n",-504469236),events], null);
 });
 });
-re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$edit,react_med.routes.next_state_then(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_backup_DASH_domain], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_close_DASH_actions_DASH_menu], null)], null)));
-re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$cancel,react_med.routes.next_state_then(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_restore_DASH_domain], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_close_DASH_actions_DASH_menu], null)], null)));
-re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$ok,react_med.routes.next_state_then(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_discard_DASH_backup], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_close_DASH_actions_DASH_menu], null)], null)));
-re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$back,react_med.routes.next_state_then(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_restore_DASH_domain], null)], null)));
-var G__20461_20463 = cljs.core.cst$kw$react_DASH_med$routes_SLASH_state;
-var G__20462_20464 = ((function (G__20461_20463){
-return (function (app_state){
-return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$state], null));
-});})(G__20461_20463))
-;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$2 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$2(G__20461_20463,G__20462_20464) : re_frame.core.reg_sub.call(null,G__20461_20463,G__20462_20464));
-react_med.routes.state_machine = new cljs.core.PersistentArrayMap(null, 8, [null,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$init,"info"], null),"pacientes",cljs.core.PersistentArrayMap.EMPTY,"info",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$edit,"edit-info",cljs.core.cst$kw$back,"pacientes"], null),"edit-info",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$ok,"info",cljs.core.cst$kw$cancel,"info"], null),"avaliacoes",new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$back,"pacientes"], null),"coleta",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$back,"info",cljs.core.cst$kw$edit,"edit-avaliacao"], null),"edit-coleta",new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$ok,"coleta",cljs.core.cst$kw$cancel,"coleta"], null),"relatorio",new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$back,"info"], null)], null);
-react_med.routes.title = (function react_med$routes$title(p__20465){
-var vec__20466 = p__20465;
-var state = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20466,(0),null);
-var selected_patient = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20466,(1),null);
-var patient_name = cljs.core.cst$kw$nome.cljs$core$IFn$_invoke$arity$1(selected_patient);
-var preposição = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$sexo.cljs$core$IFn$_invoke$arity$1(selected_patient),"Feminino"))?" da ":" do ");
-var G__20469 = state;
-switch (G__20469) {
+re_frame.core.reg_event_fx.call(null,new cljs.core.Keyword(null,"edit","edit",-1641834166),react_med.routes.next_state_then.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","backup-domain","react-med.routes/backup-domain",-1000428949)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","close-actions-menu","react-med.shell-components/close-actions-menu",-628250487)], null)], null)));
+re_frame.core.reg_event_fx.call(null,new cljs.core.Keyword(null,"cancel","cancel",-1964088360),react_med.routes.next_state_then.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","restore-domain","react-med.routes/restore-domain",1200856465)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","close-actions-menu","react-med.shell-components/close-actions-menu",-628250487)], null)], null)));
+re_frame.core.reg_event_fx.call(null,new cljs.core.Keyword(null,"ok","ok",967785236),react_med.routes.next_state_then.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","discard-backup","react-med.routes/discard-backup",-1883862736)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","close-actions-menu","react-med.shell-components/close-actions-menu",-628250487)], null)], null)));
+re_frame.core.reg_event_fx.call(null,new cljs.core.Keyword(null,"back","back",-417520012),react_med.routes.next_state_then.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","restore-domain","react-med.routes/restore-domain",1200856465)], null)], null)));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239),(function (app_state){
+return cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null));
+}));
+react_med.routes.state_machine = new cljs.core.PersistentArrayMap(null, 8, [null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"init","init",-1875481434),"info"], null),"pacientes",cljs.core.PersistentArrayMap.EMPTY,"info",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"edit","edit",-1641834166),"edit-info",new cljs.core.Keyword(null,"back","back",-417520012),"pacientes"], null),"edit-info",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"ok","ok",967785236),"info",new cljs.core.Keyword(null,"cancel","cancel",-1964088360),"info"], null),"avaliacoes",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"back","back",-417520012),"pacientes"], null),"coleta",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"back","back",-417520012),"info",new cljs.core.Keyword(null,"edit","edit",-1641834166),"edit-avaliacao"], null),"edit-coleta",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"ok","ok",967785236),"coleta",new cljs.core.Keyword(null,"cancel","cancel",-1964088360),"coleta"], null),"relatorio",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"back","back",-417520012),"info"], null)], null);
+react_med.routes.title = (function react_med$routes$title(p__14841){
+var vec__14842 = p__14841;
+var state = cljs.core.nth.call(null,vec__14842,(0),null);
+var selected_patient = cljs.core.nth.call(null,vec__14842,(1),null);
+var patient_name = new cljs.core.Keyword(null,"nome","nome",1100401122).cljs$core$IFn$_invoke$arity$1(selected_patient);
+var preposição = ((cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"sexo","sexo",-629407757).cljs$core$IFn$_invoke$arity$1(selected_patient),"Feminino"))?" da ":" do ");
+var G__14845 = state;
+switch (G__14845) {
 case "pacientes":
 return "Pacientes";
 
@@ -310,16 +305,10 @@ return "??";
 
 }
 });
-var G__20471_20477 = cljs.core.cst$kw$react_DASH_med$routes_SLASH_title;
-var G__20472_20478 = cljs.core.cst$kw$_LT__DASH_;
-var G__20473_20479 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_state], null);
-var G__20474_20480 = cljs.core.cst$kw$_LT__DASH_;
-var G__20475_20481 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$screens$patient_DASH_info$core_SLASH_selected_DASH_patient], null);
-var G__20476_20482 = react_med.routes.title;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$6 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$6(G__20471_20477,G__20472_20478,G__20473_20479,G__20474_20480,G__20475_20481,G__20476_20482) : re_frame.core.reg_sub.call(null,G__20471_20477,G__20472_20478,G__20473_20479,G__20474_20480,G__20475_20481,G__20476_20482));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","title","react-med.routes/title",1582209313),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.patient-info.core","selected-patient","react-med.screens.patient-info.core/selected-patient",-1719364628)], null),react_med.routes.title);
 react_med.routes.tab_title = (function react_med$routes$tab_title(screen){
-var G__20483 = screen;
-switch (G__20483) {
+var G__14847 = screen;
+switch (G__14847) {
 case "pacientes":
 return "Pacientes";
 
@@ -354,21 +343,21 @@ return "??";
 }
 });
 react_med.routes.tabs = (function react_med$routes$tabs(state){
-var state__GT_tab = (function (p1__20485_SHARP_){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$label,react_med.routes.tab_title(p1__20485_SHARP_),cljs.core.cst$kw$state,p1__20485_SHARP_], null));
+var state__GT_tab = (function (p1__14849_SHARP_){
+return cljs.core.into.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"label","label",1718410804),react_med.routes.tab_title.call(null,p1__14849_SHARP_),new cljs.core.Keyword(null,"state","state",-1988618099),p1__14849_SHARP_], null));
 });
-var G__20486 = state;
-switch (G__20486) {
+var G__14850 = state;
+switch (G__14850) {
 case "info":
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab("info"),state__GT_tab("avaliacoes")], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab.call(null,"info"),state__GT_tab.call(null,"avaliacoes")], null);
 
 break;
 case "edit-info":
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab("info"),state__GT_tab("avaliacoes")], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab.call(null,"info"),state__GT_tab.call(null,"avaliacoes")], null);
 
 break;
 case "relatorio":
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab("coleta"),state__GT_tab("relatorio")], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab.call(null,"coleta"),state__GT_tab.call(null,"relatorio")], null);
 
 break;
 default:
@@ -376,83 +365,65 @@ return null;
 
 }
 });
-var G__20488_20492 = cljs.core.cst$kw$react_DASH_med$routes_SLASH_tabs;
-var G__20489_20493 = cljs.core.cst$kw$_LT__DASH_;
-var G__20490_20494 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_state], null);
-var G__20491_20495 = react_med.routes.tabs;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$4 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$4(G__20488_20492,G__20489_20493,G__20490_20494,G__20491_20495) : re_frame.core.reg_sub.call(null,G__20488_20492,G__20489_20493,G__20490_20494,G__20491_20495));
-react_med.routes.side_menu = (function react_med$routes$side_menu(p__20498){
-var vec__20499 = p__20498;
-var state = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20499,(0),null);
-var selected_patient = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20499,(1),null);
-var selected_avaliacao = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20499,(2),null);
-var vec__20502 = cljs.core.re_find(/\d+-(\d+)-(\d+)/,cljs.core.cst$kw$data.cljs$core$IFn$_invoke$arity$1(selected_avaliacao));
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20502,(0),null);
-var month = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20502,(1),null);
-var day = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__20502,(2),null);
-var model__GT_menu = ((function (vec__20502,_,month,day,vec__20499,state,selected_patient,selected_avaliacao){
-return (function react_med$routes$side_menu_$_m__GT_m(p__20505){
-var map__20506 = p__20505;
-var map__20506__$1 = (((((!((map__20506 == null))))?(((((map__20506.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20506.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20506):map__20506);
-var s = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20506__$1,cljs.core.cst$kw$s);
-var sub_menus = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20506__$1,cljs.core.cst$kw$sub_DASH_menus);
-var extra_label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20506__$1,cljs.core.cst$kw$extra_DASH_label);
-return new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$label,[cljs.core.str.cljs$core$IFn$_invoke$arity$1(react_med.routes.tab_title(s)),cljs.core.str.cljs$core$IFn$_invoke$arity$1(extra_label)].join(''),cljs.core.cst$kw$state,s,cljs.core.cst$kw$selected,cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(state,s),cljs.core.cst$kw$sub_DASH_menus,cljs.core.map.cljs$core$IFn$_invoke$arity$2(react_med$routes$side_menu_$_m__GT_m,sub_menus)], null);
-});})(vec__20502,_,month,day,vec__20499,state,selected_patient,selected_avaliacao))
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","tabs","react-med.routes/tabs",1784816700),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),react_med.routes.tabs);
+react_med.routes.side_menu = (function react_med$routes$side_menu(p__14854){
+var vec__14855 = p__14854;
+var state = cljs.core.nth.call(null,vec__14855,(0),null);
+var selected_patient = cljs.core.nth.call(null,vec__14855,(1),null);
+var selected_avaliacao = cljs.core.nth.call(null,vec__14855,(2),null);
+var vec__14858 = cljs.core.re_find.call(null,/\d+-(\d+)-(\d+)/,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(selected_avaliacao));
+var _ = cljs.core.nth.call(null,vec__14858,(0),null);
+var month = cljs.core.nth.call(null,vec__14858,(1),null);
+var day = cljs.core.nth.call(null,vec__14858,(2),null);
+var model__GT_menu = ((function (vec__14858,_,month,day,vec__14855,state,selected_patient,selected_avaliacao){
+return (function react_med$routes$side_menu_$_m__GT_m(p__14861){
+var map__14862 = p__14861;
+var map__14862__$1 = (((((!((map__14862 == null))))?(((((map__14862.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__14862.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14862):map__14862);
+var s = cljs.core.get.call(null,map__14862__$1,new cljs.core.Keyword(null,"s","s",1705939918));
+var sub_menus = cljs.core.get.call(null,map__14862__$1,new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979));
+var extra_label = cljs.core.get.call(null,map__14862__$1,new cljs.core.Keyword(null,"extra-label","extra-label",1842953888));
+return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"label","label",1718410804),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(react_med.routes.tab_title.call(null,s)),cljs.core.str.cljs$core$IFn$_invoke$arity$1(extra_label)].join(''),new cljs.core.Keyword(null,"state","state",-1988618099),s,new cljs.core.Keyword(null,"selected","selected",574897764),cljs.core._EQ_.call(null,state,s),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),cljs.core.map.call(null,react_med$routes$side_menu_$_m__GT_m,sub_menus)], null);
+});})(vec__14858,_,month,day,vec__14855,state,selected_patient,selected_avaliacao))
 ;
-var menu_model = (function (){var pred__20508 = ((function (vec__20502,_,month,day,model__GT_menu,vec__20499,state,selected_patient,selected_avaliacao){
-return (function (p1__20496_SHARP_,p2__20497_SHARP_){
-return (p1__20496_SHARP_.cljs$core$IFn$_invoke$arity$1 ? p1__20496_SHARP_.cljs$core$IFn$_invoke$arity$1(p2__20497_SHARP_) : p1__20496_SHARP_.call(null,p2__20497_SHARP_));
-});})(vec__20502,_,month,day,model__GT_menu,vec__20499,state,selected_patient,selected_avaliacao))
+var menu_model = (function (){var pred__14864 = ((function (vec__14858,_,month,day,model__GT_menu,vec__14855,state,selected_patient,selected_avaliacao){
+return (function (p1__14852_SHARP_,p2__14853_SHARP_){
+return p1__14852_SHARP_.call(null,p2__14853_SHARP_);
+});})(vec__14858,_,month,day,model__GT_menu,vec__14855,state,selected_patient,selected_avaliacao))
 ;
-var expr__20509 = state;
-if(cljs.core.truth_(pred__20508(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ["pacientes",null], null), null),expr__20509))){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$s,"pacientes"], null)], null);
+var expr__14865 = state;
+if(cljs.core.truth_(pred__14864.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ["pacientes",null], null), null),expr__14865))){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes"], null)], null);
 } else {
-if(cljs.core.truth_(pred__20508(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["info",null,"avaliacoes",null,"edit-info",null], null), null),expr__20509))){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$s,"pacientes",cljs.core.cst$kw$extra_DASH_label,(cljs.core.truth_(selected_patient)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.cst$kw$nome.cljs$core$IFn$_invoke$arity$1(selected_patient)),")"].join(''):null),cljs.core.cst$kw$sub_DASH_menus,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$s,"info"], null),new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$s,"avaliacoes",cljs.core.cst$kw$extra_DASH_label,(cljs.core.truth_(selected_avaliacao)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),")"].join(''):null)], null)], null)], null)], null);
+if(cljs.core.truth_(pred__14864.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["info",null,"avaliacoes",null,"edit-info",null], null), null),expr__14865))){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_patient)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"nome","nome",1100401122).cljs$core$IFn$_invoke$arity$1(selected_patient)),")"].join(''):null),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"info"], null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"s","s",1705939918),"avaliacoes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_avaliacao)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),")"].join(''):null)], null)], null)], null)], null);
 } else {
-if(cljs.core.truth_(pred__20508(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["coleta",null,"relatorio",null,"edit-coleta",null], null), null),expr__20509))){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$s,"pacientes",cljs.core.cst$kw$extra_DASH_label,(cljs.core.truth_(selected_patient)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.cst$kw$nome.cljs$core$IFn$_invoke$arity$1(selected_patient)),")"].join(''):null),cljs.core.cst$kw$sub_DASH_menus,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$s,"info"], null),new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$s,"avaliacoes",cljs.core.cst$kw$extra_DASH_label,(cljs.core.truth_(selected_avaliacao)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),")"].join(''):null),cljs.core.cst$kw$sub_DASH_menus,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$s,"coleta"], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$s,"relatorio"], null)], null)], null)], null)], null)], null);
+if(cljs.core.truth_(pred__14864.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["coleta",null,"relatorio",null,"edit-coleta",null], null), null),expr__14865))){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_patient)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"nome","nome",1100401122).cljs$core$IFn$_invoke$arity$1(selected_patient)),")"].join(''):null),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"info"], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"s","s",1705939918),"avaliacoes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_avaliacao)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),")"].join(''):null),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"coleta"], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"relatorio"], null)], null)], null)], null)], null)], null);
 } else {
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$s,"pacientes"], null)], null);
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes"], null)], null);
 }
 }
 }
 })();
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(model__GT_menu,menu_model);
+return cljs.core.map.call(null,model__GT_menu,menu_model);
 });
-var G__20511_20519 = cljs.core.cst$kw$react_DASH_med$routes_SLASH_side_DASH_menu;
-var G__20512_20520 = cljs.core.cst$kw$_LT__DASH_;
-var G__20513_20521 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_state], null);
-var G__20514_20522 = cljs.core.cst$kw$_LT__DASH_;
-var G__20515_20523 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$screens$patient_DASH_info$core_SLASH_selected_DASH_patient], null);
-var G__20516_20524 = cljs.core.cst$kw$_LT__DASH_;
-var G__20517_20525 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$screens$paciente_DASH_avaliacao_SLASH_selected_DASH_avaliacao], null);
-var G__20518_20526 = react_med.routes.side_menu;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$8 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$8(G__20511_20519,G__20512_20520,G__20513_20521,G__20514_20522,G__20515_20523,G__20516_20524,G__20517_20525,G__20518_20526) : re_frame.core.reg_sub.call(null,G__20511_20519,G__20512_20520,G__20513_20521,G__20514_20522,G__20515_20523,G__20516_20524,G__20517_20525,G__20518_20526));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","side-menu","react-med.routes/side-menu",909029319),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.patient-info.core","selected-patient","react-med.screens.patient-info.core/selected-patient",-1719364628)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.paciente-avaliacao","selected-avaliacao","react-med.screens.paciente-avaliacao/selected-avaliacao",1796286413)], null),react_med.routes.side_menu);
 react_med.routes.actions = (function react_med$routes$actions(state){
-var G__20527 = state;
-switch (G__20527) {
+var G__14867 = state;
+switch (G__14867) {
 case "relatorio":
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$name,"Voltar",cljs.core.cst$kw$event,cljs.core.cst$kw$back], null)], null);
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"name","name",1843675177),"Voltar",new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"back","back",-417520012)], null)], null);
 
 break;
 default:
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$name,"Sem a\u00E7\u00F5es pra essa tela"], null)], null);
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"name","name",1843675177),"Sem a\u00E7\u00F5es pra essa tela"], null)], null);
 
 }
 });
-var G__20529_20533 = cljs.core.cst$kw$react_DASH_med$routes_SLASH_actions;
-var G__20530_20534 = cljs.core.cst$kw$_LT__DASH_;
-var G__20531_20535 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_state], null);
-var G__20532_20536 = react_med.routes.actions;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$4 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$4(G__20529_20533,G__20530_20534,G__20531_20535,G__20532_20536) : re_frame.core.reg_sub.call(null,G__20529_20533,G__20530_20534,G__20531_20535,G__20532_20536));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","actions","react-med.routes/actions",-1858990120),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),react_med.routes.actions);
 react_med.routes.selected_view = (function react_med$routes$selected_view(){
-var G__20537 = (function (){var G__20538 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_state], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20538) : react_med.util._LT_sub.call(null,G__20538));
-})();
-switch (G__20537) {
+var G__14869 = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null));
+switch (G__14869) {
 case "pacientes":
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.lista_pacientes.view], null);
 
@@ -486,3 +457,5 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 
 }
 });
+
+//# sourceMappingURL=routes.js.map

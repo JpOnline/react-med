@@ -14,6 +14,9 @@
     [close-icon]
     [more-vert :as more-vert-icon]
     [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
+    [react-med.motivation-sentences]
+
+    [reagent.core :as reagent]
     ))
 
 (defn header [& children]
@@ -148,7 +151,22 @@
                 (action :name)])
              actions)]]])])
 
-(defn drawer-menu []
+(defn drawer-menu [{:keys [menu-structure]}]
+  (let [structure->menu-item
+        (fn s->mi
+          ([structure]
+           (s->mi structure 0))
+          ([{:keys [label sub-menus selected state]} padding]
+           (cons ^{:key label}
+                 [:> material-menu-item
+                  {:onClick #(>evt [:react-med.routes/set-route state])
+                   :style (clj->js
+                            (merge
+                              (when selected {:backgroundColor "lightgray"})
+                              {:paddingLeft (+ 20 (* 8 padding))}))}
+                  (str label)]
+                 (mapcat s->mi sub-menus (repeat (inc padding))))))
+        ]
   [:<> ;; Needed because can accept a possible nil
    (when (<sub [::drawer-opened?])
      [:<>
@@ -183,17 +201,19 @@
        [:> material-menu-list
         {:style #js {:flexGrow 1
                      :paddingTop "0px"}}
-        [:> material-menu-item
-         "Grupos"]
-        [:> material-menu-item
-         "Pacientes (Daniela)"]
-        [:> material-menu-item
-         {:style #js {:paddingLeft 28
-                      :backgroundColor "lightgray"}}
-         "Informações Pessoais"]
-        [:> material-menu-item
-         {:style #js {:paddingLeft 32}}
-         "Avaliações"]]
+        (map structure->menu-item menu-structure)
+        ;; [:> material-menu-item
+        ;;  "Grupos"]
+        ;; [:> material-menu-item
+        ;;  "Pacientes (Daniela)"]
+        ;; [:> material-menu-item
+        ;;  {:style #js {:paddingLeft 28
+        ;;               :backgroundColor "lightgray"}}
+        ;;  "Informações Pessoais"]
+        ;; [:> material-menu-item
+        ;;  {:style #js {:paddingLeft 32}}
+        ;;  "Avaliações"]
+        ]
        [:div.drawer-footer
         {:style #js {:height "64px"
                      :display "flex"
@@ -201,7 +221,7 @@
         [:> material-icon-button
          {:color "inherit"
           :onClick #(>evt [::toggle-drawer-menu])}
-         [:> close-icon]]]]])])
+         [:> close-icon]]]]])]))
 
 (defn-traced toggle-drawer-menu
   [app-state]
@@ -213,12 +233,59 @@
   (get-in app-state [:ui :drawer-menu :opened?]))
 (re-frame/reg-sub ::drawer-opened? drawer-opened?)
 
+(defn error-boundary []
+  (let [error (reagent/atom nil)]
+    (reagent/create-class
+      {:component-did-catch (fn [this e info]) ;; For side effects, like logging the error.
+       :get-derived-state-from-error (fn [e]
+                                       (reset! error e)
+                                       #js {})
+       :reagent-render (fn [{:keys [if-error]} & children]
+                         (if @error
+                           [if-error]
+                           [:<> (map-indexed #(with-meta %2 {:key %1}) children)]))})))
+
+(defn error-view []
+  (let [{:keys [sentence author]} (get react-med.motivation-sentences/sentences
+                                       (rand-int (count react-med.motivation-sentences/sentences)))]
+    [:<>
+     [:h3
+      {:style #js {:textAlign "center"
+                   :paddingBottom "50px"}}
+      "Desculpa, aconteceu algum erro. 😞"]
+     [:div
+      {:style #js {:maxWidth "600px"
+                   :margin "auto"}}
+      [:p
+       {:style #js {:textAlign "center"}}
+       sentence]
+      [:p
+       {:style #js {:textAlign "right"}}
+       [:i author]]]]))
+
 (defn main-content [& children]
   [:main
    {:style #js {:flexGrow 1
                 :padding 12
                 :overflow "auto"}}
-   (map-indexed #(with-meta %2 {:key %1}) children)])
+   [error-boundary
+    {:if-error error-view}
+    (map-indexed #(with-meta %2 {:key %1}) children)]])
+
+(defn main-error-view []
+  [:<>
+   [header
+    [top-bar
+     [left-icon
+      {:variation ""}]
+     [screen-title
+      "Erro"]]]
+     [main-content
+      [error-view]]
+     [drawer-menu]
+     #_[actions-menu
+      {:actions actions}]
+     [bottom-bar]])
 
 (defn main-panel [& children]
   [:div.main-panel
@@ -228,5 +295,7 @@
                 :flexDirection "column"
                 :height "inherit"
                 :width "inherit"}}
-   (map-indexed #(with-meta %2 {:key %1}) children)])
+   [error-boundary
+    {:if-error main-error-view}
+    (map-indexed #(with-meta %2 {:key %1}) children)]])
 

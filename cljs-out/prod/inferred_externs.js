@@ -34,6 +34,7 @@ Object.error.println;
 HTMLDocument.prototype.activeElement;
 var SyntaxError;
 var URIError;
+TypeError.prototype.toString;
 var process;
 process.hrtime;
 var require;

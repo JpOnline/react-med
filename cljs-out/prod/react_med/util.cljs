@@ -2,6 +2,7 @@
   (:require
     [re-frame.core :as re-frame]
     [reagent.core :as reagent]
+    [clojure.spec.alpha :as spec]
     ))
 
 ;; Redef re-frame subscribe and dispatch for brevity
@@ -19,3 +20,19 @@
     {:reagent-render #(into [] (update-in to-render [1]
                                           dissoc :component-did-mount))
      :component-did-mount component-did-mount}))
+
+(defn validate [spec input message]
+  "Throw a message when the input don't conform to the spec."
+  (or (spec/valid? spec input)
+      (throw (ex-info message {:spec-input input
+                               :spec-data (spec/explain-data spec input)}))))
+
+(defn round-to-precision
+  "it takes an argument for which number to round,
+  the same as the classic round had the implicit
+  argument of 1 (e.g. (round 2.3) is the same as
+  (round-to-precision 2.3 1)"
+  [n & [precision]]
+  (let [temp (+ n (if precision (/ precision 2) 0.5))]
+    (- temp (mod temp (or precision 1)))))
+

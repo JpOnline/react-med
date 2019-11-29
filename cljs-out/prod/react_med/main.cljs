@@ -15,22 +15,22 @@
   {:domain
    {:patients
     [{:id 1
-      :name "Dani"
-      :birth-date "2001-10-01"
-      :gender "Feminino"
-      :height 166
+      :nome "Dani"
+      :nascimento "2001-10-01"
+      :sexo "Masculino"
+      :estatura 166.8
       :avaliacoes [{:data "2019-10-10"
                     :peso 45.4
                     :circunferencia-cintura 63
                     :circunferencia-braco 23.2
                     :circunferencia-perna 30.2
-                    :estatura 166
+                    :estatura 166.8
                     :resistencia 648
                     :reatancia 59
-                    :atividade-fisica "ativo"}]}]}
+                    :atividade-fisica "Ativo"}]}]}
    :ui {:actions-menu {:opened? false}
         :drawer-menu {:opened? false}
-        :state "info"}})
+        :state "coleta"}})
 
 (re-frame/reg-event-db ::init-app-state
   (fn-traced [_ _]
