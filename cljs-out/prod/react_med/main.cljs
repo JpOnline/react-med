@@ -30,7 +30,7 @@
                     :atividade-fisica "Ativo"}]}]}
    :ui {:actions-menu {:opened? false}
         :drawer-menu {:opened? false}
-        :state "avaliacoes"}})
+        :state "pacientes"}})
 
 (re-frame/reg-event-db ::init-app-state
   (fn-traced [_ _]

@@ -55,7 +55,7 @@
 (defn share [data filename type]
   (-> js/navigator
       (.share #js {#_#_"url" "https://web.dev"
-                   :files #js [(new js/Blob #js [data] #js {"type" type})]
+                   "files" #js [(new js/Blob #js [data] #js {"type" type})]
                    "title" "Avaliação da Dani"
                    "text" "Texto q acho q não vai aparecer."
                    })
