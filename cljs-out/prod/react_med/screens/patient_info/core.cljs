@@ -21,6 +21,46 @@
         (dissoc :avaliacoes))))
 (re-frame/reg-sub ::selected-patient selected-patient)
 
+;; async function testWebShare() {
+;;       if (navigator.share === undefined) {
+;;         logError('Error: Unsupported feature: navigator.share()');
+;;         return;
+;;       }
+;;
+;;       const title_input = document.querySelector('#title');
+;;       const text_input = document.querySelector('#text');
+;;       const url_input = document.querySelector('#url');
+;;       const file_input = document.querySelector('#files');
+;;
+;;       const title = title_input.disabled ? undefined : title_input.value;
+;;       const text = text_input.disabled ? undefined : text_input.value;
+;;       const url = url_input.disabled ? undefined : url_input.value;
+;;       const files = file_input.disabled ? undefined : file_input.files;
+;;
+;;       if (files && files.length > 0) {
+;;         if (!navigator.canShare || !navigator.canShare({files})) {
+;;           logError('Error: Unsupported feature: navigator.canShare()');
+;;           return;
+;;         }
+;;       }
+;;
+;;       try {
+;;         await navigator.share({files, title, text, url});
+;;         logText('Successfully sent share');
+;;       } catch (error) {
+;;         logError('Error sharing: ' + error);
+;;       }
+;;     }
+
+(defn share [data filename type]
+  (-> js/navigator
+      (.share #js {:files #js [(new js/Blob #js [data] #js {"type" type})]
+                   :title "Avaliação da Dani"
+                   :text "Texto q acho q não vai aparecer."
+                   })
+      (.then #(js/console.log "Conseguiu compartilhar."))
+      (.catch #(js/console.log "Não conseguiu compartilhar." %))))
+
 (defn download [data filename type]
   (let [file (new js/Blob #js [data] #js {"type" type})
         url (.createObjectURL js/URL file)
@@ -49,7 +89,7 @@
                                  ["Estatura" (.replace (str estatura) "." ",")]
                                  ] :quote? true)]
     (js/console.log "csv\n" csv-data)
-    (download csv-data "teste.csv" "text/csv"))
+    (share csv-data "teste.csv" "text/csv"))
   app-state)
 (re-frame/reg-event-db :export-to-csv export-to-csv)
 

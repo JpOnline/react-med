@@ -40,6 +40,8 @@ HTMLDocument.prototype.createElement;
 var SyntaxError;
 var URIError;
 TypeError.prototype.toString;
+var RESULT;
+RESULT.prototype.catch$;
 var process;
 process.hrtime;
 var require;

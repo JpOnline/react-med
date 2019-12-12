@@ -115,7 +115,7 @@
                       (:estatura avaliacao-info)
                       0.0001))
                 1))
-        ;; t (bioimpedance/t avaliacao-info)
+        t (bioimpedance/t avaliacao-info)
         line-style #js {:display "flex"
                         :alignItems "center"
                         :height 48

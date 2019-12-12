@@ -25,7 +25,7 @@ var result__14245__auto__ = react_med.main.initial_state;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14245__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"initial-state","initial-state",-381085279,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14245__auto__;
-}catch (e15001){var e = e15001;
+}catch (e15002){var e = e15002;
 throw e;
 }}):(function (_,___$1){
 return react_med.main.initial_state;
