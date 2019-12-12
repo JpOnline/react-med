@@ -15,7 +15,7 @@ return cljs.core.dissoc.call(null,cljs.core.assoc.call(null,patient_info,new clj
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.screens.patient-info.core","selected-patient","react-med.screens.patient-info.core/selected-patient",-1719364628),react_med.screens.patient_info.core.selected_patient);
 react_med.screens.patient_info.core.share = (function react_med$screens$patient_info$core$share(data,filename,type){
-return navigator.share(({"url": "https://web.dev", "title": "Avalia\u00E7\u00E3o da Dani", "text": "Texto q acho q n\u00E3o vai aparecer."})).then((function (){
+return navigator.share(({"files": [(new Blob([data],({"type": type})))], "title": "Avalia\u00E7\u00E3o da Dani", "text": "Texto q acho q n\u00E3o vai aparecer."})).then((function (){
 return console.log("Conseguiu compartilhar.");
 })).catch((function (p1__14885_SHARP_){
 return console.log("N\u00E3o conseguiu compartilhar.",p1__14885_SHARP_);
