@@ -5,32 +5,31 @@
     [re-frame.core :as re-frame]
     [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
     [reagent.core :as reagent]
+    [react-med.screens.components :as screens.components]
     ))
 
 (defn paciente-avaliacao-shell [{:keys [actions]} content-view]
-  (let [patient-name (:name (<sub [:react-med.screens.patient-info.core/selected-patient]))]
+  (let [menu-structure (<sub [:react-med.routes/side-menu])]
     [shell/main-panel
-   [shell/header
-    [shell/top-bar
-     [shell/left-icon
-      {:variation "<-"}]
-     [shell/screen-title
-      "Avaliação (" patient-name ")"]]
-    [shell/tabs-menu
-     {:menu-options
-      [{:label "Informações Pessoais"
-        :state "info"}
-       {:label "Avaliações"
-        :state "avaliacao/<id>"}]}] 
-    #_[shell/tabs-menu
-     "Coleta"
-     "Resultado"]]
-   [shell/main-content
-    (with-meta content-view {:key 1})]
-   [shell/drawer-menu]
-   [shell/actions-menu
-    {:actions actions}]
-   [shell/bottom-bar]]))
+     [shell/header
+      [shell/top-bar
+       [shell/left-icon
+        {:variation "<-"}]
+       [shell/screen-title
+        (<sub [:react-med.routes/title])]]
+      [shell/tabs-menu
+       {:menu-options
+        [{:label "Coleta"
+          :state "coleta"}
+         {:label "Relatório"
+          :state "relatorio"}]}]]
+     [shell/main-content
+      (with-meta content-view {:key 1})]
+     [shell/drawer-menu
+      {:menu-structure menu-structure}]
+     [shell/actions-menu
+      {:actions actions}]
+     [shell/bottom-bar]]))
 
 (defn selected-avaliacao
   [app-state]
@@ -52,25 +51,33 @@
       [:b "Data: "] data]
      [:div
       {:style line-style}
-      [:b "Peso: "] peso " Kg"]
+      [:b "Peso: "] (.replace (str peso) "." ",") " Kg"]
      [:div
       {:style line-style}
-      [:b "Circunferência da Cintura: "] circunferencia-cintura " cm"]
+      [:b "Estatura: "] (.replace (str estatura) "." ",") " cm"]
      [:div
       {:style line-style}
-      [:b "Circunferência de Braço: "] circunferencia-braco " cm"]
+      [:b "Resistência: "] (.replace (str resistencia) "." ",")]
      [:div
       {:style line-style}
-      [:b "Circunferência de Perna: "] circunferencia-perna " cm"]
+      [:b "Reatância: "] (.replace (str reatancia) "." ",")]
      [:div
       {:style line-style}
-      [:b "Estatura: "] estatura " cm"]
+      [:b "Circunferência da Cintura: "] (.replace (str circunferencia-cintura) "." ",") " cm"]
      [:div
       {:style line-style}
-      [:b "Resistência: "] resistencia]
+      [:b "Circunferência de Braço: "] (.replace (str circunferencia-braco) "." ",") " cm"]
      [:div
       {:style line-style}
-      [:b "Reatância: "] reatancia]]))
+      [:b "Circunferência de Perna: "] (.replace (str circunferencia-perna) "." ",") " cm"]]))
+
+(defn-traced change-avaliacao
+  [app-state [event attr new-value-input]]
+  (let [new-value (if (#{:data :atividade-fisica} attr)
+                    new-value-input
+                    (js/parseFloat (.replace new-value-input "," ".")))]
+    (assoc-in app-state [:domain :patients 0 :avaliacoes 0 attr] new-value)))
+(re-frame/reg-event-db ::change-avaliacao change-avaliacao)
 
 (defn editing-component []
   (let [{:keys [data peso circunferencia-cintura circunferencia-braco
@@ -96,146 +103,65 @@
            :component-did-mount
            (fn [this]
              (set! (-> (reagent/dom-node this) .-onchange)
-                   #(>evt [::change-avaliacao-data (-> % .-target .-value)])))}])]]
+                   #(>evt [::change-avaliacao :data (-> % .-target .-value)])))}])]]
      [:div
       {:style line-style}
       [:b "Peso: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue peso
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]
-       "Kg"]]
-     [:div
-      {:style line-style}
-      [:b "Circunferência da Cintura: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue circunferencia-cintura
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]
-       "cm"]]
-     [:div
-      {:style line-style}
-      [:b "Circunferência de Braço: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue circunferencia-braco
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]
-       "cm"]]
-     [:div
-      {:style line-style}
-      [:b "Circunferência de Perna: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue circunferencia-perna
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]
-       "cm"]]
+      [screens.components/gray-input
+       {:defaultValue peso
+        :onBlur #(>evt [::change-avaliacao :peso (-> % .-target .-value)])
+        :suffix " Kg"}]]
      [:div
       {:style line-style}
       [:b "Estatura: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue estatura
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]
-       "cm"]]
+      [screens.components/gray-input
+       {:defaultValue estatura
+        :onBlur #(>evt [::change-avaliacao :estatura (-> % .-target .-value)])
+        :suffix " cm"}]]
      [:div
       {:style line-style}
       [:b "Resistência: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue resistencia
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]]]
+      [screens.components/gray-input
+       {:defaultValue resistencia
+        :onBlur #(>evt [::change-avaliacao :resistencia (-> % .-target .-value)])
+        :max 20000}]]
      [:div
       {:style line-style}
       [:b "Reatância: "]
-      [:span
-       {:style #js {:backgroundColor "#e5e9ed"
-                    :padding "4px 8px"
-                    :borderRadius "5px"}}
-       [:input
-        {:style #js {:textDecoration "underline"
-                     :width "46px"
-                     :backgroundColor "#e5e9ed"
-                     :WebkitAppearance "meter"}
-         :type "number"
-         :defaultValue reatancia
-         #_#_:onBlur #(>evt [::change-height (-> % .-target .-value)])
-         :min 0
-         :max 500}]]]]))
-
-(def actions
-  [{:name "Voltar" :event :back}
-   {:name "Editar" :event :edit}])
+      [screens.components/gray-input
+       {:defaultValue reatancia
+        :onBlur #(>evt [::change-avaliacao :reatancia (-> % .-target .-value)])
+        :max 20000}]]
+     [:div
+      {:style line-style}
+      [:b "Circunferência da Cintura: "]
+      [screens.components/gray-input
+       {:defaultValue circunferencia-cintura
+        :onBlur #(>evt [::change-avaliacao :circunferencia-cintura (-> % .-target .-value)])
+        :suffix " cm"}]]
+     [:div
+      {:style line-style}
+      [:b "Circunferência de Braço: "]
+      [screens.components/gray-input
+       {:defaultValue circunferencia-braco
+        :onBlur #(>evt [::change-avaliacao :circunferencia-braco (-> % .-target .-value)])
+        :suffix " cm"}]]
+     [:div
+      {:style line-style}
+      [:b "Circunferência de Perna: "]
+      [screens.components/gray-input
+       {:defaultValue circunferencia-perna
+        :onBlur #(>evt [::change-avaliacao :circunferencia-perna (-> % .-target .-value)])
+        :suffix " cm"}]]]))
 
 (defn detail-view []
-  [paciente-avaliacao-shell
-   {:actions actions}
-   [details-component]])
-
-(def editing-actions
-  [{:name "Pronto" :event :ok}
-   {:name "Cancelar" :event :cancel}])
+  (let [actions (<sub [:react-med.routes/actions])]
+    [paciente-avaliacao-shell
+     {:actions actions}
+     [details-component]]))
 
 (defn editing-view []
-  [paciente-avaliacao-shell
-   {:actions editing-actions}
-   [editing-component]])
+  (let [actions (<sub [:react-med.routes/actions])]
+    [paciente-avaliacao-shell
+     {:actions actions}
+     [editing-component]]))

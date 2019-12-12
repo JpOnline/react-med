@@ -15,22 +15,22 @@
   {:domain
    {:patients
     [{:id 1
-      :name "Dani"
-      :birth-date "2001-10-01"
-      :gender "Feminino"
-      :height 166
+      :nome "Dani"
+      :nascimento "2001-10-01"
+      :sexo "Masculino"
+      :estatura 166.8
       :avaliacoes [{:data "2019-10-10"
                     :peso 45.4
                     :circunferencia-cintura 63
                     :circunferencia-braco 23.2
                     :circunferencia-perna 30.2
-                    :estatura 166
+                    :estatura 166.8
                     :resistencia 648
                     :reatancia 59
-                    :atividade-fisica "ativo"}]}]}
+                    :atividade-fisica "Ativo"}]}]}
    :ui {:actions-menu {:opened? false}
         :drawer-menu {:opened? false}
-        :state "info"}})
+        :state "relatorio"}})
 
 (re-frame/reg-event-db ::init-app-state
   (fn-traced [_ _]
@@ -38,13 +38,14 @@
 
 ;; conditionally start your application based on the presence of an "app" element
 ;; this is particularly helpful for testing this ns without launching the app
-(do
-  (re-frame/clear-subscription-cache!)
+(defonce startup
+  (do
+    (re-frame/clear-subscription-cache!)
 
-  (re-frame/dispatch-sync [::init-app-state])
-  ;; (ext-store/init-app-state "none")
+    (re-frame/dispatch-sync [::init-app-state])
+    ;; (ext-store/init-app-state "none")
 
-  (mount-app-element))
+    (mount-app-element)))
 
 ;; specify reload hook with ^;after-load metadata
 (defn ^:after-load on-reload []

@@ -9,7 +9,7 @@ goog.require('cljs.analyzer');
 cljs.analyzer.api.empty_state = (function cljs$analyzer$api$empty_state(){
 return cljs.env.default_compiler_env.call(null);
 });
-var ret__4776__auto___10980 = /**
+var ret__4776__auto___12264 = /**
  * Run the body with the given compilation state Atom<Map>.
  */
 cljs.analyzer.api.with_state = (function cljs$analyzer$api$with_state(_AMPERSAND_form,_AMPERSAND_env,state,body){
@@ -23,20 +23,20 @@ cljs.analyzer.api.with_state.cljs$lang$macro = true;
 cljs.analyzer.api.empty_env = (function cljs$analyzer$api$empty_env(){
 return cljs.analyzer.empty_env.call(null);
 });
-var ret__4776__auto___10984 = (function (){
+var ret__4776__auto___12268 = (function (){
 /**
  * Disable analyzer warnings for any analysis executed in body.
  */
 cljs.analyzer.api.no_warn = (function cljs$analyzer$api$no_warn(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___10985 = arguments.length;
-var i__4731__auto___10986 = (0);
+var len__4730__auto___12269 = arguments.length;
+var i__4731__auto___12270 = (0);
 while(true){
-if((i__4731__auto___10986 < len__4730__auto___10985)){
-args__4736__auto__.push((arguments[i__4731__auto___10986]));
+if((i__4731__auto___12270 < len__4730__auto___12269)){
+args__4736__auto__.push((arguments[i__4731__auto___12270]));
 
-var G__10987 = (i__4731__auto___10986 + (1));
-i__4731__auto___10986 = G__10987;
+var G__12271 = (i__4731__auto___12270 + (1));
+i__4731__auto___12270 = G__12271;
 continue;
 } else {
 }
@@ -55,13 +55,13 @@ return cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.cal
 cljs.analyzer.api.no_warn.cljs$lang$maxFixedArity = (2);
 
 /** @this {Function} */
-cljs.analyzer.api.no_warn.cljs$lang$applyTo = (function (seq10981){
-var G__10982 = cljs.core.first.call(null,seq10981);
-var seq10981__$1 = cljs.core.next.call(null,seq10981);
-var G__10983 = cljs.core.first.call(null,seq10981__$1);
-var seq10981__$2 = cljs.core.next.call(null,seq10981__$1);
+cljs.analyzer.api.no_warn.cljs$lang$applyTo = (function (seq12265){
+var G__12266 = cljs.core.first.call(null,seq12265);
+var seq12265__$1 = cljs.core.next.call(null,seq12265);
+var G__12267 = cljs.core.first.call(null,seq12265__$1);
+var seq12265__$2 = cljs.core.next.call(null,seq12265__$1);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__10982,G__10983,seq10981__$2);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__12266,G__12267,seq12265__$2);
 });
 
 return null;
@@ -87,8 +87,8 @@ return cljs.analyzer.default_warning_handler.call(null,warning_type,env,extra);
  * Return the compiler options from compiler state.
  */
 cljs.analyzer.api.get_options = (function cljs$analyzer$api$get_options(var_args){
-var G__10989 = arguments.length;
-switch (G__10989) {
+var G__12273 = arguments.length;
+switch (G__12273) {
 case 0:
 return cljs.analyzer.api.get_options.cljs$core$IFn$_invoke$arity$0();
 
@@ -118,8 +118,8 @@ cljs.analyzer.api.get_options.cljs$lang$maxFixedArity = 1;
  *   compiler state.
  */
 cljs.analyzer.api.get_js_index = (function cljs$analyzer$api$get_js_index(var_args){
-var G__10992 = arguments.length;
-switch (G__10992) {
+var G__12276 = arguments.length;
+switch (G__12276) {
 case 0:
 return cljs.analyzer.api.get_js_index.cljs$core$IFn$_invoke$arity$0();
 
@@ -159,13 +159,13 @@ if((sym instanceof cljs.core.Symbol)){
 throw (new Error("Assert failed: (symbol? sym)"));
 }
 
-try{var _STAR_private_var_access_nowarn_STAR__orig_val__10995 = cljs.analyzer._STAR_private_var_access_nowarn_STAR_;
-var _STAR_private_var_access_nowarn_STAR__temp_val__10996 = true;
-cljs.analyzer._STAR_private_var_access_nowarn_STAR_ = _STAR_private_var_access_nowarn_STAR__temp_val__10996;
+try{var _STAR_private_var_access_nowarn_STAR__orig_val__12279 = cljs.analyzer._STAR_private_var_access_nowarn_STAR_;
+var _STAR_private_var_access_nowarn_STAR__temp_val__12280 = true;
+cljs.analyzer._STAR_private_var_access_nowarn_STAR_ = _STAR_private_var_access_nowarn_STAR__temp_val__12280;
 
 try{return cljs.analyzer.resolve_var.call(null,env,sym,cljs.analyzer.confirm_var_exists_throw.call(null));
-}finally {cljs.analyzer._STAR_private_var_access_nowarn_STAR_ = _STAR_private_var_access_nowarn_STAR__orig_val__10995;
-}}catch (e10994){var e = e10994;
+}finally {cljs.analyzer._STAR_private_var_access_nowarn_STAR_ = _STAR_private_var_access_nowarn_STAR__orig_val__12279;
+}}catch (e12278){var e = e12278;
 return cljs.analyzer.resolve_macro_var.call(null,env,sym);
 }});
 /**
@@ -173,8 +173,8 @@ return cljs.analyzer.resolve_macro_var.call(null,env,sym);
  *   returns symbols identifying namespaces not Namespace instances.
  */
 cljs.analyzer.api.all_ns = (function cljs$analyzer$api$all_ns(var_args){
-var G__10998 = arguments.length;
-switch (G__10998) {
+var G__12282 = arguments.length;
+switch (G__12282) {
 case 0:
 return cljs.analyzer.api.all_ns.cljs$core$IFn$_invoke$arity$0();
 
@@ -204,8 +204,8 @@ cljs.analyzer.api.all_ns.cljs$lang$maxFixedArity = 1;
  *   to clojure.core/find-ns.
  */
 cljs.analyzer.api.find_ns = (function cljs$analyzer$api$find_ns(var_args){
-var G__11001 = arguments.length;
-switch (G__11001) {
+var G__12285 = arguments.length;
+switch (G__12285) {
 case 1:
 return cljs.analyzer.api.find_ns.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -240,8 +240,8 @@ cljs.analyzer.api.find_ns.cljs$lang$maxFixedArity = 2;
  *   clojure.core/ns-interns but returns var analysis maps not vars.
  */
 cljs.analyzer.api.ns_interns = (function cljs$analyzer$api$ns_interns(var_args){
-var G__11004 = arguments.length;
-switch (G__11004) {
+var G__12288 = arguments.length;
+switch (G__12288) {
 case 1:
 return cljs.analyzer.api.ns_interns.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -276,8 +276,8 @@ cljs.analyzer.api.ns_interns.cljs$lang$maxFixedArity = 2;
  *   clojure.core/ns-publics but returns var analysis maps not vars.
  */
 cljs.analyzer.api.ns_publics = (function cljs$analyzer$api$ns_publics(var_args){
-var G__11007 = arguments.length;
-switch (G__11007) {
+var G__12291 = arguments.length;
+switch (G__12291) {
 case 1:
 return cljs.analyzer.api.ns_publics.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -302,10 +302,10 @@ if((ns instanceof cljs.core.Symbol)){
 throw (new Error("Assert failed: (symbol? ns)"));
 }
 
-return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.remove.call(null,(function (p__11008){
-var vec__11009 = p__11008;
-var k = cljs.core.nth.call(null,vec__11009,(0),null);
-var v = cljs.core.nth.call(null,vec__11009,(1),null);
+return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.remove.call(null,(function (p__12292){
+var vec__12293 = p__12292;
+var k = cljs.core.nth.call(null,vec__12293,(0),null);
+var v = cljs.core.nth.call(null,vec__12293,(1),null);
 return new cljs.core.Keyword(null,"private","private",-558947994).cljs$core$IFn$_invoke$arity$1(v);
 }),cljs.core.merge.call(null,cljs.core.get_in.call(null,cljs.core.deref.call(null,state),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("cljs.analyzer","namespaces","cljs.analyzer/namespaces",-260788927),ns,new cljs.core.Keyword(null,"macros","macros",811339431)], null)),cljs.core.get_in.call(null,cljs.core.deref.call(null,state),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("cljs.analyzer","namespaces","cljs.analyzer/namespaces",-260788927),ns,new cljs.core.Keyword(null,"defs","defs",1398449717)], null)))));
 });
@@ -317,8 +317,8 @@ cljs.analyzer.api.ns_publics.cljs$lang$maxFixedArity = 2;
  *   Analagous to clojure.core/ns-resolve but returns var analysis map not Var.
  */
 cljs.analyzer.api.ns_resolve = (function cljs$analyzer$api$ns_resolve(var_args){
-var G__11014 = arguments.length;
-switch (G__11014) {
+var G__12298 = arguments.length;
+switch (G__12298) {
 case 2:
 return cljs.analyzer.api.ns_resolve.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -357,8 +357,8 @@ cljs.analyzer.api.ns_resolve.cljs$lang$maxFixedArity = 3;
  * Removes the namespace named by the symbol.
  */
 cljs.analyzer.api.remove_ns = (function cljs$analyzer$api$remove_ns(var_args){
-var G__11017 = arguments.length;
-switch (G__11017) {
+var G__12301 = arguments.length;
+switch (G__12301) {
 case 1:
 return cljs.analyzer.api.remove_ns.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -388,21 +388,21 @@ return cljs.core.swap_BANG_.call(null,state,cljs.core.update_in,new cljs.core.Pe
 
 cljs.analyzer.api.remove_ns.cljs$lang$maxFixedArity = 2;
 
-var ret__4776__auto___11023 = (function (){
+var ret__4776__auto___12307 = (function (){
 /**
  * Binds cljs.analyzer/*cljs-ns* to 'cljs.user and uses the given compilation
  *   environment atom and runs body.
  */
 cljs.analyzer.api.in_cljs_user = (function cljs$analyzer$api$in_cljs_user(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___11024 = arguments.length;
-var i__4731__auto___11025 = (0);
+var len__4730__auto___12308 = arguments.length;
+var i__4731__auto___12309 = (0);
 while(true){
-if((i__4731__auto___11025 < len__4730__auto___11024)){
-args__4736__auto__.push((arguments[i__4731__auto___11025]));
+if((i__4731__auto___12309 < len__4730__auto___12308)){
+args__4736__auto__.push((arguments[i__4731__auto___12309]));
 
-var G__11026 = (i__4731__auto___11025 + (1));
-i__4731__auto___11025 = G__11026;
+var G__12310 = (i__4731__auto___12309 + (1));
+i__4731__auto___12309 = G__12310;
 continue;
 } else {
 }
@@ -420,15 +420,15 @@ return cljs.core.sequence.call(null,cljs.core.seq.call(null,cljs.core.concat.cal
 cljs.analyzer.api.in_cljs_user.cljs$lang$maxFixedArity = (3);
 
 /** @this {Function} */
-cljs.analyzer.api.in_cljs_user.cljs$lang$applyTo = (function (seq11019){
-var G__11020 = cljs.core.first.call(null,seq11019);
-var seq11019__$1 = cljs.core.next.call(null,seq11019);
-var G__11021 = cljs.core.first.call(null,seq11019__$1);
-var seq11019__$2 = cljs.core.next.call(null,seq11019__$1);
-var G__11022 = cljs.core.first.call(null,seq11019__$2);
-var seq11019__$3 = cljs.core.next.call(null,seq11019__$2);
+cljs.analyzer.api.in_cljs_user.cljs$lang$applyTo = (function (seq12303){
+var G__12304 = cljs.core.first.call(null,seq12303);
+var seq12303__$1 = cljs.core.next.call(null,seq12303);
+var G__12305 = cljs.core.first.call(null,seq12303__$1);
+var seq12303__$2 = cljs.core.next.call(null,seq12303__$1);
+var G__12306 = cljs.core.first.call(null,seq12303__$2);
+var seq12303__$3 = cljs.core.next.call(null,seq12303__$2);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__11020,G__11021,G__11022,seq11019__$3);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__12304,G__12305,G__12306,seq12303__$3);
 });
 
 return null;
