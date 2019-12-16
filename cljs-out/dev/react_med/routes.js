@@ -13,10 +13,10 @@ goog.require('react_med.screens.paciente_relatorio.paciente_relatorio');
 goog.require('react_med.screens.lista_pacientes');
 goog.require('re_frame.core');
 if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
-react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__35192){
-var vec__35193 = p__35192;
-var _ = cljs.core.nth.call(null,vec__35193,(0),null);
-var ui_route = cljs.core.nth.call(null,vec__35193,(1),null);
+react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__35682){
+var vec__35683 = p__35682;
+var _ = cljs.core.nth.call(null,vec__35683,(0),null);
+var ui_route = cljs.core.nth.call(null,vec__35683,(1),null);
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
 try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new cljs.core.Symbol(null,"ui-route","ui-route",1828352800,null)));
 
@@ -40,14 +40,14 @@ return result__14245__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14245__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new cljs.core.Symbol(null,"ui-route","ui-route",1828352800,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14245__auto__;
-}catch (e35196){var e = e35196;
+}catch (e35686){var e = e35686;
 throw e;
 }});
 } else {
-react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__35197){
-var vec__35198 = p__35197;
-var _ = cljs.core.nth.call(null,vec__35198,(0),null);
-var ui_route = cljs.core.nth.call(null,vec__35198,(1),null);
+react_med.routes.set_route = (function react_med$routes$set_route(app_state,p__35687){
+var vec__35688 = p__35687;
+var _ = cljs.core.nth.call(null,vec__35688,(0),null);
+var ui_route = cljs.core.nth.call(null,vec__35688,(1),null);
 return cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),ui_route);
 });
 }
@@ -55,9 +55,9 @@ re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.routes","s
 react_med.routes.current__GT_next_state = (function react_med$routes$current__GT_next_state(state_machine,current_state,transition){
 return cljs.core.get_in.call(null,state_machine,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [current_state,transition], null));
 });
-react_med.routes.next_state_handler = (function react_med$routes$next_state_handler(db,p__35201){
-var vec__35202 = p__35201;
-var event = cljs.core.nth.call(null,vec__35202,(0),null);
+react_med.routes.next_state_handler = (function react_med$routes$next_state_handler(db,p__35691){
+var vec__35692 = p__35691;
+var event = cljs.core.nth.call(null,vec__35692,(0),null);
 var temp__5733__auto__ = react_med.routes.current__GT_next_state.call(null,react_med.routes.state_machine,cljs.core.get_in.call(null,db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null)),event);
 if(cljs.core.truth_(temp__5733__auto__)){
 var new_state = temp__5733__auto__;
@@ -86,7 +86,7 @@ return result__14245__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14245__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"next-state-handler","next-state-handler",-503541646,null),new cljs.core.Symbol(null,"db","db",-1661185010,null),new cljs.core.Symbol(null,"event","event",1941966969,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14245__auto__;
-}catch (e35205){var e = e35205;
+}catch (e35695){var e = e35695;
 throw e;
 }});
 } else {
@@ -135,7 +135,7 @@ return result__14245__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14245__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null),cljs.core.list(new cljs.core.Symbol(null,"get","get",-971253014,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"domain","domain",1847214937))], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null),new cljs.core.Symbol(null,"domain-snapshot","domain-snapshot",-1672358085,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14245__auto__;
-}catch (e35206){var e = e35206;
+}catch (e35696){var e = e35696;
 throw e;
 }});
 } else {
@@ -196,7 +196,7 @@ return result__14245__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14245__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"if-let","if-let",1803593690,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"old-domain","old-domain",-177558496,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"backup","backup",26347393)], null))], null),cljs.core.list(new cljs.core.Symbol(null,"quote","quote",1377916282,null),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14245__auto__;
-}catch (e35207){var e = e35207;
+}catch (e35697){var e = e35697;
 throw e;
 }});
 } else {
@@ -236,7 +236,7 @@ return result__14245__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14245__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"backup","backup",26347393)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14245__auto__;
-}catch (e35208){var e = e35208;
+}catch (e35698){var e = e35698;
 throw e;
 }});
 } else {
@@ -246,13 +246,13 @@ return cljs.core.update_in.call(null,app_state,new cljs.core.PersistentVector(nu
 }
 re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.routes","discard-backup","react-med.routes/discard-backup",-1883862736),react_med.routes.discard_backup);
 react_med.routes.next_state_then = (function react_med$routes$next_state_then(events){
-return (function (p__35209,p__35210){
-var map__35211 = p__35209;
-var map__35211__$1 = (((((!((map__35211 == null))))?(((((map__35211.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35211.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35211):map__35211);
-var app_state = cljs.core.get.call(null,map__35211__$1,new cljs.core.Keyword(null,"db","db",993250759));
-var vec__35212 = p__35210;
-var event = cljs.core.nth.call(null,vec__35212,(0),null);
-var _ = cljs.core.nth.call(null,vec__35212,(1),null);
+return (function (p__35699,p__35700){
+var map__35701 = p__35699;
+var map__35701__$1 = (((((!((map__35701 == null))))?(((((map__35701.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35701.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35701):map__35701);
+var app_state = cljs.core.get.call(null,map__35701__$1,new cljs.core.Keyword(null,"db","db",993250759));
+var vec__35702 = p__35700;
+var event = cljs.core.nth.call(null,vec__35702,(0),null);
+var _ = cljs.core.nth.call(null,vec__35702,(1),null);
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"db","db",993250759),react_med.routes.next_state_handler.call(null,app_state,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [event], null)),new cljs.core.Keyword(null,"dispatch-n","dispatch-n",-504469236),events], null);
 });
 });
@@ -264,14 +264,14 @@ re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","state"
 return cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null));
 }));
 react_med.routes.state_machine = new cljs.core.PersistentArrayMap(null, 8, [null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"init","init",-1875481434),"info"], null),"pacientes",cljs.core.PersistentArrayMap.EMPTY,"info",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"edit","edit",-1641834166),"edit-info",new cljs.core.Keyword(null,"back","back",-417520012),"pacientes"], null),"edit-info",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"ok","ok",967785236),"info",new cljs.core.Keyword(null,"cancel","cancel",-1964088360),"info"], null),"avaliacoes",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"back","back",-417520012),"pacientes"], null),"coleta",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"back","back",-417520012),"info",new cljs.core.Keyword(null,"edit","edit",-1641834166),"edit-coleta"], null),"edit-coleta",new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"ok","ok",967785236),"coleta",new cljs.core.Keyword(null,"cancel","cancel",-1964088360),"coleta"], null),"relatorio",new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"back","back",-417520012),"info"], null)], null);
-react_med.routes.title = (function react_med$routes$title(p__35216){
-var vec__35217 = p__35216;
-var state = cljs.core.nth.call(null,vec__35217,(0),null);
-var selected_patient = cljs.core.nth.call(null,vec__35217,(1),null);
+react_med.routes.title = (function react_med$routes$title(p__35706){
+var vec__35707 = p__35706;
+var state = cljs.core.nth.call(null,vec__35707,(0),null);
+var selected_patient = cljs.core.nth.call(null,vec__35707,(1),null);
 var patient_name = new cljs.core.Keyword(null,"nome","nome",1100401122).cljs$core$IFn$_invoke$arity$1(selected_patient);
 var preposição = ((cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"sexo","sexo",-629407757).cljs$core$IFn$_invoke$arity$1(selected_patient),"Feminino"))?" da ":" do ");
-var G__35220 = state;
-switch (G__35220) {
+var G__35710 = state;
+switch (G__35710) {
 case "pacientes":
 return "Pacientes";
 
@@ -307,8 +307,8 @@ return "??";
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","title","react-med.routes/title",1582209313),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.patient-info.core","selected-patient","react-med.screens.patient-info.core/selected-patient",-1719364628)], null),react_med.routes.title);
 react_med.routes.tab_title = (function react_med$routes$tab_title(screen){
-var G__35222 = screen;
-switch (G__35222) {
+var G__35712 = screen;
+switch (G__35712) {
 case "pacientes":
 return "Pacientes";
 
@@ -343,11 +343,11 @@ return "??";
 }
 });
 react_med.routes.tabs = (function react_med$routes$tabs(state){
-var state__GT_tab = (function (p1__35224_SHARP_){
-return cljs.core.into.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"label","label",1718410804),react_med.routes.tab_title.call(null,p1__35224_SHARP_),new cljs.core.Keyword(null,"state","state",-1988618099),p1__35224_SHARP_], null));
+var state__GT_tab = (function (p1__35714_SHARP_){
+return cljs.core.into.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"label","label",1718410804),react_med.routes.tab_title.call(null,p1__35714_SHARP_),new cljs.core.Keyword(null,"state","state",-1988618099),p1__35714_SHARP_], null));
 });
-var G__35225 = state;
-switch (G__35225) {
+var G__35715 = state;
+switch (G__35715) {
 case "info":
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [state__GT_tab.call(null,"info"),state__GT_tab.call(null,"avaliacoes")], null);
 
@@ -366,38 +366,38 @@ return null;
 }
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","tabs","react-med.routes/tabs",1784816700),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),react_med.routes.tabs);
-react_med.routes.side_menu = (function react_med$routes$side_menu(p__35229){
-var vec__35230 = p__35229;
-var state = cljs.core.nth.call(null,vec__35230,(0),null);
-var selected_patient = cljs.core.nth.call(null,vec__35230,(1),null);
-var selected_avaliacao = cljs.core.nth.call(null,vec__35230,(2),null);
-var vec__35233 = cljs.core.re_find.call(null,/\d+-(\d+)-(\d+)/,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(selected_avaliacao));
-var _ = cljs.core.nth.call(null,vec__35233,(0),null);
-var month = cljs.core.nth.call(null,vec__35233,(1),null);
-var day = cljs.core.nth.call(null,vec__35233,(2),null);
-var model__GT_menu = ((function (vec__35233,_,month,day,vec__35230,state,selected_patient,selected_avaliacao){
-return (function react_med$routes$side_menu_$_m__GT_m(p__35236){
-var map__35237 = p__35236;
-var map__35237__$1 = (((((!((map__35237 == null))))?(((((map__35237.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35237.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35237):map__35237);
-var s = cljs.core.get.call(null,map__35237__$1,new cljs.core.Keyword(null,"s","s",1705939918));
-var sub_menus = cljs.core.get.call(null,map__35237__$1,new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979));
-var extra_label = cljs.core.get.call(null,map__35237__$1,new cljs.core.Keyword(null,"extra-label","extra-label",1842953888));
+react_med.routes.side_menu = (function react_med$routes$side_menu(p__35719){
+var vec__35720 = p__35719;
+var state = cljs.core.nth.call(null,vec__35720,(0),null);
+var selected_patient = cljs.core.nth.call(null,vec__35720,(1),null);
+var selected_avaliacao = cljs.core.nth.call(null,vec__35720,(2),null);
+var vec__35723 = cljs.core.re_find.call(null,/\d+-(\d+)-(\d+)/,new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(selected_avaliacao));
+var _ = cljs.core.nth.call(null,vec__35723,(0),null);
+var month = cljs.core.nth.call(null,vec__35723,(1),null);
+var day = cljs.core.nth.call(null,vec__35723,(2),null);
+var model__GT_menu = ((function (vec__35723,_,month,day,vec__35720,state,selected_patient,selected_avaliacao){
+return (function react_med$routes$side_menu_$_m__GT_m(p__35726){
+var map__35727 = p__35726;
+var map__35727__$1 = (((((!((map__35727 == null))))?(((((map__35727.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35727.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35727):map__35727);
+var s = cljs.core.get.call(null,map__35727__$1,new cljs.core.Keyword(null,"s","s",1705939918));
+var sub_menus = cljs.core.get.call(null,map__35727__$1,new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979));
+var extra_label = cljs.core.get.call(null,map__35727__$1,new cljs.core.Keyword(null,"extra-label","extra-label",1842953888));
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"label","label",1718410804),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(react_med.routes.tab_title.call(null,s)),cljs.core.str.cljs$core$IFn$_invoke$arity$1(extra_label)].join(''),new cljs.core.Keyword(null,"state","state",-1988618099),s,new cljs.core.Keyword(null,"selected","selected",574897764),cljs.core._EQ_.call(null,state,s),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),cljs.core.map.call(null,react_med$routes$side_menu_$_m__GT_m,sub_menus)], null);
-});})(vec__35233,_,month,day,vec__35230,state,selected_patient,selected_avaliacao))
+});})(vec__35723,_,month,day,vec__35720,state,selected_patient,selected_avaliacao))
 ;
-var menu_model = (function (){var pred__35239 = ((function (vec__35233,_,month,day,model__GT_menu,vec__35230,state,selected_patient,selected_avaliacao){
-return (function (p1__35227_SHARP_,p2__35228_SHARP_){
-return p1__35227_SHARP_.call(null,p2__35228_SHARP_);
-});})(vec__35233,_,month,day,model__GT_menu,vec__35230,state,selected_patient,selected_avaliacao))
+var menu_model = (function (){var pred__35729 = ((function (vec__35723,_,month,day,model__GT_menu,vec__35720,state,selected_patient,selected_avaliacao){
+return (function (p1__35717_SHARP_,p2__35718_SHARP_){
+return p1__35717_SHARP_.call(null,p2__35718_SHARP_);
+});})(vec__35723,_,month,day,model__GT_menu,vec__35720,state,selected_patient,selected_avaliacao))
 ;
-var expr__35240 = state;
-if(cljs.core.truth_(pred__35239.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ["pacientes",null], null), null),expr__35240))){
+var expr__35730 = state;
+if(cljs.core.truth_(pred__35729.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ["pacientes",null], null), null),expr__35730))){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes"], null)], null);
 } else {
-if(cljs.core.truth_(pred__35239.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["info",null,"avaliacoes",null,"edit-info",null], null), null),expr__35240))){
+if(cljs.core.truth_(pred__35729.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["info",null,"avaliacoes",null,"edit-info",null], null), null),expr__35730))){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_patient)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"nome","nome",1100401122).cljs$core$IFn$_invoke$arity$1(selected_patient)),")"].join(''):null),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"info"], null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"s","s",1705939918),"avaliacoes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_avaliacao)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),")"].join(''):null)], null)], null)], null)], null);
 } else {
-if(cljs.core.truth_(pred__35239.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["coleta",null,"relatorio",null,"edit-coleta",null], null), null),expr__35240))){
+if(cljs.core.truth_(pred__35729.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, ["coleta",null,"relatorio",null,"edit-coleta",null], null), null),expr__35730))){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_patient)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"nome","nome",1100401122).cljs$core$IFn$_invoke$arity$1(selected_patient)),")"].join(''):null),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"info"], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"s","s",1705939918),"avaliacoes",new cljs.core.Keyword(null,"extra-label","extra-label",1842953888),(cljs.core.truth_(selected_avaliacao)?[" (",cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),")"].join(''):null),new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"coleta"], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"relatorio"], null)], null)], null)], null)], null)], null);
 } else {
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"s","s",1705939918),"pacientes"], null)], null);
@@ -409,8 +409,8 @@ return cljs.core.map.call(null,model__GT_menu,menu_model);
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","side-menu","react-med.routes/side-menu",909029319),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.patient-info.core","selected-patient","react-med.screens.patient-info.core/selected-patient",-1719364628)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.paciente-avaliacao","selected-avaliacao","react-med.screens.paciente-avaliacao/selected-avaliacao",1796286413)], null),react_med.routes.side_menu);
 react_med.routes.actions = (function react_med$routes$actions(state){
-var G__35242 = state;
-switch (G__35242) {
+var G__35732 = state;
+switch (G__35732) {
 case "info":
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"name","name",1843675177),"Exportar para Excel",new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"export-to-csv","export-to-csv",-305760776)], null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"name","name",1843675177),"Voltar",new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"back","back",-417520012)], null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"name","name",1843675177),"Editar",new cljs.core.Keyword(null,"event","event",301435442),new cljs.core.Keyword(null,"edit","edit",-1641834166)], null)], null);
 
@@ -434,8 +434,8 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.routes","actions","react-med.routes/actions",-1858990120),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null),react_med.routes.actions);
 react_med.routes.selected_view = (function react_med$routes$selected_view(){
-var G__35244 = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null));
-switch (G__35244) {
+var G__35734 = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null));
+switch (G__35734) {
 case "pacientes":
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.lista_pacientes.view], null);
 

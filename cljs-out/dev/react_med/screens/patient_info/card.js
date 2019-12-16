@@ -19,7 +19,7 @@ react_med.screens.patient_info.card.devcards_hidden = reagent.core.atom.call(nul
 }
 devcards.core.register_card.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"react_med.screens.patient_info.card","react_med.screens.patient_info.card",-722609824),new cljs.core.Keyword(null,"hidding-cards","hidding-cards",-932317179)], null),new cljs.core.Keyword(null,"func","func",-238706040),(function (){
 return devcards.core.card_base.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),"hidding-cards",new cljs.core.Keyword(null,"documentation","documentation",1889593999),null,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){
-if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefined') && (typeof react_med.screens.patient_info !== 'undefined') && (typeof react_med.screens.patient_info.card !== 'undefined') && (typeof react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251 !== 'undefined')){
+if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefined') && (typeof react_med.screens.patient_info !== 'undefined') && (typeof react_med.screens.patient_info.card !== 'undefined') && (typeof react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741 !== 'undefined')){
 } else {
 
 /**
@@ -28,26 +28,26 @@ if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefine
  * @implements {cljs.core.IWithMeta}
  * @implements {devcards.core.IDevcardOptions}
 */
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251 = (function (meta35252){
-this.meta35252 = meta35252;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741 = (function (meta35742){
+this.meta35742 = meta35742;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 });
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_35253,meta35252__$1){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_35743,meta35742__$1){
 var self__ = this;
-var _35253__$1 = this;
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251(meta35252__$1));
+var _35743__$1 = this;
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741(meta35742__$1));
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_35253){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_35743){
 var self__ = this;
-var _35253__$1 = this;
-return self__.meta35252;
+var _35743__$1 = this;
+return self__.meta35742;
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL;
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__21007__auto__,devcard_opts__21008__auto__){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__21007__auto__,devcard_opts__21008__auto__){
 var self__ = this;
 var this__21007__auto____$1 = this;
 return cljs.core.assoc.call(null,devcard_opts__21008__auto__,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){var v__21026__auto__ = (function (){var card_container_style = ({"display": "flex", "justifyContent": "space-evenly", "padding": "20px 0"});
@@ -55,53 +55,53 @@ return ((function (card_container_style,this__21007__auto____$1){
 return (function (devcard_data,_){
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-container","div.card-container",-901577759),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),card_container_style], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.patient_info.card.global$module$button,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"id","id",-1388402092),"hide-all",new cljs.core.Keyword(null,"variant","variant",-424354234),"outlined",new cljs.core.Keyword(null,"size","size",1098693007),"small",new cljs.core.Keyword(null,"color","color",1011675173),"secondary",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (card_container_style,this__21007__auto____$1){
 return (function (){
-var seq__35254 = cljs.core.seq.call(null,cljs.core.deref.call(null,react_med.screens.patient_info.card.devcards_hidden));
-var chunk__35255 = null;
-var count__35256 = (0);
-var i__35257 = (0);
+var seq__35744 = cljs.core.seq.call(null,cljs.core.deref.call(null,react_med.screens.patient_info.card.devcards_hidden));
+var chunk__35745 = null;
+var count__35746 = (0);
+var i__35747 = (0);
 while(true){
-if((i__35257 < count__35256)){
-var hidden_atom = cljs.core._nth.call(null,chunk__35255,i__35257);
+if((i__35747 < count__35746)){
+var hidden_atom = cljs.core._nth.call(null,chunk__35745,i__35747);
 cljs.core.reset_BANG_.call(null,hidden_atom,true);
 
 
-var G__35262 = seq__35254;
-var G__35263 = chunk__35255;
-var G__35264 = count__35256;
-var G__35265 = (i__35257 + (1));
-seq__35254 = G__35262;
-chunk__35255 = G__35263;
-count__35256 = G__35264;
-i__35257 = G__35265;
+var G__35752 = seq__35744;
+var G__35753 = chunk__35745;
+var G__35754 = count__35746;
+var G__35755 = (i__35747 + (1));
+seq__35744 = G__35752;
+chunk__35745 = G__35753;
+count__35746 = G__35754;
+i__35747 = G__35755;
 continue;
 } else {
-var temp__5735__auto__ = cljs.core.seq.call(null,seq__35254);
+var temp__5735__auto__ = cljs.core.seq.call(null,seq__35744);
 if(temp__5735__auto__){
-var seq__35254__$1 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__35254__$1)){
-var c__4550__auto__ = cljs.core.chunk_first.call(null,seq__35254__$1);
-var G__35266 = cljs.core.chunk_rest.call(null,seq__35254__$1);
-var G__35267 = c__4550__auto__;
-var G__35268 = cljs.core.count.call(null,c__4550__auto__);
-var G__35269 = (0);
-seq__35254 = G__35266;
-chunk__35255 = G__35267;
-count__35256 = G__35268;
-i__35257 = G__35269;
+var seq__35744__$1 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__35744__$1)){
+var c__4550__auto__ = cljs.core.chunk_first.call(null,seq__35744__$1);
+var G__35756 = cljs.core.chunk_rest.call(null,seq__35744__$1);
+var G__35757 = c__4550__auto__;
+var G__35758 = cljs.core.count.call(null,c__4550__auto__);
+var G__35759 = (0);
+seq__35744 = G__35756;
+chunk__35745 = G__35757;
+count__35746 = G__35758;
+i__35747 = G__35759;
 continue;
 } else {
-var hidden_atom = cljs.core.first.call(null,seq__35254__$1);
+var hidden_atom = cljs.core.first.call(null,seq__35744__$1);
 cljs.core.reset_BANG_.call(null,hidden_atom,true);
 
 
-var G__35270 = cljs.core.next.call(null,seq__35254__$1);
-var G__35271 = null;
-var G__35272 = (0);
-var G__35273 = (0);
-seq__35254 = G__35270;
-chunk__35255 = G__35271;
-count__35256 = G__35272;
-i__35257 = G__35273;
+var G__35760 = cljs.core.next.call(null,seq__35744__$1);
+var G__35761 = null;
+var G__35762 = (0);
+var G__35763 = (0);
+seq__35744 = G__35760;
+chunk__35745 = G__35761;
+count__35746 = G__35762;
+i__35747 = G__35763;
 continue;
 }
 } else {
@@ -113,53 +113,53 @@ break;
 });})(card_container_style,this__21007__auto____$1))
 ], null),"hide all"], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.patient_info.card.global$module$button,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"id","id",-1388402092),"show-all",new cljs.core.Keyword(null,"variant","variant",-424354234),"outlined",new cljs.core.Keyword(null,"size","size",1098693007),"small",new cljs.core.Keyword(null,"color","color",1011675173),"secondary",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (card_container_style,this__21007__auto____$1){
 return (function (){
-var seq__35258 = cljs.core.seq.call(null,cljs.core.deref.call(null,react_med.screens.patient_info.card.devcards_hidden));
-var chunk__35259 = null;
-var count__35260 = (0);
-var i__35261 = (0);
+var seq__35748 = cljs.core.seq.call(null,cljs.core.deref.call(null,react_med.screens.patient_info.card.devcards_hidden));
+var chunk__35749 = null;
+var count__35750 = (0);
+var i__35751 = (0);
 while(true){
-if((i__35261 < count__35260)){
-var hidden_atom = cljs.core._nth.call(null,chunk__35259,i__35261);
+if((i__35751 < count__35750)){
+var hidden_atom = cljs.core._nth.call(null,chunk__35749,i__35751);
 cljs.core.reset_BANG_.call(null,hidden_atom,false);
 
 
-var G__35274 = seq__35258;
-var G__35275 = chunk__35259;
-var G__35276 = count__35260;
-var G__35277 = (i__35261 + (1));
-seq__35258 = G__35274;
-chunk__35259 = G__35275;
-count__35260 = G__35276;
-i__35261 = G__35277;
+var G__35764 = seq__35748;
+var G__35765 = chunk__35749;
+var G__35766 = count__35750;
+var G__35767 = (i__35751 + (1));
+seq__35748 = G__35764;
+chunk__35749 = G__35765;
+count__35750 = G__35766;
+i__35751 = G__35767;
 continue;
 } else {
-var temp__5735__auto__ = cljs.core.seq.call(null,seq__35258);
+var temp__5735__auto__ = cljs.core.seq.call(null,seq__35748);
 if(temp__5735__auto__){
-var seq__35258__$1 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__35258__$1)){
-var c__4550__auto__ = cljs.core.chunk_first.call(null,seq__35258__$1);
-var G__35278 = cljs.core.chunk_rest.call(null,seq__35258__$1);
-var G__35279 = c__4550__auto__;
-var G__35280 = cljs.core.count.call(null,c__4550__auto__);
-var G__35281 = (0);
-seq__35258 = G__35278;
-chunk__35259 = G__35279;
-count__35260 = G__35280;
-i__35261 = G__35281;
+var seq__35748__$1 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__35748__$1)){
+var c__4550__auto__ = cljs.core.chunk_first.call(null,seq__35748__$1);
+var G__35768 = cljs.core.chunk_rest.call(null,seq__35748__$1);
+var G__35769 = c__4550__auto__;
+var G__35770 = cljs.core.count.call(null,c__4550__auto__);
+var G__35771 = (0);
+seq__35748 = G__35768;
+chunk__35749 = G__35769;
+count__35750 = G__35770;
+i__35751 = G__35771;
 continue;
 } else {
-var hidden_atom = cljs.core.first.call(null,seq__35258__$1);
+var hidden_atom = cljs.core.first.call(null,seq__35748__$1);
 cljs.core.reset_BANG_.call(null,hidden_atom,false);
 
 
-var G__35282 = cljs.core.next.call(null,seq__35258__$1);
-var G__35283 = null;
-var G__35284 = (0);
-var G__35285 = (0);
-seq__35258 = G__35282;
-chunk__35259 = G__35283;
-count__35260 = G__35284;
-i__35261 = G__35285;
+var G__35772 = cljs.core.next.call(null,seq__35748__$1);
+var G__35773 = null;
+var G__35774 = (0);
+var G__35775 = (0);
+seq__35748 = G__35772;
+chunk__35749 = G__35773;
+count__35750 = G__35774;
+i__35751 = G__35775;
 continue;
 }
 } else {
@@ -185,34 +185,34 @@ return reagent.core.as_element.call(null,v__21026__auto__);
 })(),new cljs.core.Keyword(null,"options","options",99638489),cljs.core.merge.call(null,cljs.core.PersistentArrayMap.EMPTY,devcards.core.assert_options_map.call(null,new cljs.core.Keyword(null,"options","options",99638489).cljs$core$IFn$_invoke$arity$1(devcard_opts__21008__auto__))));
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta35252","meta35252",1682826009,null)], null);
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta35742","meta35742",-929981694,null)], null);
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.cljs$lang$type = true;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.cljs$lang$type = true;
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.cljs$lang$ctorStr = "react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35251";
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.cljs$lang$ctorStr = "react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35741";
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
-return cljs.core._write.call(null,writer__4375__auto__,"react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35251");
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
+return cljs.core._write.call(null,writer__4375__auto__,"react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35741");
 });
 
 /**
- * Positional factory function for react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35251.
+ * Positional factory function for react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35741.
  */
-react_med.screens.patient_info.card.__GT_t_react_med$screens$patient_info$card35251 = (function react_med$screens$patient_info$card$__GT_t_react_med$screens$patient_info$card35251(meta35252){
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251(meta35252));
+react_med.screens.patient_info.card.__GT_t_react_med$screens$patient_info$card35741 = (function react_med$screens$patient_info$card$__GT_t_react_med$screens$patient_info$card35741(meta35742){
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741(meta35742));
 });
 
 }
 
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35251(null));
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35741(null));
 })()
 ,new cljs.core.Keyword(null,"initial-data","initial-data",-1315709804),cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"options","options",99638489),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"frame","frame",-1711082588),false,new cljs.core.Keyword(null,"watch-atom","watch-atom",-2134031308),false], null)], null));
 })], null));
 devcards.core.register_card.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"react_med.screens.patient_info.card","react_med.screens.patient_info.card",-722609824),new cljs.core.Keyword(null,"patient-info-component","patient-info-component",81488317)], null),new cljs.core.Keyword(null,"func","func",-238706040),(function (){
 return devcards.core.card_base.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),"patient-info-component",new cljs.core.Keyword(null,"documentation","documentation",1889593999),null,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){
-if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefined') && (typeof react_med.screens.patient_info !== 'undefined') && (typeof react_med.screens.patient_info.card !== 'undefined') && (typeof react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286 !== 'undefined')){
+if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefined') && (typeof react_med.screens.patient_info !== 'undefined') && (typeof react_med.screens.patient_info.card !== 'undefined') && (typeof react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776 !== 'undefined')){
 } else {
 
 /**
@@ -221,39 +221,39 @@ if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefine
  * @implements {cljs.core.IWithMeta}
  * @implements {devcards.core.IDevcardOptions}
 */
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286 = (function (meta35287){
-this.meta35287 = meta35287;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776 = (function (meta35777){
+this.meta35777 = meta35777;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 });
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_35288,meta35287__$1){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_35778,meta35777__$1){
 var self__ = this;
-var _35288__$1 = this;
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286(meta35287__$1));
+var _35778__$1 = this;
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776(meta35777__$1));
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_35288){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_35778){
 var self__ = this;
-var _35288__$1 = this;
-return self__.meta35287;
+var _35778__$1 = this;
+return self__.meta35777;
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL;
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__21007__auto__,devcard_opts__21008__auto__){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__21007__auto__,devcard_opts__21008__auto__){
 var self__ = this;
 var this__21007__auto____$1 = this;
 return cljs.core.assoc.call(null,devcard_opts__21008__auto__,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){var v__21026__auto__ = ((function (this__21007__auto____$1){
 return (function (devcard_data,_){
-var map__35289 = cljs.core.deref.call(null,devcard_data);
-var map__35289__$1 = (((((!((map__35289 == null))))?(((((map__35289.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35289.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35289):map__35289);
-var hidden_QMARK_ = cljs.core.get.call(null,map__35289__$1,new cljs.core.Keyword(null,"hidden?","hidden?",1339691380));
+var map__35779 = cljs.core.deref.call(null,devcard_data);
+var map__35779__$1 = (((((!((map__35779 == null))))?(((((map__35779.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35779.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35779):map__35779);
+var hidden_QMARK_ = cljs.core.get.call(null,map__35779__$1,new cljs.core.Keyword(null,"hidden?","hidden?",1339691380));
 cljs.core.swap_BANG_.call(null,react_med.screens.patient_info.card.devcards_hidden,cljs.core.conj,hidden_QMARK_);
 
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-expander","div.card-expander",969295648),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__35289,map__35289__$1,hidden_QMARK_,this__21007__auto____$1){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-expander","div.card-expander",969295648),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__35779,map__35779__$1,hidden_QMARK_,this__21007__auto____$1){
 return (function (){
 return cljs.core.swap_BANG_.call(null,hidden_QMARK_,cljs.core.not);
-});})(map__35289,map__35289__$1,hidden_QMARK_,this__21007__auto____$1))
+});})(map__35779,map__35779__$1,hidden_QMARK_,this__21007__auto____$1))
 ,new cljs.core.Keyword(null,"style","style",-496642736),({"textAlign": "center"})], null),(cljs.core.truth_(cljs.core.deref.call(null,hidden_QMARK_))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.patient_info.card.global$module$expand_more], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.patient_info.card.global$module$expand_less], null))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-container","div.card-container",-901577759),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"display": "flex"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_boundary,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"if-error","if-error",-1992288515),react_med.shell_components.error_view], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.component-container","div.component-container",-642182457),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"hidden","hidden",-312506092),cljs.core.deref.call(null,hidden_QMARK_)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.patient_info.core.patient_info_component], null)], null)], null)], null)], null);
 });})(this__21007__auto____$1))
 ;
@@ -269,34 +269,34 @@ return reagent.core.as_element.call(null,v__21026__auto__);
 })(),new cljs.core.Keyword(null,"options","options",99638489),cljs.core.merge.call(null,cljs.core.PersistentArrayMap.EMPTY,devcards.core.assert_options_map.call(null,new cljs.core.Keyword(null,"options","options",99638489).cljs$core$IFn$_invoke$arity$1(devcard_opts__21008__auto__))));
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta35287","meta35287",666144647,null)], null);
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta35777","meta35777",1905094139,null)], null);
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.cljs$lang$type = true;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.cljs$lang$type = true;
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.cljs$lang$ctorStr = "react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35286";
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.cljs$lang$ctorStr = "react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35776";
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
-return cljs.core._write.call(null,writer__4375__auto__,"react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35286");
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
+return cljs.core._write.call(null,writer__4375__auto__,"react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35776");
 });
 
 /**
- * Positional factory function for react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35286.
+ * Positional factory function for react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35776.
  */
-react_med.screens.patient_info.card.__GT_t_react_med$screens$patient_info$card35286 = (function react_med$screens$patient_info$card$__GT_t_react_med$screens$patient_info$card35286(meta35287){
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286(meta35287));
+react_med.screens.patient_info.card.__GT_t_react_med$screens$patient_info$card35776 = (function react_med$screens$patient_info$card$__GT_t_react_med$screens$patient_info$card35776(meta35777){
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776(meta35777));
 });
 
 }
 
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35286(null));
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35776(null));
 })()
 ,new cljs.core.Keyword(null,"initial-data","initial-data",-1315709804),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"hidden?","hidden?",1339691380),reagent.core.atom.call(null,false)], null),new cljs.core.Keyword(null,"options","options",99638489),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"watch-atom","watch-atom",-2134031308),false], null)], null));
 })], null));
 devcards.core.register_card.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"path","path",-188191168),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"react_med.screens.patient_info.card","react_med.screens.patient_info.card",-722609824),new cljs.core.Keyword(null,"editing-patient-info-component","editing-patient-info-component",816516127)], null),new cljs.core.Keyword(null,"func","func",-238706040),(function (){
 return devcards.core.card_base.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"name","name",1843675177),"editing-patient-info-component",new cljs.core.Keyword(null,"documentation","documentation",1889593999),null,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){
-if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefined') && (typeof react_med.screens.patient_info !== 'undefined') && (typeof react_med.screens.patient_info.card !== 'undefined') && (typeof react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291 !== 'undefined')){
+if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefined') && (typeof react_med.screens.patient_info !== 'undefined') && (typeof react_med.screens.patient_info.card !== 'undefined') && (typeof react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781 !== 'undefined')){
 } else {
 
 /**
@@ -305,39 +305,39 @@ if((typeof react_med !== 'undefined') && (typeof react_med.screens !== 'undefine
  * @implements {cljs.core.IWithMeta}
  * @implements {devcards.core.IDevcardOptions}
 */
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291 = (function (meta35292){
-this.meta35292 = meta35292;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781 = (function (meta35782){
+this.meta35782 = meta35782;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 });
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_35293,meta35292__$1){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_35783,meta35782__$1){
 var self__ = this;
-var _35293__$1 = this;
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291(meta35292__$1));
+var _35783__$1 = this;
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781(meta35782__$1));
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_35293){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_35783){
 var self__ = this;
-var _35293__$1 = this;
-return self__.meta35292;
+var _35783__$1 = this;
+return self__.meta35782;
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.prototype.devcards$core$IDevcardOptions$ = cljs.core.PROTOCOL_SENTINEL;
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__21007__auto__,devcard_opts__21008__auto__){
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.prototype.devcards$core$IDevcardOptions$_devcard_options$arity$2 = (function (this__21007__auto__,devcard_opts__21008__auto__){
 var self__ = this;
 var this__21007__auto____$1 = this;
 return cljs.core.assoc.call(null,devcard_opts__21008__auto__,new cljs.core.Keyword(null,"main-obj","main-obj",-1544409742),(function (){var v__21026__auto__ = ((function (this__21007__auto____$1){
 return (function (devcard_data,_){
-var map__35294 = cljs.core.deref.call(null,devcard_data);
-var map__35294__$1 = (((((!((map__35294 == null))))?(((((map__35294.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35294.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35294):map__35294);
-var hidden_QMARK_ = cljs.core.get.call(null,map__35294__$1,new cljs.core.Keyword(null,"hidden?","hidden?",1339691380));
+var map__35784 = cljs.core.deref.call(null,devcard_data);
+var map__35784__$1 = (((((!((map__35784 == null))))?(((((map__35784.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__35784.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__35784):map__35784);
+var hidden_QMARK_ = cljs.core.get.call(null,map__35784__$1,new cljs.core.Keyword(null,"hidden?","hidden?",1339691380));
 cljs.core.swap_BANG_.call(null,react_med.screens.patient_info.card.devcards_hidden,cljs.core.conj,hidden_QMARK_);
 
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-expander","div.card-expander",969295648),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__35294,map__35294__$1,hidden_QMARK_,this__21007__auto____$1){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-expander","div.card-expander",969295648),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__35784,map__35784__$1,hidden_QMARK_,this__21007__auto____$1){
 return (function (){
 return cljs.core.swap_BANG_.call(null,hidden_QMARK_,cljs.core.not);
-});})(map__35294,map__35294__$1,hidden_QMARK_,this__21007__auto____$1))
+});})(map__35784,map__35784__$1,hidden_QMARK_,this__21007__auto____$1))
 ,new cljs.core.Keyword(null,"style","style",-496642736),({"textAlign": "center"})], null),(cljs.core.truth_(cljs.core.deref.call(null,hidden_QMARK_))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.patient_info.card.global$module$expand_more], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.patient_info.card.global$module$expand_less], null))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.card-container","div.card-container",-901577759),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"display": "flex"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_boundary,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"if-error","if-error",-1992288515),react_med.shell_components.error_view], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.component-container","div.component-container",-642182457),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"hidden","hidden",-312506092),cljs.core.deref.call(null,hidden_QMARK_)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.patient_info.core.editing_patient_info_component], null)], null)], null)], null)], null);
 });})(this__21007__auto____$1))
 ;
@@ -353,28 +353,28 @@ return reagent.core.as_element.call(null,v__21026__auto__);
 })(),new cljs.core.Keyword(null,"options","options",99638489),cljs.core.merge.call(null,cljs.core.PersistentArrayMap.EMPTY,devcards.core.assert_options_map.call(null,new cljs.core.Keyword(null,"options","options",99638489).cljs$core$IFn$_invoke$arity$1(devcard_opts__21008__auto__))));
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta35292","meta35292",1070282968,null)], null);
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"meta35782","meta35782",-199545306,null)], null);
 });
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.cljs$lang$type = true;
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.cljs$lang$type = true;
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.cljs$lang$ctorStr = "react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35291";
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.cljs$lang$ctorStr = "react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35781";
 
-react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
-return cljs.core._write.call(null,writer__4375__auto__,"react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35291");
+react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
+return cljs.core._write.call(null,writer__4375__auto__,"react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35781");
 });
 
 /**
- * Positional factory function for react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35291.
+ * Positional factory function for react-med.screens.patient-info.card/t_react_med$screens$patient_info$card35781.
  */
-react_med.screens.patient_info.card.__GT_t_react_med$screens$patient_info$card35291 = (function react_med$screens$patient_info$card$__GT_t_react_med$screens$patient_info$card35291(meta35292){
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291(meta35292));
+react_med.screens.patient_info.card.__GT_t_react_med$screens$patient_info$card35781 = (function react_med$screens$patient_info$card$__GT_t_react_med$screens$patient_info$card35781(meta35782){
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781(meta35782));
 });
 
 }
 
-return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35291(null));
+return (new react_med.screens.patient_info.card.t_react_med$screens$patient_info$card35781(null));
 })()
 ,new cljs.core.Keyword(null,"initial-data","initial-data",-1315709804),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"hidden?","hidden?",1339691380),reagent.core.atom.call(null,false)], null),new cljs.core.Keyword(null,"options","options",99638489),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"watch-atom","watch-atom",-2134031308),false], null)], null));
 })], null));

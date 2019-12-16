@@ -55,7 +55,7 @@
 (defn share [data filename type]
   (-> js/navigator
       (.share #js {#_#_"url" "https://web.dev"
-                   "files" #js [(new js/Blob #js [data] "Avaliacao.csv")]
+                   "files" #js [(new js/File #js [data] "Avaliacao.csv")]
                    "title" "Avaliação da Dani"
                    "text" "Texto q acho q não vai aparecer."
                    })
@@ -77,7 +77,7 @@
 
 (defn yyyy-mm-dd->dd-mm-yyyy [date]
   (let [[_ year month day] (re-find #"(\d{4})\D(\d{1,2})\D(\d{1,2})" date)]
-     (str day"/"month"/"year)))
+     (str day"-"month"/"year)))
 
 (defn export-to-csv
   [app-state [event #_new-birth-date]]
