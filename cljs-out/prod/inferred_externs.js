@@ -46,6 +46,7 @@ HTMLDocument.prototype.getElementById;
 var SyntaxError;
 var confirm;
 var URIError;
+TypeError.prototype.toString;
 var RESULT;
 RESULT.prototype.catch$;
 var process;

@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.temporal.temporal_amount');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time.temporal');
 cljc.java_time.temporal.temporal_amount.get = (function cljc$java_time$temporal$temporal_amount$get(this3108,java_time_temporal_TemporalUnit3109){
@@ -16,3 +15,5 @@ return this3111.addTo(java_time_temporal_Temporal3112);
 cljc.java_time.temporal.temporal_amount.subtract_from = (function cljc$java_time$temporal$temporal_amount$subtract_from(this3113,java_time_temporal_Temporal3114){
 return this3113.subtractFrom(java_time_temporal_Temporal3114);
 });
+
+//# sourceMappingURL=temporal_amount.js.map

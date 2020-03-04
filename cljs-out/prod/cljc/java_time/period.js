@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.period');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.period.zero = java.time.Period.ZERO;
@@ -113,3 +112,5 @@ return this1846.plusYears(long1847);
 cljc.java_time.period.minus_days = (function cljc$java_time$period$minus_days(this1848,long1849){
 return this1848.minusDays(long1849);
 });
+
+//# sourceMappingURL=period.js.map

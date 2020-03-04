@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.zone_offset');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.zone_offset.max = java.time.ZoneOffset.MAX;
@@ -17,8 +16,8 @@ cljc.java_time.zone_offset.of_total_seconds = (function cljc$java_time$zone_offs
 return java.time.ZoneOffset.ofTotalSeconds(int3033);
 });
 cljc.java_time.zone_offset.of = (function cljc$java_time$zone_offset$of(var_args){
-var G__20554 = arguments.length;
-switch (G__20554) {
+var G__8949 = arguments.length;
+switch (G__8949) {
 case 1:
 return cljc.java_time.zone_offset.of.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -103,3 +102,5 @@ return this3067.get(java_time_temporal_TemporalField3068);
 cljc.java_time.zone_offset.equals = (function cljc$java_time$zone_offset$equals(this3069,java_lang_Object3070){
 return this3069.equals(java_lang_Object3070);
 });
+
+//# sourceMappingURL=zone_offset.js.map

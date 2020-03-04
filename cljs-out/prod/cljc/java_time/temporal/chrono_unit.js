@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.temporal.chrono_unit');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time.temporal');
 cljc.java_time.temporal.chrono_unit.millis = java.time.temporal.ChronoUnit.MILLIS;
@@ -24,8 +23,8 @@ cljc.java_time.temporal.chrono_unit.values = (function cljc$java_time$temporal$c
 return java.time.temporal.ChronoUnit.values();
 });
 cljc.java_time.temporal.chrono_unit.value_of = (function cljc$java_time$temporal$chrono_unit$value_of(var_args){
-var G__20405 = arguments.length;
-switch (G__20405) {
+var G__8339 = arguments.length;
+switch (G__8339) {
 case 1:
 return cljc.java_time.temporal.chrono_unit.value_of.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -92,3 +91,5 @@ return this3136.equals(java_lang_Object3137);
 cljc.java_time.temporal.chrono_unit.is_time_based = (function cljc$java_time$temporal$chrono_unit$is_time_based(this3138){
 return this3138.isTimeBased();
 });
+
+//# sourceMappingURL=chrono_unit.js.map

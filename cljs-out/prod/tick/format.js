@@ -1,9 +1,8 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('tick.format');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('java.time.format');
-tick.format.predefined_formatters = new cljs.core.PersistentArrayMap(null, 6, [cljs.core.cst$kw$iso_DASH_zoned_DASH_date_DASH_time,java.time.format.DateTimeFormatter.ISO_ZONED_DATE_TIME,cljs.core.cst$kw$iso_DASH_offset_DASH_date_DASH_time,java.time.format.DateTimeFormatter.ISO_OFFSET_DATE_TIME,cljs.core.cst$kw$iso_DASH_local_DASH_time,java.time.format.DateTimeFormatter.ISO_LOCAL_TIME,cljs.core.cst$kw$iso_DASH_local_DASH_date_DASH_time,java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME,cljs.core.cst$kw$iso_DASH_local_DASH_date,java.time.format.DateTimeFormatter.ISO_LOCAL_DATE,cljs.core.cst$kw$iso_DASH_instant,java.time.format.DateTimeFormatter.ISO_INSTANT], null);
+tick.format.predefined_formatters = new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"iso-zoned-date-time","iso-zoned-date-time",-1626338878),java.time.format.DateTimeFormatter.ISO_ZONED_DATE_TIME,new cljs.core.Keyword(null,"iso-offset-date-time","iso-offset-date-time",-47990863),java.time.format.DateTimeFormatter.ISO_OFFSET_DATE_TIME,new cljs.core.Keyword(null,"iso-local-time","iso-local-time",-1676599821),java.time.format.DateTimeFormatter.ISO_LOCAL_TIME,new cljs.core.Keyword(null,"iso-local-date-time","iso-local-date-time",-1669236935),java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME,new cljs.core.Keyword(null,"iso-local-date","iso-local-date",571187900),java.time.format.DateTimeFormatter.ISO_LOCAL_DATE,new cljs.core.Keyword(null,"iso-instant","iso-instant",1024383901),java.time.format.DateTimeFormatter.ISO_INSTANT], null);
 /**
  * Constructs a DateTimeFormatter out of either a
  * 
@@ -14,8 +13,8 @@ tick.format.predefined_formatters = new cljs.core.PersistentArrayMap(null, 6, [c
  *   and a Locale, which is optional.
  */
 tick.format.formatter = (function tick$format$formatter(var_args){
-var G__20305 = arguments.length;
-switch (G__20305) {
+var G__8140 = arguments.length;
+switch (G__8140) {
 case 1:
 return tick.format.formatter.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -31,24 +30,24 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 tick.format.formatter.cljs$core$IFn$_invoke$arity$1 = (function (fmt){
-return tick.format.formatter.cljs$core$IFn$_invoke$arity$2(fmt,(function (){try{var G__20307 = goog.object.get(JSJodaLocale,"Locale");
-if((G__20307 == null)){
+return tick.format.formatter.call(null,fmt,(function (){try{var G__8142 = goog.object.get(JSJodaLocale,"Locale");
+if((G__8142 == null)){
 return null;
 } else {
-return goog.object.get(G__20307,"US");
+return goog.object.get(G__8142,"US");
 }
-}catch (e20306){if((e20306 instanceof Error)){
-var e = e20306;
+}catch (e8141){if((e8141 instanceof Error)){
+var e = e8141;
 return null;
 } else {
-throw e20306;
+throw e8141;
 
 }
 }})());
 });
 
 tick.format.formatter.cljs$core$IFn$_invoke$arity$2 = (function (fmt,locale){
-var fmt__$1 = (((fmt instanceof java.time.format.DateTimeFormatter))?fmt:((typeof fmt === 'string')?(((locale == null))?(function(){throw (new Error("Locale is nil, try adding a require '[tick.locale-en-us]"))})():java.time.format.DateTimeFormatter.ofPattern(fmt).withLocale(locale)):cljs.core.get.cljs$core$IFn$_invoke$arity$2(tick.format.predefined_formatters,fmt)
+var fmt__$1 = (((fmt instanceof java.time.format.DateTimeFormatter))?fmt:((typeof fmt === 'string')?(((locale == null))?(function(){throw (new Error("Locale is nil, try adding a require '[tick.locale-en-us]"))})():java.time.format.DateTimeFormatter.ofPattern(fmt).withLocale(locale)):cljs.core.get.call(null,tick.format.predefined_formatters,fmt)
 ));
 return fmt__$1;
 });
@@ -61,8 +60,8 @@ tick.format.formatter.cljs$lang$maxFixedArity = 2;
  *   argument. Given one argument uses the default format.
  */
 tick.format.format = (function tick$format$format(var_args){
-var G__20310 = arguments.length;
-switch (G__20310) {
+var G__8145 = arguments.length;
+switch (G__8145) {
 case 1:
 return tick.format.format.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -82,8 +81,10 @@ return cljs.core.str.cljs$core$IFn$_invoke$arity$1(o);
 });
 
 tick.format.format.cljs$core$IFn$_invoke$arity$2 = (function (fmt,o){
-return tick.format.formatter.cljs$core$IFn$_invoke$arity$1(fmt).format(o);
+return tick.format.formatter.call(null,fmt).format(o);
 });
 
 tick.format.format.cljs$lang$maxFixedArity = 2;
 
+
+//# sourceMappingURL=format.js.map

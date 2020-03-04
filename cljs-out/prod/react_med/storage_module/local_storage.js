@@ -1,106 +1,103 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('react_med.storage_module.local_storage');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('akiroz.re_frame.storage');
 goog.require('day8.re_frame.tracing');
 goog.require('re_frame.core');
 goog.require('react_med.storage_module.firebase');
 goog.require('react_med.storage_module.initial_state');
-akiroz.re_frame.storage.reg_co_fx_BANG_(cljs.core.cst$kw$react_DASH_med_DASH_app_DASH_state,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$fx,cljs.core.cst$kw$store,cljs.core.cst$kw$cofx,cljs.core.cst$kw$store], null));
-re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$react_DASH_med$storage_DASH_module$local_DASH_storage_SLASH_save_DASH_domain_DASH_to_DASH_local_DASH_storage,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__20063 = cljs.core.cst$kw$store;
-return (re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1(G__20063) : re_frame.core.inject_cofx.call(null,G__20063));
-})()], null),((day8.re_frame.tracing.is_trace_enabled_QMARK_())?(function (p__20064,_){
-var map__20065 = p__20064;
-var map__20065__$1 = (((((!((map__20065 == null))))?(((((map__20065.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20065.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20065):map__20065);
-var db = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20065__$1,cljs.core.cst$kw$db);
-var store = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20065__$1,cljs.core.cst$kw$store);
+akiroz.re_frame.storage.reg_co_fx_BANG_.call(null,new cljs.core.Keyword(null,"react-med-app-state","react-med-app-state",1516655683),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"fx","fx",-1237829572),new cljs.core.Keyword(null,"store","store",1512230022),new cljs.core.Keyword(null,"cofx","cofx",2013202907),new cljs.core.Keyword(null,"store","store",1512230022)], null));
+re_frame.core.reg_event_fx.call(null,new cljs.core.Keyword("react-med.storage-module.local-storage","save-domain-to-local-storage","react-med.storage-module.local-storage/save-domain-to-local-storage",-403399307),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_frame.core.inject_cofx.call(null,new cljs.core.Keyword(null,"store","store",1512230022))], null),((day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null))?(function (p__19312,_){
+var map__19313 = p__19312;
+var map__19313__$1 = (((((!((map__19313 == null))))?(((((map__19313.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19313.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19313):map__19313);
+var db = cljs.core.get.call(null,map__19313__$1,new cljs.core.Keyword(null,"db","db",993250759));
+var store = cljs.core.get.call(null,map__19313__$1,new cljs.core.Keyword(null,"store","store",1512230022));
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$if,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$store),new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$store,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$sym$store,cljs.core.cst$kw$domain,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$db)),cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_save_DASH_to_DASH_firebase,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$sym$store,cljs.core.cst$kw$domain,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$db))], null)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null)));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"store","store",-1142205747,null)),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"store","store",1512230022),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"domain","domain",1847214937),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"db","db",-1661185010,null))),new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","save-to-firebase","react-med.storage-module.firebase/save-to-firebase",-1606458749),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"domain","domain",1847214937),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"db","db",-1661185010,null)))], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null)));
 
-var opts__19887__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = (cljs.core.truth_((function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1((function (){var opts__19887__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = store;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$store,cljs.core.cst$kw$indent_DASH_level,(2)], null));
+var opts__19139__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = (cljs.core.truth_((function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1((function (){var opts__19139__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = store;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$store),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"store","store",-1142205747,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})())?(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$store,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(store,cljs.core.cst$kw$domain,cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1(db)),cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_save_DASH_to_DASH_firebase,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(store,cljs.core.cst$kw$domain,cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1(db))], null)], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$store,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$sym$store,cljs.core.cst$kw$domain,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$db)),cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_save_DASH_to_DASH_firebase,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$sym$store,cljs.core.cst$kw$domain,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$db))], null)], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})())?(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"store","store",1512230022),cljs.core.assoc.call(null,store,new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1(db)),new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","save-to-firebase","react-med.storage-module.firebase/save-to-firebase",-1606458749),cljs.core.assoc.call(null,store,new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1(db))], null)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"store","store",1512230022),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"domain","domain",1847214937),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"db","db",-1661185010,null))),new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","save-to-firebase","react-med.storage-module.firebase/save-to-firebase",-1606458749),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"domain","domain",1847214937),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"db","db",-1661185010,null)))], null)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})():(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})():(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$if,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$store),new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$store,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$sym$store,cljs.core.cst$kw$domain,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$db)),cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_save_DASH_to_DASH_firebase,cljs.core.list(cljs.core.cst$sym$assoc,cljs.core.cst$sym$store,cljs.core.cst$kw$domain,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$db))], null)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null)),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"store","store",-1142205747,null)),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"store","store",1512230022),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"domain","domain",1847214937),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"db","db",-1661185010,null))),new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","save-to-firebase","react-med.storage-module.firebase/save-to-firebase",-1606458749),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"domain","domain",1847214937),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"db","db",-1661185010,null)))], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19888__auto__;
-}catch (e20067){var e = e20067;
+return result__19140__auto__;
+}catch (e19315){var e = e19315;
 throw e;
-}}):(function (p__20068,_){
-var map__20069 = p__20068;
-var map__20069__$1 = (((((!((map__20069 == null))))?(((((map__20069.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20069.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20069):map__20069);
-var db = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20069__$1,cljs.core.cst$kw$db);
-var store = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20069__$1,cljs.core.cst$kw$store);
-if(cljs.core.truth_(cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1(store))){
-return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$store,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(store,cljs.core.cst$kw$domain,cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1(db)),cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_save_DASH_to_DASH_firebase,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(store,cljs.core.cst$kw$domain,cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1(db))], null)], null);
+}}):(function (p__19316,_){
+var map__19317 = p__19316;
+var map__19317__$1 = (((((!((map__19317 == null))))?(((((map__19317.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19317.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19317):map__19317);
+var db = cljs.core.get.call(null,map__19317__$1,new cljs.core.Keyword(null,"db","db",993250759));
+var store = cljs.core.get.call(null,map__19317__$1,new cljs.core.Keyword(null,"store","store",1512230022));
+if(cljs.core.truth_(new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1(store))){
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"store","store",1512230022),cljs.core.assoc.call(null,store,new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1(db)),new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","save-to-firebase","react-med.storage-module.firebase/save-to-firebase",-1606458749),cljs.core.assoc.call(null,store,new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1(db))], null)], null);
 } else {
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null);
+return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null);
 }
 })));
-re_frame.core.reg_event_fx.cljs$core$IFn$_invoke$arity$3(cljs.core.cst$kw$react_DASH_med$storage_DASH_module$local_DASH_storage_SLASH_load_DASH_domain_DASH_from_DASH_local_DASH_storage,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__20071 = cljs.core.cst$kw$store;
-return (re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1 ? re_frame.core.inject_cofx.cljs$core$IFn$_invoke$arity$1(G__20071) : re_frame.core.inject_cofx.call(null,G__20071));
-})()], null),((day8.re_frame.tracing.is_trace_enabled_QMARK_())?(function (p__20072,_){
-var map__20073 = p__20072;
-var map__20073__$1 = (((((!((map__20073 == null))))?(((((map__20073.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20073.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20073):map__20073);
-var db = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20073__$1,cljs.core.cst$kw$db);
-var store = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20073__$1,cljs.core.cst$kw$store);
+re_frame.core.reg_event_fx.call(null,new cljs.core.Keyword("react-med.storage-module.local-storage","load-domain-from-local-storage","react-med.storage-module.local-storage/load-domain-from-local-storage",-1642872826),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [re_frame.core.inject_cofx.call(null,new cljs.core.Keyword(null,"store","store",1512230022))], null),((day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null))?(function (p__19319,_){
+var map__19320 = p__19319;
+var map__19320__$1 = (((((!((map__19320 == null))))?(((((map__19320.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19320.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19320):map__19320);
+var db = cljs.core.get.call(null,map__19320__$1,new cljs.core.Keyword(null,"db","db",993250759));
+var store = cljs.core.get.call(null,map__19320__$1,new cljs.core.Keyword(null,"store","store",1512230022));
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$if,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$store),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$db,cljs.core.list(cljs.core.cst$sym$merge,cljs.core.cst$sym$store,cljs.core.cst$sym$initial_DASH_state_SLASH_ui_DASH_initial_DASH_state)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null)));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"store","store",-1142205747,null)),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"db","db",993250759),cljs.core.list(new cljs.core.Symbol(null,"merge","merge",-163787882,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Symbol("initial-state","ui-initial-state","initial-state/ui-initial-state",-542571818,null))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null)));
 
-var opts__19887__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = (cljs.core.truth_((function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1((function (){var opts__19887__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = store;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$store,cljs.core.cst$kw$indent_DASH_level,(2)], null));
+var opts__19139__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = (cljs.core.truth_((function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1((function (){var opts__19139__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = store;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$store),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"store","store",-1142205747,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})())?(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$db,cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([store,react_med.storage_module.initial_state.ui_initial_state], 0))], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$db,cljs.core.list(cljs.core.cst$sym$merge,cljs.core.cst$sym$store,cljs.core.cst$sym$initial_DASH_state_SLASH_ui_DASH_initial_DASH_state)], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})())?(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"db","db",993250759),cljs.core.merge.call(null,store,react_med.storage_module.initial_state.ui_initial_state)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"db","db",993250759),cljs.core.list(new cljs.core.Symbol(null,"merge","merge",-163787882,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Symbol("initial-state","ui-initial-state","initial-state/ui-initial-state",-542571818,null))], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})():(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})():(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$if,cljs.core.list(cljs.core.cst$kw$domain,cljs.core.cst$sym$store),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$db,cljs.core.list(cljs.core.cst$sym$merge,cljs.core.cst$sym$store,cljs.core.cst$sym$initial_DASH_state_SLASH_ui_DASH_initial_DASH_state)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null)),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Symbol(null,"store","store",-1142205747,null)),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"db","db",993250759),cljs.core.list(new cljs.core.Symbol(null,"merge","merge",-163787882,null),new cljs.core.Symbol(null,"store","store",-1142205747,null),new cljs.core.Symbol("initial-state","ui-initial-state","initial-state/ui-initial-state",-542571818,null))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19888__auto__;
-}catch (e20075){var e = e20075;
+return result__19140__auto__;
+}catch (e19322){var e = e19322;
 throw e;
-}}):(function (p__20076,_){
-var map__20077 = p__20076;
-var map__20077__$1 = (((((!((map__20077 == null))))?(((((map__20077.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20077.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20077):map__20077);
-var db = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20077__$1,cljs.core.cst$kw$db);
-var store = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20077__$1,cljs.core.cst$kw$store);
-if(cljs.core.truth_(cljs.core.cst$kw$domain.cljs$core$IFn$_invoke$arity$1(store))){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$db,cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([store,react_med.storage_module.initial_state.ui_initial_state], 0))], null);
+}}):(function (p__19323,_){
+var map__19324 = p__19323;
+var map__19324__$1 = (((((!((map__19324 == null))))?(((((map__19324.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19324.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19324):map__19324);
+var db = cljs.core.get.call(null,map__19324__$1,new cljs.core.Keyword(null,"db","db",993250759));
+var store = cljs.core.get.call(null,map__19324__$1,new cljs.core.Keyword(null,"store","store",1512230022));
+if(cljs.core.truth_(new cljs.core.Keyword(null,"domain","domain",1847214937).cljs$core$IFn$_invoke$arity$1(store))){
+return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"db","db",993250759),cljs.core.merge.call(null,store,react_med.storage_module.initial_state.ui_initial_state)], null);
 } else {
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$dispatch,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$storage_DASH_module$firebase_SLASH_restore_DASH_domain_DASH_from_DASH_firebase], null)], null);
+return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"dispatch","dispatch",1319337009),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.storage-module.firebase","restore-domain-from-firebase","react-med.storage-module.firebase/restore-domain-from-firebase",558704003)], null)], null);
 }
 })));
+
+//# sourceMappingURL=local_storage.js.map

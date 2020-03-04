@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.day_of_week');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.day_of_week.saturday = java.time.DayOfWeek.SATURDAY;
@@ -18,8 +17,8 @@ cljc.java_time.day_of_week.values = (function cljc$java_time$day_of_week$values(
 return java.time.DayOfWeek.values();
 });
 cljc.java_time.day_of_week.value_of = (function cljc$java_time$day_of_week$value_of(var_args){
-var G__20479 = arguments.length;
-switch (G__20479) {
+var G__8411 = arguments.length;
+switch (G__8411) {
 case 1:
 return cljc.java_time.day_of_week.value_of.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -98,3 +97,5 @@ return this2611.get(java_time_temporal_TemporalField2612);
 cljc.java_time.day_of_week.equals = (function cljc$java_time$day_of_week$equals(this2613,java_lang_Object2614){
 return this2613.equals(java_lang_Object2614);
 });
+
+//# sourceMappingURL=day_of_week.js.map

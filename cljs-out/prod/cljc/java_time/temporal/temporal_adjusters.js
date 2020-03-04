@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.temporal.temporal_adjusters');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time.temporal');
 cljc.java_time.temporal.temporal_adjusters.next = (function cljc$java_time$temporal$temporal_adjusters$next(java_time_DayOfWeek3071){
@@ -46,3 +45,5 @@ return java.time.temporal.TemporalAdjusters.firstDayOfNextYear();
 cljc.java_time.temporal.temporal_adjusters.day_of_week_in_month = (function cljc$java_time$temporal$temporal_adjusters$day_of_week_in_month(int3078,java_time_DayOfWeek3079){
 return java.time.temporal.TemporalAdjusters.dayOfWeekInMonth(int3078,java_time_DayOfWeek3079);
 });
+
+//# sourceMappingURL=temporal_adjusters.js.map

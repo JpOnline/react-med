@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.month');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.month.may = java.time.Month.MAY;
@@ -23,8 +22,8 @@ cljc.java_time.month.values = (function cljc$java_time$month$values(){
 return java.time.Month.values();
 });
 cljc.java_time.month.value_of = (function cljc$java_time$month$value_of(var_args){
-var G__20549 = arguments.length;
-switch (G__20549) {
+var G__8944 = arguments.length;
+switch (G__8944) {
 case 1:
 return cljc.java_time.month.value_of.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -118,3 +117,5 @@ return this2747.get(java_time_temporal_TemporalField2748);
 cljc.java_time.month.equals = (function cljc$java_time$month$equals(this2749,java_lang_Object2750){
 return this2749.equals(java_lang_Object2750);
 });
+
+//# sourceMappingURL=month.js.map

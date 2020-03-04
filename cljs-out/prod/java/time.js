@@ -1,7 +1,7 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('java.time');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
+goog.require('js_joda');
 java.time.global$module$js_joda = goog.global["JSJoda"];
 java.time.Period = java.time.global$module$js_joda.Period;
 java.time.Instant = java.time.global$module$js_joda.Instant;
@@ -332,3 +332,5 @@ java.time.Duration.prototype.cljs$core$IHash$_hash$arity$1 = (function (x){
 var x__$1 = this;
 return ((x__$1.nano() * (51)) + ((x__$1.seconds() ^ (x__$1.seconds() >>> (32))) | (0)));
 });
+
+//# sourceMappingURL=time.js.map

@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.clock');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.clock.tick = (function cljc$java_time$clock$tick(java_time_Clock3014,java_time_Duration3015){
@@ -46,3 +45,5 @@ return this3028.instant();
 cljc.java_time.clock.equals = (function cljc$java_time$clock$equals(this3029,java_lang_Object3030){
 return this3029.equals(java_lang_Object3030);
 });
+
+//# sourceMappingURL=clock.js.map

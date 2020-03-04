@@ -1,14 +1,13 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljs.env');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 cljs.env._STAR_compiler_STAR_ = null;
 cljs.env.default_compiler_env_STAR_ = (function cljs$env$default_compiler_env_STAR_(options){
-return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$cljs$analyzer_SLASH_namespaces,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$sym$cljs$user,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$name,cljs.core.cst$sym$cljs$user], null)], null),cljs.core.cst$kw$cljs$analyzer_SLASH_constant_DASH_table,cljs.core.PersistentArrayMap.EMPTY,cljs.core.cst$kw$cljs$analyzer_SLASH_data_DASH_readers,cljs.core.PersistentArrayMap.EMPTY,cljs.core.cst$kw$cljs$analyzer_SLASH_externs,null,cljs.core.cst$kw$options,options], null)], 0));
+return cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword("cljs.analyzer","namespaces","cljs.analyzer/namespaces",-260788927),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Symbol(null,"cljs.user","cljs.user",877795071,null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Symbol(null,"cljs.user","cljs.user",877795071,null)], null)], null),new cljs.core.Keyword("cljs.analyzer","constant-table","cljs.analyzer/constant-table",-114131889),cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword("cljs.analyzer","data-readers","cljs.analyzer/data-readers",1778544933),cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword("cljs.analyzer","externs","cljs.analyzer/externs",893359239),null,new cljs.core.Keyword(null,"options","options",99638489),options], null));
 });
 cljs.env.default_compiler_env = (function cljs$env$default_compiler_env(var_args){
-var G__15792 = arguments.length;
-switch (G__15792) {
+var G__15995 = arguments.length;
+switch (G__15995) {
 case 0:
 return cljs.env.default_compiler_env.cljs$core$IFn$_invoke$arity$0();
 
@@ -24,12 +23,14 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 cljs.env.default_compiler_env.cljs$core$IFn$_invoke$arity$0 = (function (){
-return cljs.env.default_compiler_env.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
+return cljs.env.default_compiler_env.call(null,cljs.core.PersistentArrayMap.EMPTY);
 });
 
 cljs.env.default_compiler_env.cljs$core$IFn$_invoke$arity$1 = (function (options){
-return cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.env.default_compiler_env_STAR_(options));
+return cljs.core.atom.call(null,cljs.env.default_compiler_env_STAR_.call(null,options));
 });
 
 cljs.env.default_compiler_env.cljs$lang$maxFixedArity = 1;
 
+
+//# sourceMappingURL=env.js.map

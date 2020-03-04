@@ -1,4 +1,5 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljs.java_time.extend_eq_and_compare');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
+
+//# sourceMappingURL=extend_eq_and_compare.js.map

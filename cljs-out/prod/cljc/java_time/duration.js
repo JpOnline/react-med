@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.duration');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.duration.zero = java.time.Duration.ZERO;
@@ -54,8 +53,8 @@ cljc.java_time.duration.plus_nanos = (function cljc$java_time$duration$plus_nano
 return this2820.plusNanos(long2821);
 });
 cljc.java_time.duration.plus = (function cljc$java_time$duration$plus(var_args){
-var G__20599 = arguments.length;
-switch (G__20599) {
+var G__9858 = arguments.length;
+switch (G__9858) {
 case 2:
 return cljc.java_time.duration.plus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -90,8 +89,8 @@ cljc.java_time.duration.to_string = (function cljc$java_time$duration$to_string(
 return this2831.toString();
 });
 cljc.java_time.duration.minus = (function cljc$java_time$duration$minus(var_args){
-var G__20602 = arguments.length;
-switch (G__20602) {
+var G__9861 = arguments.length;
+switch (G__9861) {
 case 2:
 return cljc.java_time.duration.minus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -186,8 +185,8 @@ cljc.java_time.duration.equals = (function cljc$java_time$duration$equals(this28
 return this2869.equals(java_lang_Object2870);
 });
 cljc.java_time.duration.of_seconds = (function cljc$java_time$duration$of_seconds(var_args){
-var G__20605 = arguments.length;
-switch (G__20605) {
+var G__9864 = arguments.length;
+switch (G__9864) {
 case 1:
 return cljc.java_time.duration.of_seconds.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -218,3 +217,5 @@ return this2874.minusDays(long2875);
 cljc.java_time.duration.to_days = (function cljc$java_time$duration$to_days(this2876){
 return this2876.toDays();
 });
+
+//# sourceMappingURL=duration.js.map

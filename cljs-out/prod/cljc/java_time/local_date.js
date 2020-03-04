@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.local_date');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.local_date.max = java.time.LocalDate.MAX;
@@ -40,8 +39,8 @@ cljc.java_time.local_date.get_day_of_year = (function cljc$java_time$local_date$
 return this1868.dayOfYear();
 });
 cljc.java_time.local_date.plus = (function cljc$java_time$local_date$plus(var_args){
-var G__20375 = arguments.length;
-switch (G__20375) {
+var G__8311 = arguments.length;
+switch (G__8311) {
 case 3:
 return cljc.java_time.local_date.plus.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -88,8 +87,8 @@ cljc.java_time.local_date.minus_months = (function cljc$java_time$local_date$min
 return this1883.minusMonths(long1884);
 });
 cljc.java_time.local_date.minus = (function cljc$java_time$local_date$minus(var_args){
-var G__20378 = arguments.length;
-switch (G__20378) {
+var G__8314 = arguments.length;
+switch (G__8314) {
 case 3:
 return cljc.java_time.local_date.minus.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -127,8 +126,8 @@ cljc.java_time.local_date.length_of_month = (function cljc$java_time$local_date$
 return this1896.lengthOfMonth();
 });
 cljc.java_time.local_date.until = (function cljc$java_time$local_date$until(var_args){
-var G__20381 = arguments.length;
-switch (G__20381) {
+var G__8317 = arguments.length;
+switch (G__8317) {
 case 2:
 return cljc.java_time.local_date.until.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -178,8 +177,8 @@ cljc.java_time.local_date.get_chronology = (function cljc$java_time$local_date$g
 return this1913.chronology();
 });
 cljc.java_time.local_date.parse = (function cljc$java_time$local_date$parse(var_args){
-var G__20384 = arguments.length;
-switch (G__20384) {
+var G__8320 = arguments.length;
+switch (G__8320) {
 case 2:
 return cljc.java_time.local_date.parse.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -211,8 +210,8 @@ cljc.java_time.local_date.adjust_into = (function cljc$java_time$local_date$adju
 return this1918.adjustInto(java_time_temporal_Temporal1919);
 });
 cljc.java_time.local_date.with$ = (function cljc$java_time$local_date$with(var_args){
-var G__20387 = arguments.length;
-switch (G__20387) {
+var G__8323 = arguments.length;
+switch (G__8323) {
 case 3:
 return cljc.java_time.local_date.with$.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -238,8 +237,8 @@ return this1923.with(G__1924);
 cljc.java_time.local_date.with$.cljs$lang$maxFixedArity = 3;
 
 cljc.java_time.local_date.now = (function cljc$java_time$local_date$now(var_args){
-var G__20390 = arguments.length;
-switch (G__20390) {
+var G__8326 = arguments.length;
+switch (G__8326) {
 case 0:
 return cljc.java_time.local_date.now.cljs$core$IFn$_invoke$arity$0();
 
@@ -265,8 +264,8 @@ return java.time.LocalDate.now(G__1926);
 cljc.java_time.local_date.now.cljs$lang$maxFixedArity = 1;
 
 cljc.java_time.local_date.at_start_of_day = (function cljc$java_time$local_date$at_start_of_day(var_args){
-var G__20393 = arguments.length;
-switch (G__20393) {
+var G__8329 = arguments.length;
+switch (G__8329) {
 case 2:
 return cljc.java_time.local_date.at_start_of_day.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -313,8 +312,8 @@ cljc.java_time.local_date.equals = (function cljc$java_time$local_date$equals(th
 return this1940.equals(java_lang_Object1941);
 });
 cljc.java_time.local_date.at_time = (function cljc$java_time$local_date$at_time(var_args){
-var G__20396 = arguments.length;
-switch (G__20396) {
+var G__8332 = arguments.length;
+switch (G__8332) {
 case 5:
 return cljc.java_time.local_date.at_time.cljs$core$IFn$_invoke$arity$5((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),(arguments[(4)]));
 
@@ -364,3 +363,5 @@ return this1958.plusYears(long1959);
 cljc.java_time.local_date.minus_days = (function cljc$java_time$local_date$minus_days(this1960,long1961){
 return this1960.minusDays(long1961);
 });
+
+//# sourceMappingURL=local_date.js.map

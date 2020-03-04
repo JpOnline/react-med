@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.temporal.chrono_field');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time.temporal');
 cljc.java_time.temporal.chrono_field.milli_of_second = java.time.temporal.ChronoField.MILLI_OF_SECOND;
@@ -44,8 +43,8 @@ cljc.java_time.temporal.chrono_field.values = (function cljc$java_time$temporal$
 return java.time.temporal.ChronoField.values();
 });
 cljc.java_time.temporal.chrono_field.value_of = (function cljc$java_time$temporal$chrono_field$value_of(var_args){
-var G__20412 = arguments.length;
-switch (G__20412) {
+var G__8344 = arguments.length;
+switch (G__8344) {
 case 1:
 return cljc.java_time.temporal.chrono_field.value_of.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -124,3 +123,5 @@ return this3172.isTimeBased();
 cljc.java_time.temporal.chrono_field.check_valid_value = (function cljc$java_time$temporal$chrono_field$check_valid_value(this3173,long3174){
 return this3173.checkValidValue(long3174);
 });
+
+//# sourceMappingURL=chrono_field.js.map

@@ -1,13 +1,23 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('react_med.shell_components');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
+goog.require('arrow_back');
+goog.require('button');
+goog.require('close_icon');
 goog.require('day8.re_frame.tracing');
+goog.require('icon_button');
+goog.require('menu_icon');
+goog.require('menu_item');
+goog.require('menu_list');
+goog.require('more_vert');
+goog.require('paper');
 goog.require('re_frame.core');
 goog.require('react_med.authentication.authentication');
 goog.require('react_med.motivation_sentences');
 goog.require('react_med.util');
 goog.require('reagent.core');
+goog.require('tab');
+goog.require('tabs');
 react_med.shell_components.global$module$arrow_back = goog.global["ArrowBack"];
 react_med.shell_components.global$module$button = goog.global["Button"];
 react_med.shell_components.global$module$close_icon = goog.global["CloseIcon"];
@@ -21,14 +31,14 @@ react_med.shell_components.global$module$tab = goog.global["Tab"];
 react_med.shell_components.global$module$tabs = goog.global["Tabs"];
 react_med.shell_components.header = (function react_med$shell_components$header(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20148 = arguments.length;
-var i__4731__auto___20149 = (0);
+var len__4730__auto___19380 = arguments.length;
+var i__4731__auto___19381 = (0);
 while(true){
-if((i__4731__auto___20149 < len__4730__auto___20148)){
-args__4736__auto__.push((arguments[i__4731__auto___20149]));
+if((i__4731__auto___19381 < len__4730__auto___19380)){
+args__4736__auto__.push((arguments[i__4731__auto___19381]));
 
-var G__20150 = (i__4731__auto___20149 + (1));
-i__4731__auto___20149 = G__20150;
+var G__19382 = (i__4731__auto___19381 + (1));
+i__4731__auto___19381 = G__19382;
 continue;
 } else {
 }
@@ -40,29 +50,29 @@ return react_med.shell_components.header.cljs$core$IFn$_invoke$arity$variadic(ar
 });
 
 react_med.shell_components.header.cljs$core$IFn$_invoke$arity$variadic = (function (children){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$header,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"color": "white", "backgroundColor": react_med.util.primary_color, "width": "100%", "display": "flex", "flexDirection": "column", "zIndex": (1100), "boxShadow": "0px 2px 4px -1px #0003,\n                            0px 4px 5px 0px #00000024,\n                            0px 1px 10px 0px #0000001f"})], null),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__20146_SHARP_,p2__20145_SHARP_){
-return cljs.core.with_meta(p2__20145_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,p1__20146_SHARP_], null));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"header","header",119441134),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"color": "white", "backgroundColor": react_med.util.primary_color, "width": "100%", "display": "flex", "flexDirection": "column", "zIndex": (1100), "boxShadow": "0px 2px 4px -1px #0003,\n                            0px 4px 5px 0px #00000024,\n                            0px 1px 10px 0px #0000001f"})], null),cljs.core.map_indexed.call(null,(function (p1__19378_SHARP_,p2__19377_SHARP_){
+return cljs.core.with_meta.call(null,p2__19377_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__19378_SHARP_], null));
 }),children)], null);
 });
 
 react_med.shell_components.header.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-react_med.shell_components.header.cljs$lang$applyTo = (function (seq20147){
+react_med.shell_components.header.cljs$lang$applyTo = (function (seq19379){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq20147));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19379));
 });
 
 react_med.shell_components.top_bar = (function react_med$shell_components$top_bar(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20154 = arguments.length;
-var i__4731__auto___20155 = (0);
+var len__4730__auto___19386 = arguments.length;
+var i__4731__auto___19387 = (0);
 while(true){
-if((i__4731__auto___20155 < len__4730__auto___20154)){
-args__4736__auto__.push((arguments[i__4731__auto___20155]));
+if((i__4731__auto___19387 < len__4730__auto___19386)){
+args__4736__auto__.push((arguments[i__4731__auto___19387]));
 
-var G__20156 = (i__4731__auto___20155 + (1));
-i__4731__auto___20155 = G__20156;
+var G__19388 = (i__4731__auto___19387 + (1));
+i__4731__auto___19387 = G__19388;
 continue;
 } else {
 }
@@ -74,58 +84,56 @@ return react_med.shell_components.top_bar.cljs$core$IFn$_invoke$arity$variadic(a
 });
 
 react_med.shell_components.top_bar.cljs$core$IFn$_invoke$arity$variadic = (function (children){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$top_DASH_bar,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"minHeight": (64), "padding": "0 24px", "display": "flex", "alignItems": "center"})], null),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__20152_SHARP_,p2__20151_SHARP_){
-return cljs.core.with_meta(p2__20151_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,p1__20152_SHARP_], null));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.top-bar","div.top-bar",-1606146455),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"minHeight": (64), "padding": "0 24px", "display": "flex", "alignItems": "center"})], null),cljs.core.map_indexed.call(null,(function (p1__19384_SHARP_,p2__19383_SHARP_){
+return cljs.core.with_meta.call(null,p2__19383_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__19384_SHARP_], null));
 }),children)], null);
 });
 
 react_med.shell_components.top_bar.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-react_med.shell_components.top_bar.cljs$lang$applyTo = (function (seq20153){
+react_med.shell_components.top_bar.cljs$lang$applyTo = (function (seq19385){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq20153));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19385));
 });
 
-react_med.shell_components.left_icon = (function react_med$shell_components$left_icon(p__20157){
-var map__20158 = p__20157;
-var map__20158__$1 = (((((!((map__20158 == null))))?(((((map__20158.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20158.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20158):map__20158);
-var variation = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20158__$1,cljs.core.cst$kw$variation);
-var G__20160 = variation;
-switch (G__20160) {
+react_med.shell_components.left_icon = (function react_med$shell_components$left_icon(p__19389){
+var map__19390 = p__19389;
+var map__19390__$1 = (((((!((map__19390 == null))))?(((((map__19390.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19390.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19390):map__19390);
+var variation = cljs.core.get.call(null,map__19390__$1,new cljs.core.Keyword(null,"variation","variation",-450640146));
+var G__19392 = variation;
+switch (G__19392) {
 case "<-":
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$color,"inherit",cljs.core.cst$kw$onClick,((function (G__20160,map__20158,map__20158__$1,variation){
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"color","color",1011675173),"inherit",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (G__19392,map__19390,map__19390__$1,variation){
 return (function (){
-var G__20161 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$back], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20161) : react_med.util._GT_evt.call(null,G__20161));
-});})(G__20160,map__20158,map__20158__$1,variation))
-,cljs.core.cst$kw$style,({"marginLeft": (-12), "marginRight": (20)})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$arrow_back], null)], null);
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"back","back",-417520012)], null));
+});})(G__19392,map__19390,map__19390__$1,variation))
+,new cljs.core.Keyword(null,"style","style",-496642736),({"marginLeft": (-12), "marginRight": (20)})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$arrow_back], null)], null);
 
 break;
 case "X":
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$color,"inherit",cljs.core.cst$kw$onClick,((function (G__20160,map__20158,map__20158__$1,variation){
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"color","color",1011675173),"inherit",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (G__19392,map__19390,map__19390__$1,variation){
 return (function (){
-var G__20162 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$cancel], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20162) : react_med.util._GT_evt.call(null,G__20162));
-});})(G__20160,map__20158,map__20158__$1,variation))
-,cljs.core.cst$kw$style,({"marginLeft": (-12), "marginRight": (20)})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$close_icon], null)], null);
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"cancel","cancel",-1964088360)], null));
+});})(G__19392,map__19390,map__19390__$1,variation))
+,new cljs.core.Keyword(null,"style","style",-496642736),({"marginLeft": (-12), "marginRight": (20)})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$close_icon], null)], null);
 
 break;
 default:
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$arrow_DASH_back_DASH_placeholder,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"width": "56px"})], null)], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.arrow-back-placeholder","div.arrow-back-placeholder",-957738956),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"width": "56px"})], null)], null);
 
 }
 });
 react_med.shell_components.screen_title = (function react_med$shell_components$screen_title(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20165 = arguments.length;
-var i__4731__auto___20166 = (0);
+var len__4730__auto___19395 = arguments.length;
+var i__4731__auto___19396 = (0);
 while(true){
-if((i__4731__auto___20166 < len__4730__auto___20165)){
-args__4736__auto__.push((arguments[i__4731__auto___20166]));
+if((i__4731__auto___19396 < len__4730__auto___19395)){
+args__4736__auto__.push((arguments[i__4731__auto___19396]));
 
-var G__20167 = (i__4731__auto___20166 + (1));
-i__4731__auto___20166 = G__20167;
+var G__19397 = (i__4731__auto___19396 + (1));
+i__4731__auto___19396 = G__19397;
 continue;
 } else {
 }
@@ -137,44 +145,41 @@ return react_med.shell_components.screen_title.cljs$core$IFn$_invoke$arity$varia
 });
 
 react_med.shell_components.screen_title.cljs$core$IFn$_invoke$arity$variadic = (function (title_strs){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h6,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"fontSize": "1.25rem", "fontWeight": (500), "lineHeight": 1.6, "letterSpacing": "0.0075em", "margin": (0)})], null),title_strs], null);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h6","h6",557293780),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"fontSize": "1.25rem", "fontWeight": (500), "lineHeight": 1.6, "letterSpacing": "0.0075em", "margin": (0)})], null),title_strs], null);
 });
 
 react_med.shell_components.screen_title.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-react_med.shell_components.screen_title.cljs$lang$applyTo = (function (seq20164){
+react_med.shell_components.screen_title.cljs$lang$applyTo = (function (seq19394){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq20164));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19394));
 });
 
-react_med.shell_components.tabs_menu = (function react_med$shell_components$tabs_menu(p__20171){
-var map__20172 = p__20171;
-var map__20172__$1 = (((((!((map__20172 == null))))?(((((map__20172.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20172.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20172):map__20172);
-var menu_options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20172__$1,cljs.core.cst$kw$menu_DASH_options);
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$tabs,new cljs.core.PersistentArrayMap(null, 6, [cljs.core.cst$kw$value,(function (){var G__20174 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_state], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20174) : react_med.util._LT_sub.call(null,G__20174));
-})(),cljs.core.cst$kw$TabIndicatorProps,({"style": ({"backgroundColor": react_med.util.secondary_color})}),cljs.core.cst$kw$variant,"scrollable",cljs.core.cst$kw$scrollButtons,(((cljs.core.count(menu_options) > (3)))?"on":"off"),cljs.core.cst$kw$onChange,((function (map__20172,map__20172__$1,menu_options){
-return (function (p1__20169_SHARP_,p2__20168_SHARP_){
-var G__20175 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_set_DASH_route,p2__20168_SHARP_], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20175) : react_med.util._GT_evt.call(null,G__20175));
-});})(map__20172,map__20172__$1,menu_options))
-,cljs.core.cst$kw$style,({"overflowX": "hidden"})], null),cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (map__20172,map__20172__$1,menu_options){
-return (function (p1__20170_SHARP_){
-return cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$tab,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$label,cljs.core.cst$kw$label.cljs$core$IFn$_invoke$arity$1(p1__20170_SHARP_),cljs.core.cst$kw$value,cljs.core.cst$kw$state.cljs$core$IFn$_invoke$arity$1(p1__20170_SHARP_),cljs.core.cst$kw$style,({"flexGrow": (1)})], null)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,p1__20170_SHARP_], null));
-});})(map__20172,map__20172__$1,menu_options))
+react_med.shell_components.tabs_menu = (function react_med$shell_components$tabs_menu(p__19401){
+var map__19402 = p__19401;
+var map__19402__$1 = (((((!((map__19402 == null))))?(((((map__19402.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19402.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19402):map__19402);
+var menu_options = cljs.core.get.call(null,map__19402__$1,new cljs.core.Keyword(null,"menu-options","menu-options",-1774050123));
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$tabs,new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"value","value",305978217),react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","state","react-med.routes/state",1226363239)], null)),new cljs.core.Keyword(null,"TabIndicatorProps","TabIndicatorProps",-1668293323),({"style": ({"backgroundColor": react_med.util.secondary_color})}),new cljs.core.Keyword(null,"variant","variant",-424354234),"scrollable",new cljs.core.Keyword(null,"scrollButtons","scrollButtons",-954109284),(((cljs.core.count.call(null,menu_options) > (3)))?"on":"off"),new cljs.core.Keyword(null,"onChange","onChange",-312891301),((function (map__19402,map__19402__$1,menu_options){
+return (function (p1__19399_SHARP_,p2__19398_SHARP_){
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","set-route","react-med.routes/set-route",-701732541),p2__19398_SHARP_], null));
+});})(map__19402,map__19402__$1,menu_options))
+,new cljs.core.Keyword(null,"style","style",-496642736),({"overflowX": "hidden"})], null),cljs.core.map.call(null,((function (map__19402,map__19402__$1,menu_options){
+return (function (p1__19400_SHARP_){
+return cljs.core.with_meta.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$tab,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"label","label",1718410804),new cljs.core.Keyword(null,"label","label",1718410804).cljs$core$IFn$_invoke$arity$1(p1__19400_SHARP_),new cljs.core.Keyword(null,"value","value",305978217),new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(p1__19400_SHARP_),new cljs.core.Keyword(null,"style","style",-496642736),({"flexGrow": (1)})], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__19400_SHARP_], null));
+});})(map__19402,map__19402__$1,menu_options))
 ,menu_options)], null);
 });
 react_med.shell_components.bottom_bar = (function react_med$shell_components$bottom_bar(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20179 = arguments.length;
-var i__4731__auto___20180 = (0);
+var len__4730__auto___19405 = arguments.length;
+var i__4731__auto___19406 = (0);
 while(true){
-if((i__4731__auto___20180 < len__4730__auto___20179)){
-args__4736__auto__.push((arguments[i__4731__auto___20180]));
+if((i__4731__auto___19406 < len__4730__auto___19405)){
+args__4736__auto__.push((arguments[i__4731__auto___19406]));
 
-var G__20181 = (i__4731__auto___20180 + (1));
-i__4731__auto___20180 = G__20181;
+var G__19407 = (i__4731__auto___19406 + (1));
+i__4731__auto___19406 = G__19407;
 continue;
 } else {
 }
@@ -186,145 +191,130 @@ return react_med.shell_components.bottom_bar.cljs$core$IFn$_invoke$arity$variadi
 });
 
 react_med.shell_components.bottom_bar.cljs$core$IFn$_invoke$arity$variadic = (function (actions){
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$bottom_DASH_bar,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"color": "white", "width": "100%", "justifyContent": "space-between", "zIndex": (1100), "display": "flex", "boxShadow": "0px -2px 4px -1px #0003,\n                           0px -4px 5px 0px #00000024,\n                           0px -1px 10px 0px #0000001f", "backgroundColor": react_med.util.primary_color, "height": (64), "alignItems": "center"})], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$onClick,(function (){
-var G__20177 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_toggle_DASH_drawer_DASH_menu], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20177) : react_med.util._GT_evt.call(null,G__20177));
-}),cljs.core.cst$kw$color,"inherit"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$menu_icon], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$color,"inherit",cljs.core.cst$kw$onClick,(function (){
-var G__20178 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_open_DASH_actions_DASH_menu], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20178) : react_med.util._GT_evt.call(null,G__20178));
-})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$more_vert], null)], null)], null);
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.bottom-bar","div.bottom-bar",-1120608513),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"color": "white", "width": "100%", "justifyContent": "space-between", "zIndex": (1100), "display": "flex", "boxShadow": "0px -2px 4px -1px #0003,\n                           0px -4px 5px 0px #00000024,\n                           0px -1px 10px 0px #0000001f", "backgroundColor": react_med.util.primary_color, "height": (64), "alignItems": "center"})], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),(function (){
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","toggle-drawer-menu","react-med.shell-components/toggle-drawer-menu",-203315410)], null));
+}),new cljs.core.Keyword(null,"color","color",1011675173),"inherit"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$menu_icon], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"color","color",1011675173),"inherit",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),(function (){
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","open-actions-menu","react-med.shell-components/open-actions-menu",1464706104)], null));
+})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$more_vert], null)], null)], null);
 });
 
 react_med.shell_components.bottom_bar.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-react_med.shell_components.bottom_bar.cljs$lang$applyTo = (function (seq20176){
+react_med.shell_components.bottom_bar.cljs$lang$applyTo = (function (seq19404){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq20176));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19404));
 });
 
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.shell_components.open_actions_menu = (function react_med$shell_components$open_actions_menu(app_state){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),true));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),true));
 
-var opts__19887__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = cljs.core.assoc_in((function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__19139__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = cljs.core.assoc_in.call(null,(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})(),(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})(),(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })(),true);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),true),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),true),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19888__auto__;
-}catch (e20182){var e = e20182;
+return result__19140__auto__;
+}catch (e19408){var e = e19408;
 throw e;
 }});
 } else {
 react_med.shell_components.open_actions_menu = (function react_med$shell_components$open_actions_menu(app_state){
-return cljs.core.assoc_in(app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),true);
+return cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),true);
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_open_DASH_actions_DASH_menu,react_med.shell_components.open_actions_menu);
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.shell-components","open-actions-menu","react-med.shell-components/open-actions-menu",1464706104),react_med.shell_components.open_actions_menu);
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.shell_components.close_actions_menu = (function react_med$shell_components$close_actions_menu(app_state){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),false));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),false));
 
-var opts__19887__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = cljs.core.assoc_in((function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__19139__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = cljs.core.assoc_in.call(null,(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})(),(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})(),(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })(),false);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$assoc_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),false),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),false),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19888__auto__;
-}catch (e20183){var e = e20183;
+return result__19140__auto__;
+}catch (e19409){var e = e19409;
 throw e;
 }});
 } else {
 react_med.shell_components.close_actions_menu = (function react_med$shell_components$close_actions_menu(app_state){
-return cljs.core.assoc_in(app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),false);
+return cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),false);
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_close_DASH_actions_DASH_menu,react_med.shell_components.close_actions_menu);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.shell-components","close-actions-menu","react-med.shell-components/close-actions-menu",-628250487),react_med.shell_components.close_actions_menu);
 react_med.shell_components.actions_opened_QMARK_ = (function react_med$shell_components$actions_opened_QMARK_(app_state){
-return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$actions_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null));
+return cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null));
 });
-var G__20184_20186 = cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_actions_DASH_opened_QMARK_;
-var G__20185_20187 = react_med.shell_components.actions_opened_QMARK_;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$2 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$2(G__20184_20186,G__20185_20187) : re_frame.core.reg_sub.call(null,G__20184_20186,G__20185_20187));
-react_med.shell_components.actions_menu = (function react_med$shell_components$actions_menu(p__20188){
-var map__20189 = p__20188;
-var map__20189__$1 = (((((!((map__20189 == null))))?(((((map__20189.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20189.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20189):map__20189);
-var actions = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20189__$1,cljs.core.cst$kw$actions);
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,(cljs.core.truth_((function (){var G__20191 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_actions_DASH_opened_QMARK_], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20191) : react_med.util._LT_sub.call(null,G__20191));
-})())?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$close_DASH_menu_DASH_invisible_DASH_layer,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$style,({"position": "absolute", "width": "100%", "height": "100%", "zIndex": (1199), "backgroundColor": "#0000000d"}),cljs.core.cst$kw$onClick,((function (map__20189,map__20189__$1,actions){
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.shell-components","actions-opened?","react-med.shell-components/actions-opened?",1028017071),react_med.shell_components.actions_opened_QMARK_);
+react_med.shell_components.actions_menu = (function react_med$shell_components$actions_menu(p__19410){
+var map__19411 = p__19410;
+var map__19411__$1 = (((((!((map__19411 == null))))?(((((map__19411.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19411.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19411):map__19411);
+var actions = cljs.core.get.call(null,map__19411__$1,new cljs.core.Keyword(null,"actions","actions",-812656882));
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),(cljs.core.truth_(react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","actions-opened?","react-med.shell-components/actions-opened?",1028017071)], null)))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.close-menu-invisible-layer","div.close-menu-invisible-layer",-287020188),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"style","style",-496642736),({"position": "absolute", "width": "100%", "height": "100%", "zIndex": (1199), "backgroundColor": "#0000000d"}),new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__19411,map__19411__$1,actions){
 return (function (){
-var G__20192 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_close_DASH_actions_DASH_menu], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20192) : react_med.util._GT_evt.call(null,G__20192));
-});})(map__20189,map__20189__$1,actions))
-], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$paper,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$elevation,(8),cljs.core.cst$kw$style,({"backgroundColor": "white", "position": "absolute", "right": "12px", "bottom": "20px", "zIndex": (1200)})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$menu_list,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (map__20189,map__20189__$1,actions){
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","close-actions-menu","react-med.shell-components/close-actions-menu",-628250487)], null));
+});})(map__19411,map__19411__$1,actions))
+], null)], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$paper,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"elevation","elevation",-1609348796),(8),new cljs.core.Keyword(null,"style","style",-496642736),({"backgroundColor": "white", "position": "absolute", "right": "12px", "bottom": "20px", "zIndex": (1200)})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$menu_list,cljs.core.map.call(null,((function (map__19411,map__19411__$1,actions){
 return (function (action){
-return cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$menu_item,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$onClick,((function (map__20189,map__20189__$1,actions){
+return cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$menu_item,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__19411,map__19411__$1,actions){
 return (function (){
-var G__20193 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var G__20194 = cljs.core.cst$kw$event;
-return (action.cljs$core$IFn$_invoke$arity$1 ? action.cljs$core$IFn$_invoke$arity$1(G__20194) : action.call(null,G__20194));
-})()], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20193) : react_med.util._GT_evt.call(null,G__20193));
-});})(map__20189,map__20189__$1,actions))
-], null),(function (){var G__20195 = cljs.core.cst$kw$name;
-return (action.cljs$core$IFn$_invoke$arity$1 ? action.cljs$core$IFn$_invoke$arity$1(G__20195) : action.call(null,G__20195));
-})()], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,(function (){var G__20196 = cljs.core.cst$kw$name;
-return (action.cljs$core$IFn$_invoke$arity$1 ? action.cljs$core$IFn$_invoke$arity$1(G__20196) : action.call(null,G__20196));
-})()], null));
-});})(map__20189,map__20189__$1,actions))
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [action.call(null,new cljs.core.Keyword(null,"event","event",301435442))], null));
+});})(map__19411,map__19411__$1,actions))
+], null),action.call(null,new cljs.core.Keyword(null,"name","name",1843675177))], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),action.call(null,new cljs.core.Keyword(null,"name","name",1843675177))], null));
+});})(map__19411,map__19411__$1,actions))
 ,actions)], null)], null)], null):null)], null);
 });
-react_med.shell_components.drawer_menu = (function react_med$shell_components$drawer_menu(p__20197){
-var map__20198 = p__20197;
-var map__20198__$1 = (((((!((map__20198 == null))))?(((((map__20198.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20198.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20198):map__20198);
-var menu_structure = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20198__$1,cljs.core.cst$kw$menu_DASH_structure);
-var structure__GT_menu_item = ((function (map__20198,map__20198__$1,menu_structure){
+react_med.shell_components.drawer_menu = (function react_med$shell_components$drawer_menu(p__19413){
+var map__19414 = p__19413;
+var map__19414__$1 = (((((!((map__19414 == null))))?(((((map__19414.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19414.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19414):map__19414);
+var menu_structure = cljs.core.get.call(null,map__19414__$1,new cljs.core.Keyword(null,"menu-structure","menu-structure",-627499224));
+var structure__GT_menu_item = ((function (map__19414,map__19414__$1,menu_structure){
 return (function() {
 var react_med$shell_components$drawer_menu_$_s__GT_mi = null;
 var react_med$shell_components$drawer_menu_$_s__GT_mi__1 = (function (structure){
-return react_med$shell_components$drawer_menu_$_s__GT_mi.cljs$core$IFn$_invoke$arity$2(structure,(0));
+return react_med$shell_components$drawer_menu_$_s__GT_mi.call(null,structure,(0));
 });
-var react_med$shell_components$drawer_menu_$_s__GT_mi__2 = (function (p__20200,padding){
-var map__20201 = p__20200;
-var map__20201__$1 = (((((!((map__20201 == null))))?(((((map__20201.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20201.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20201):map__20201);
-var label = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20201__$1,cljs.core.cst$kw$label);
-var sub_menus = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20201__$1,cljs.core.cst$kw$sub_DASH_menus);
-var selected = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20201__$1,cljs.core.cst$kw$selected);
-var state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20201__$1,cljs.core.cst$kw$state);
-return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$menu_item,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$onClick,((function (map__20201,map__20201__$1,label,sub_menus,selected,state,map__20198,map__20198__$1,menu_structure){
+var react_med$shell_components$drawer_menu_$_s__GT_mi__2 = (function (p__19416,padding){
+var map__19417 = p__19416;
+var map__19417__$1 = (((((!((map__19417 == null))))?(((((map__19417.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19417.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19417):map__19417);
+var label = cljs.core.get.call(null,map__19417__$1,new cljs.core.Keyword(null,"label","label",1718410804));
+var sub_menus = cljs.core.get.call(null,map__19417__$1,new cljs.core.Keyword(null,"sub-menus","sub-menus",-230507979));
+var selected = cljs.core.get.call(null,map__19417__$1,new cljs.core.Keyword(null,"selected","selected",574897764));
+var state = cljs.core.get.call(null,map__19417__$1,new cljs.core.Keyword(null,"state","state",-1988618099));
+return cljs.core.cons.call(null,cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$menu_item,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__19417,map__19417__$1,label,sub_menus,selected,state,map__19414,map__19414__$1,menu_structure){
 return (function (){
-var G__20203 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_set_DASH_route,state], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20203) : react_med.util._GT_evt.call(null,G__20203));
-});})(map__20201,map__20201__$1,label,sub_menus,selected,state,map__20198,map__20198__$1,menu_structure))
-,cljs.core.cst$kw$style,cljs.core.clj__GT_js(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([(cljs.core.truth_(selected)?new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$backgroundColor,"lightgray"], null):null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$paddingLeft,((20) + ((8) * padding))], null)], 0)))], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(label)], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,label], null)),cljs.core.mapcat.cljs$core$IFn$_invoke$arity$variadic(react_med$shell_components$drawer_menu_$_s__GT_mi,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([sub_menus,cljs.core.repeat.cljs$core$IFn$_invoke$arity$1((padding + (1)))], 0)));
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","set-route","react-med.routes/set-route",-701732541),state], null));
+});})(map__19417,map__19417__$1,label,sub_menus,selected,state,map__19414,map__19414__$1,menu_structure))
+,new cljs.core.Keyword(null,"style","style",-496642736),cljs.core.clj__GT_js.call(null,cljs.core.merge.call(null,(cljs.core.truth_(selected)?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"backgroundColor","backgroundColor",1738438491),"lightgray"], null):null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"paddingLeft","paddingLeft",262720813),((20) + ((8) * padding))], null)))], null),cljs.core.str.cljs$core$IFn$_invoke$arity$1(label)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),label], null)),cljs.core.mapcat.call(null,react_med$shell_components$drawer_menu_$_s__GT_mi,sub_menus,cljs.core.repeat.call(null,(padding + (1)))));
 });
-react_med$shell_components$drawer_menu_$_s__GT_mi = function(p__20200,padding){
+react_med$shell_components$drawer_menu_$_s__GT_mi = function(p__19416,padding){
 switch(arguments.length){
 case 1:
-return react_med$shell_components$drawer_menu_$_s__GT_mi__1.call(this,p__20200);
+return react_med$shell_components$drawer_menu_$_s__GT_mi__1.call(this,p__19416);
 case 2:
-return react_med$shell_components$drawer_menu_$_s__GT_mi__2.call(this,p__20200,padding);
+return react_med$shell_components$drawer_menu_$_s__GT_mi__2.call(this,p__19416,padding);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -332,131 +322,125 @@ react_med$shell_components$drawer_menu_$_s__GT_mi.cljs$core$IFn$_invoke$arity$1 
 react_med$shell_components$drawer_menu_$_s__GT_mi.cljs$core$IFn$_invoke$arity$2 = react_med$shell_components$drawer_menu_$_s__GT_mi__2;
 return react_med$shell_components$drawer_menu_$_s__GT_mi;
 })()
-;})(map__20198,map__20198__$1,menu_structure))
+;})(map__19414,map__19414__$1,menu_structure))
 ;
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,(cljs.core.truth_((function (){var G__20204 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_drawer_DASH_opened_QMARK_], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20204) : react_med.util._LT_sub.call(null,G__20204));
-})())?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$close_DASH_menu_DASH_invisible_DASH_layer,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$style,({"position": "absolute", "width": "100%", "height": "100%", "zIndex": (1199), "backgroundColor": "#0000000d"}),cljs.core.cst$kw$onClick,((function (structure__GT_menu_item,map__20198,map__20198__$1,menu_structure){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),(cljs.core.truth_(react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","drawer-opened?","react-med.shell-components/drawer-opened?",1735188713)], null)))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.close-menu-invisible-layer","div.close-menu-invisible-layer",-287020188),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"style","style",-496642736),({"position": "absolute", "width": "100%", "height": "100%", "zIndex": (1199), "backgroundColor": "#0000000d"}),new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (structure__GT_menu_item,map__19414,map__19414__$1,menu_structure){
 return (function (){
-var G__20205 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_toggle_DASH_drawer_DASH_menu], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20205) : react_med.util._GT_evt.call(null,G__20205));
-});})(structure__GT_menu_item,map__20198,map__20198__$1,menu_structure))
-], null)], null),new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$paper,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$elevation,(8),cljs.core.cst$kw$style,({"maxWidth": "100vw", "borderRadius": "0px", "width": "256px", "flexDirection": "column", "zIndex": (1200), "display": "flex", "position": "absolute", "backgroundColor": "white", "height": "100%"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$drawer_DASH_header,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"height": "64px", "backgroundColor": "white", "display": "flex", "alignItems": "center", "justifyContent": "center"})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$src,"images/LogoReactmed.png",cljs.core.cst$kw$width,(150)], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$hr,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"margin": (0)})], null)], null),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$menu_list,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"flexGrow": (1), "paddingTop": "0px", "display": "flex", "flexDirection": "column"})], null),cljs.core.map.cljs$core$IFn$_invoke$arity$2(structure__GT_menu_item,menu_structure),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$button,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$style,({"backgroundColor": "#caca30", "margin": "50px 15px 10px 15px", "color": "white"}),cljs.core.cst$kw$variant,"contained",cljs.core.cst$kw$onClick,((function (structure__GT_menu_item,map__20198,map__20198__$1,menu_structure){
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","toggle-drawer-menu","react-med.shell-components/toggle-drawer-menu",-203315410)], null));
+});})(structure__GT_menu_item,map__19414,map__19414__$1,menu_structure))
+], null)], null),new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$paper,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"elevation","elevation",-1609348796),(8),new cljs.core.Keyword(null,"style","style",-496642736),({"maxWidth": "100vw", "borderRadius": "0px", "width": "256px", "flexDirection": "column", "zIndex": (1200), "display": "flex", "position": "absolute", "backgroundColor": "white", "height": "100%"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.drawer-header","div.drawer-header",-722685402),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"height": "64px", "backgroundColor": "white", "display": "flex", "alignItems": "center", "justifyContent": "center"})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"img","img",1442687358),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"src","src",-1651076051),"images/LogoReactmed.png",new cljs.core.Keyword(null,"width","width",-384071477),(150)], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"hr","hr",1377740067),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"margin": (0)})], null)], null),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$menu_list,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"flexGrow": (1), "paddingTop": "0px", "display": "flex", "flexDirection": "column"})], null),cljs.core.map.call(null,structure__GT_menu_item,menu_structure),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$button,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"style","style",-496642736),({"backgroundColor": "#caca30", "margin": "50px 15px 10px 15px", "color": "white"}),new cljs.core.Keyword(null,"variant","variant",-424354234),"contained",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (structure__GT_menu_item,map__19414,map__19414__$1,menu_structure){
 return (function (){
-return react_med.authentication.authentication.logout();
-});})(structure__GT_menu_item,map__20198,map__20198__$1,menu_structure))
-], null),"Logout"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$drawer_DASH_footer,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"height": "64px", "display": "flex", "alignItems": "center"})], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$color,"inherit",cljs.core.cst$kw$onClick,((function (structure__GT_menu_item,map__20198,map__20198__$1,menu_structure){
+return react_med.authentication.authentication.logout.call(null);
+});})(structure__GT_menu_item,map__19414,map__19414__$1,menu_structure))
+], null),"Logout"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.drawer-footer","div.drawer-footer",1216793129),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"height": "64px", "display": "flex", "alignItems": "center"})], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$icon_button,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"color","color",1011675173),"inherit",new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (structure__GT_menu_item,map__19414,map__19414__$1,menu_structure){
 return (function (){
-var G__20206 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_toggle_DASH_drawer_DASH_menu], null);
-return (react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1 ? react_med.util._GT_evt.cljs$core$IFn$_invoke$arity$1(G__20206) : react_med.util._GT_evt.call(null,G__20206));
-});})(structure__GT_menu_item,map__20198,map__20198__$1,menu_structure))
-], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_GT_,react_med.shell_components.global$module$close_icon], null)], null)], null)], null)], null):null)], null);
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.shell-components","toggle-drawer-menu","react-med.shell-components/toggle-drawer-menu",-203315410)], null));
+});})(structure__GT_menu_item,map__19414,map__19414__$1,menu_structure))
+], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.shell_components.global$module$close_icon], null)], null)], null)], null)], null):null)], null);
 });
-if(day8.re_frame.tracing.is_trace_enabled_QMARK_()){
+if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.shell_components.toggle_drawer_menu = (function react_med$shell_components$toggle_drawer_menu(app_state){
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
-try{debux.common.util.send_form_BANG_(cljs.core.list(cljs.core.cst$sym$update_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$drawer_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),cljs.core.cst$sym$not));
+try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"drawer-menu","drawer-menu",266025613),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),new cljs.core.Symbol(null,"not","not",1044554643,null)));
 
-var opts__19887__auto__ = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = cljs.core.update_in.cljs$core$IFn$_invoke$arity$3((function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = app_state;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$app_DASH_state,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+var opts__19139__auto__ = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = cljs.core.update_in.call(null,(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = app_state;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})(),(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$drawer_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null);
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$drawer_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})(),(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"drawer-menu","drawer-menu",266025613),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null);
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"drawer-menu","drawer-menu",266025613),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
-})(),(function (){var opts__19887__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__19888__auto__ = cljs.core.not;
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.cst$sym$not,cljs.core.cst$kw$indent_DASH_level,(1)], null));
+return result__19140__auto__;
+})(),(function (){var opts__19139__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
+var result__19140__auto__ = cljs.core.not;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"not","not",1044554643,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(1)], null));
 
-return result__19888__auto__;
+return result__19140__auto__;
 })());
-debux.common.util.send_trace_BANG_(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$result,result__19888__auto__,cljs.core.cst$kw$form,cljs.core.list(cljs.core.cst$sym$update_DASH_in,cljs.core.cst$sym$app_DASH_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$drawer_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),cljs.core.cst$sym$not),cljs.core.cst$kw$indent_DASH_level,(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__19140__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"drawer-menu","drawer-menu",266025613),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),new cljs.core.Symbol(null,"not","not",1044554643,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-return result__19888__auto__;
-}catch (e20207){var e = e20207;
+return result__19140__auto__;
+}catch (e19419){var e = e19419;
 throw e;
 }});
 } else {
 react_med.shell_components.toggle_drawer_menu = (function react_med$shell_components$toggle_drawer_menu(app_state){
-return cljs.core.update_in.cljs$core$IFn$_invoke$arity$3(app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$drawer_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null),cljs.core.not);
+return cljs.core.update_in.call(null,app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"drawer-menu","drawer-menu",266025613),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),cljs.core.not);
 });
 }
-re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_toggle_DASH_drawer_DASH_menu,react_med.shell_components.toggle_drawer_menu);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.shell-components","toggle-drawer-menu","react-med.shell-components/toggle-drawer-menu",-203315410),react_med.shell_components.toggle_drawer_menu);
 react_med.shell_components.drawer_opened_QMARK_ = (function react_med$shell_components$drawer_opened_QMARK_(app_state){
-return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$ui,cljs.core.cst$kw$drawer_DASH_menu,cljs.core.cst$kw$opened_QMARK_], null));
+return cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"drawer-menu","drawer-menu",266025613),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null));
 });
-var G__20208_20210 = cljs.core.cst$kw$react_DASH_med$shell_DASH_components_SLASH_drawer_DASH_opened_QMARK_;
-var G__20209_20211 = react_med.shell_components.drawer_opened_QMARK_;
-(re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$2 ? re_frame.core.reg_sub.cljs$core$IFn$_invoke$arity$2(G__20208_20210,G__20209_20211) : re_frame.core.reg_sub.call(null,G__20208_20210,G__20209_20211));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.shell-components","drawer-opened?","react-med.shell-components/drawer-opened?",1735188713),react_med.shell_components.drawer_opened_QMARK_);
 react_med.shell_components.error_boundary = (function react_med$shell_components$error_boundary(){
-var error = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
-return reagent.core.create_class(new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$component_DASH_did_DASH_catch,((function (error){
+var error = reagent.core.atom.call(null,null);
+return reagent.core.create_class.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"component-did-catch","component-did-catch",652725810),((function (error){
 return (function (this$,e,info){
 return null;
 });})(error))
-,cljs.core.cst$kw$get_DASH_derived_DASH_state_DASH_from_DASH_error,((function (error){
+,new cljs.core.Keyword(null,"get-derived-state-from-error","get-derived-state-from-error",1473896468),((function (error){
 return (function (e){
-cljs.core.reset_BANG_(error,e);
+cljs.core.reset_BANG_.call(null,error,e);
 
 return ({});
 });})(error))
-,cljs.core.cst$kw$reagent_DASH_render,((function (error){
+,new cljs.core.Keyword(null,"reagent-render","reagent-render",-985383853),((function (error){
 return (function() { 
-var G__20217__delegate = function (p__20214,children){
-var map__20215 = p__20214;
-var map__20215__$1 = (((((!((map__20215 == null))))?(((((map__20215.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20215.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20215):map__20215);
-var if_error = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20215__$1,cljs.core.cst$kw$if_DASH_error);
-if(cljs.core.truth_(cljs.core.deref(error))){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,if_error], null);
+var G__19425__delegate = function (p__19422,children){
+var map__19423 = p__19422;
+var map__19423__$1 = (((((!((map__19423 == null))))?(((((map__19423.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19423.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19423):map__19423);
+var if_error = cljs.core.get.call(null,map__19423__$1,new cljs.core.Keyword(null,"if-error","if-error",-1992288515));
+if(cljs.core.truth_(cljs.core.deref.call(null,error))){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),if_error], null);
 } else {
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2(((function (map__20215,map__20215__$1,if_error,error){
-return (function (p1__20213_SHARP_,p2__20212_SHARP_){
-return cljs.core.with_meta(p2__20212_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,p1__20213_SHARP_], null));
-});})(map__20215,map__20215__$1,if_error,error))
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),cljs.core.map_indexed.call(null,((function (map__19423,map__19423__$1,if_error,error){
+return (function (p1__19421_SHARP_,p2__19420_SHARP_){
+return cljs.core.with_meta.call(null,p2__19420_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__19421_SHARP_], null));
+});})(map__19423,map__19423__$1,if_error,error))
 ,children)], null);
 }
 };
-var G__20217 = function (p__20214,var_args){
+var G__19425 = function (p__19422,var_args){
 var children = null;
 if (arguments.length > 1) {
-var G__20218__i = 0, G__20218__a = new Array(arguments.length -  1);
-while (G__20218__i < G__20218__a.length) {G__20218__a[G__20218__i] = arguments[G__20218__i + 1]; ++G__20218__i;}
-  children = new cljs.core.IndexedSeq(G__20218__a,0,null);
+var G__19426__i = 0, G__19426__a = new Array(arguments.length -  1);
+while (G__19426__i < G__19426__a.length) {G__19426__a[G__19426__i] = arguments[G__19426__i + 1]; ++G__19426__i;}
+  children = new cljs.core.IndexedSeq(G__19426__a,0,null);
 } 
-return G__20217__delegate.call(this,p__20214,children);};
-G__20217.cljs$lang$maxFixedArity = 1;
-G__20217.cljs$lang$applyTo = (function (arglist__20219){
-var p__20214 = cljs.core.first(arglist__20219);
-var children = cljs.core.rest(arglist__20219);
-return G__20217__delegate(p__20214,children);
+return G__19425__delegate.call(this,p__19422,children);};
+G__19425.cljs$lang$maxFixedArity = 1;
+G__19425.cljs$lang$applyTo = (function (arglist__19427){
+var p__19422 = cljs.core.first(arglist__19427);
+var children = cljs.core.rest(arglist__19427);
+return G__19425__delegate(p__19422,children);
 });
-G__20217.cljs$core$IFn$_invoke$arity$variadic = G__20217__delegate;
-return G__20217;
+G__19425.cljs$core$IFn$_invoke$arity$variadic = G__19425__delegate;
+return G__19425;
 })()
 ;})(error))
 ], null));
 });
 react_med.shell_components.error_view = (function react_med$shell_components$error_view(){
-var map__20220 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(react_med.motivation_sentences.sentences,cljs.core.rand_int(cljs.core.count(react_med.motivation_sentences.sentences)));
-var map__20220__$1 = (((((!((map__20220 == null))))?(((((map__20220.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20220.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20220):map__20220);
-var sentence = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20220__$1,cljs.core.cst$kw$sentence);
-var author = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20220__$1,cljs.core.cst$kw$author);
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h3,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"textAlign": "center", "paddingBottom": "50px"})], null),"Desculpa, aconteceu algum erro. \uD83D\uDE1E"], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"maxWidth": "600px", "margin": "auto"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$p,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"textAlign": "center"})], null),sentence], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$p,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"textAlign": "right"})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$i,author], null)], null)], null)], null);
+var map__19428 = cljs.core.get.call(null,react_med.motivation_sentences.sentences,cljs.core.rand_int.call(null,cljs.core.count.call(null,react_med.motivation_sentences.sentences)));
+var map__19428__$1 = (((((!((map__19428 == null))))?(((((map__19428.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19428.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19428):map__19428);
+var sentence = cljs.core.get.call(null,map__19428__$1,new cljs.core.Keyword(null,"sentence","sentence",2033657256));
+var author = cljs.core.get.call(null,map__19428__$1,new cljs.core.Keyword(null,"author","author",2111686192));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h3","h3",2067611163),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"textAlign": "center", "paddingBottom": "50px"})], null),"Desculpa, aconteceu algum erro. \uD83D\uDE1E"], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"maxWidth": "600px", "margin": "auto"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"textAlign": "center"})], null),sentence], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"textAlign": "right"})], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),author], null)], null)], null)], null);
 });
 react_med.shell_components.main_content = (function react_med$shell_components$main_content(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20226 = arguments.length;
-var i__4731__auto___20227 = (0);
+var len__4730__auto___19434 = arguments.length;
+var i__4731__auto___19435 = (0);
 while(true){
-if((i__4731__auto___20227 < len__4730__auto___20226)){
-args__4736__auto__.push((arguments[i__4731__auto___20227]));
+if((i__4731__auto___19435 < len__4730__auto___19434)){
+args__4736__auto__.push((arguments[i__4731__auto___19435]));
 
-var G__20228 = (i__4731__auto___20227 + (1));
-i__4731__auto___20227 = G__20228;
+var G__19436 = (i__4731__auto___19435 + (1));
+i__4731__auto___19435 = G__19436;
 continue;
 } else {
 }
@@ -468,34 +452,34 @@ return react_med.shell_components.main_content.cljs$core$IFn$_invoke$arity$varia
 });
 
 react_med.shell_components.main_content.cljs$core$IFn$_invoke$arity$variadic = (function (attrs,children){
-return react_med.util.replace_if_some(attrs,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$main,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"flexGrow": (1), "padding": (12), "overflow": "auto"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_boundary,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$if_DASH_error,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_view], null)], null),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__20223_SHARP_,p2__20222_SHARP_){
-return cljs.core.with_meta(p2__20222_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,p1__20223_SHARP_], null));
-}),react_med.util.replace_if_none(attrs,children))], null)], null));
+return react_med.util.replace_if_some.call(null,attrs,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"main","main",-2117802661),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"flexGrow": (1), "padding": (12), "overflow": "auto"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_boundary,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"if-error","if-error",-1992288515),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_view], null)], null),cljs.core.map_indexed.call(null,(function (p1__19431_SHARP_,p2__19430_SHARP_){
+return cljs.core.with_meta.call(null,p2__19430_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__19431_SHARP_], null));
+}),react_med.util.replace_if_none.call(null,attrs,children))], null)], null));
 });
 
 react_med.shell_components.main_content.cljs$lang$maxFixedArity = (1);
 
 /** @this {Function} */
-react_med.shell_components.main_content.cljs$lang$applyTo = (function (seq20224){
-var G__20225 = cljs.core.first(seq20224);
-var seq20224__$1 = cljs.core.next(seq20224);
+react_med.shell_components.main_content.cljs$lang$applyTo = (function (seq19432){
+var G__19433 = cljs.core.first.call(null,seq19432);
+var seq19432__$1 = cljs.core.next.call(null,seq19432);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__20225,seq20224__$1);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19433,seq19432__$1);
 });
 
 react_med.shell_components.main_error_view = (function react_med$shell_components$main_error_view(){
-return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$_LT__GT_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.header,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.top_bar,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.left_icon,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$variation,""], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.screen_title,"Erro"], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_content,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_view], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.drawer_menu], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.bottom_bar], null)], null);
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.header,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.top_bar,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.left_icon,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"variation","variation",-450640146),""], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.screen_title,"Erro"], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_content,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_view], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.drawer_menu], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.bottom_bar], null)], null);
 });
 react_med.shell_components.main_panel = (function react_med$shell_components$main_panel(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20232 = arguments.length;
-var i__4731__auto___20233 = (0);
+var len__4730__auto___19440 = arguments.length;
+var i__4731__auto___19441 = (0);
 while(true){
-if((i__4731__auto___20233 < len__4730__auto___20232)){
-args__4736__auto__.push((arguments[i__4731__auto___20233]));
+if((i__4731__auto___19441 < len__4730__auto___19440)){
+args__4736__auto__.push((arguments[i__4731__auto___19441]));
 
-var G__20234 = (i__4731__auto___20233 + (1));
-i__4731__auto___20233 = G__20234;
+var G__19442 = (i__4731__auto___19441 + (1));
+i__4731__auto___19441 = G__19442;
 continue;
 } else {
 }
@@ -507,37 +491,29 @@ return react_med.shell_components.main_panel.cljs$core$IFn$_invoke$arity$variadi
 });
 
 react_med.shell_components.main_panel.cljs$core$IFn$_invoke$arity$variadic = (function (children){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$main_DASH_panel,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,({"display": "flex", "position": "relative", "justifyContent": "space-between", "flexDirection": "column", "height": "inherit", "width": "inherit"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_boundary,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$if_DASH_error,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_error_view], null)], null),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__20230_SHARP_,p2__20229_SHARP_){
-return cljs.core.with_meta(p2__20229_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,p1__20230_SHARP_], null));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.main-panel","div.main-panel",-705688759),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"display": "flex", "position": "relative", "justifyContent": "space-between", "flexDirection": "column", "height": "inherit", "width": "inherit"})], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.error_boundary,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"if-error","if-error",-1992288515),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_error_view], null)], null),cljs.core.map_indexed.call(null,(function (p1__19438_SHARP_,p2__19437_SHARP_){
+return cljs.core.with_meta.call(null,p2__19437_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__19438_SHARP_], null));
 }),children)], null)], null);
 });
 
 react_med.shell_components.main_panel.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-react_med.shell_components.main_panel.cljs$lang$applyTo = (function (seq20231){
+react_med.shell_components.main_panel.cljs$lang$applyTo = (function (seq19439){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq20231));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19439));
 });
 
-react_med.shell_components.default$ = (function react_med$shell_components$default(p__20235){
-var map__20236 = p__20235;
-var map__20236__$1 = (((((!((map__20236 == null))))?(((((map__20236.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20236.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20236):map__20236);
-var component = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20236__$1,cljs.core.cst$kw$component);
-var menu_structure = (function (){var G__20238 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_side_DASH_menu], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20238) : react_med.util._LT_sub.call(null,G__20238));
-})();
-var tabs = (function (){var G__20239 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_tabs], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20239) : react_med.util._LT_sub.call(null,G__20239));
-})();
-var title = (function (){var G__20240 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_title], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20240) : react_med.util._LT_sub.call(null,G__20240));
-})();
-var actions = (function (){var G__20241 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_actions], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20241) : react_med.util._LT_sub.call(null,G__20241));
-})();
-var top_bar_icon = (function (){var G__20242 = new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$react_DASH_med$routes_SLASH_top_DASH_bar_DASH_icon], null);
-return (react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1 ? react_med.util._LT_sub.cljs$core$IFn$_invoke$arity$1(G__20242) : react_med.util._LT_sub.call(null,G__20242));
-})();
-return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_panel,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.header,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.top_bar,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.left_icon,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$variation,top_bar_icon], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.screen_title,title], null)], null),(cljs.core.truth_(tabs)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.tabs_menu,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$menu_DASH_options,tabs], null)], null):null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_content,component], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.drawer_menu,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$menu_DASH_structure,menu_structure], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.actions_menu,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$actions,actions], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.bottom_bar], null)], null);
+react_med.shell_components.default$ = (function react_med$shell_components$default(p__19443){
+var map__19444 = p__19443;
+var map__19444__$1 = (((((!((map__19444 == null))))?(((((map__19444.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19444.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19444):map__19444);
+var component = cljs.core.get.call(null,map__19444__$1,new cljs.core.Keyword(null,"component","component",1555936782));
+var menu_structure = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","side-menu","react-med.routes/side-menu",909029319)], null));
+var tabs = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","tabs","react-med.routes/tabs",1784816700)], null));
+var title = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","title","react-med.routes/title",1582209313)], null));
+var actions = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","actions","react-med.routes/actions",-1858990120)], null));
+var top_bar_icon = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.routes","top-bar-icon","react-med.routes/top-bar-icon",-1492414179)], null));
+return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_panel,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.header,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.top_bar,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.left_icon,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"variation","variation",-450640146),top_bar_icon], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.screen_title,title], null)], null),(cljs.core.truth_(tabs)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.tabs_menu,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"menu-options","menu-options",-1774050123),tabs], null)], null):null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.main_content,component], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.drawer_menu,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"menu-structure","menu-structure",-627499224),menu_structure], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.actions_menu,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"actions","actions",-812656882),actions], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.bottom_bar], null)], null);
 });
+
+//# sourceMappingURL=shell_components.js.map

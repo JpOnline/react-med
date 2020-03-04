@@ -1,7 +1,6 @@
-// Compiled by ClojureScript 1.10.520 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.10.520 {}
 goog.provide('cljc.java_time.offset_date_time');
 goog.require('cljs.core');
-goog.require('cljs.core.constants');
 goog.require('cljs.java_time.interop');
 goog.require('java.time');
 cljc.java_time.offset_date_time.min = java.time.OffsetDateTime.MIN;
@@ -34,8 +33,8 @@ cljc.java_time.offset_date_time.minus_hours = (function cljc$java_time$offset_da
 return this2438.minusHours(long2439);
 });
 cljc.java_time.offset_date_time.of = (function cljc$java_time$offset_date_time$of(var_args){
-var G__20579 = arguments.length;
-switch (G__20579) {
+var G__8974 = arguments.length;
+switch (G__8974) {
 case 2:
 return cljc.java_time.offset_date_time.of.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -99,8 +98,8 @@ cljc.java_time.offset_date_time.get_day_of_year = (function cljc$java_time$offse
 return this2467.dayOfYear();
 });
 cljc.java_time.offset_date_time.plus = (function cljc$java_time$offset_date_time$plus(var_args){
-var G__20582 = arguments.length;
-switch (G__20582) {
+var G__8977 = arguments.length;
+switch (G__8977) {
 case 2:
 return cljc.java_time.offset_date_time.plus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -159,8 +158,8 @@ cljc.java_time.offset_date_time.minus_months = (function cljc$java_time$offset_d
 return this2489.minusMonths(long2490);
 });
 cljc.java_time.offset_date_time.minus = (function cljc$java_time$offset_date_time$minus(var_args){
-var G__20585 = arguments.length;
-switch (G__20585) {
+var G__8980 = arguments.length;
+switch (G__8980) {
 case 2:
 return cljc.java_time.offset_date_time.minus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -240,8 +239,8 @@ cljc.java_time.offset_date_time.minus_years = (function cljc$java_time$offset_da
 return this2525.minusYears(long2526);
 });
 cljc.java_time.offset_date_time.parse = (function cljc$java_time$offset_date_time$parse(var_args){
-var G__20588 = arguments.length;
-switch (G__20588) {
+var G__8983 = arguments.length;
+switch (G__8983) {
 case 1:
 return cljc.java_time.offset_date_time.parse.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -282,8 +281,8 @@ cljc.java_time.offset_date_time.adjust_into = (function cljc$java_time$offset_da
 return this2535.adjustInto(java_time_temporal_Temporal2536);
 });
 cljc.java_time.offset_date_time.with$ = (function cljc$java_time$offset_date_time$with(var_args){
-var G__20591 = arguments.length;
-switch (G__20591) {
+var G__8986 = arguments.length;
+switch (G__8986) {
 case 2:
 return cljc.java_time.offset_date_time.with$.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -309,8 +308,8 @@ return this2539.with(G__2540,G__2541);
 cljc.java_time.offset_date_time.with$.cljs$lang$maxFixedArity = 3;
 
 cljc.java_time.offset_date_time.now = (function cljc$java_time$offset_date_time$now(var_args){
-var G__20594 = arguments.length;
-switch (G__20594) {
+var G__8989 = arguments.length;
+switch (G__8989) {
 case 1:
 return cljc.java_time.offset_date_time.now.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -371,3 +370,5 @@ return this2561.plusYears(long2562);
 cljc.java_time.offset_date_time.minus_days = (function cljc$java_time$offset_date_time$minus_days(this2563,long2564){
 return this2563.minusDays(long2564);
 });
+
+//# sourceMappingURL=offset_date_time.js.map
