@@ -1,5 +1,6 @@
 var CLOSURE_UNCOMPILED_DEFINES = {};
 var CLOSURE_NO_DEPS = true;
+console.log("abacaxi");
 if(typeof goog == "undefined") document.write('<script src="cljs-out/prod/goog/base.js"></script>');
 document.write('<script src="cljs-out/prod/goog/deps.js"></script>');
 document.write('<script src="cljs-out/prod/cljs_deps.js"></script>');

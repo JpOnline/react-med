@@ -56,11 +56,11 @@ console.log("share-or-download csv");
 
 console.log(".-canShare csv",navigator.canShare);
 
-console.log(".canShare csv",navigator.canShare(new cljs.core.PersistentArrayMap(null, 1, ["files",[(new File([data],filename,({"type": type})))]], null)));
+console.log(".canShare csv",navigator.canShare(({"files": [(new File([data],filename,({"type": type})))]})));
 
 if(cljs.core.truth_((function (){var and__4120__auto__ = navigator.canShare;
 if(cljs.core.truth_(and__4120__auto__)){
-return navigator.canShare(new cljs.core.PersistentArrayMap(null, 1, ["files",[(new File([data],filename,({"type": type})))]], null));
+return navigator.canShare(({"files": [(new File([data],filename,({"type": type})))]}));
 } else {
 return and__4120__auto__;
 }

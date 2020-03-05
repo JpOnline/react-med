@@ -63,13 +63,13 @@
   (js/console.log ".-canShare csv" (.-canShare js/navigator))
   (js/console.log ".canShare csv" (.canShare
                                      js/navigator
-                                     {"files" #js [(new js/File #js [data]
-                                                        filename #js
-                                                        {"type" type})]}))
+                                     #js {"files" #js [(new js/File #js [data]
+                                                            filename #js
+                                                            {"type" type})]}))
   (if (and (.-canShare js/navigator)
-           (.canShare js/navigator {"files" #js [(new js/File #js [data]
-                                                      filename #js
-                                                      {"type" type})]}))
+           (.canShare js/navigator #js {"files" #js [(new js/File #js [data]
+                                                          filename #js
+                                                          {"type" type})]}))
     (share data filename type)
     (download data filename type)))
 
