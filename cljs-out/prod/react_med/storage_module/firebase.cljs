@@ -73,7 +73,7 @@
   ::restore-domain-from-firebase
   (fn-traced
     [{:keys [db]} _]
-    (when-let [user (some-> fb .auth .-currentUser)]
+    (if-let [user (some-> fb .auth .-currentUser)]
       (let [user-email (.-email user)
             name-in-email (first (clojure.string/split user-email "@"))
             user-fb-uid (.-uid user)]
@@ -82,8 +82,9 @@
             (.once "value"
                    (fn [snapshot]
                      (re-frame/dispatch-sync
-                       [::restore-domain-from-firebase-callback snapshot]))))))
-    {:db (assoc-in db [:ui :state] "loading")}))
+                       [::restore-domain-from-firebase-callback snapshot]))))
+        {:db (assoc-in db [:ui :state] "loading")})
+      {:db (assoc-in db [:ui :state] "login")})))
 
 (re-frame/reg-event-fx
   ::restore-domain-from-firebase-callback

@@ -88,7 +88,8 @@
   {:store nil
    :db (-> db
            (assoc-in [:ui :state] "login")
-           (dissoc :domain))})
+           (dissoc :domain)
+           (dissoc :authentication))})
 (re-frame/reg-event-fx
   ::user-logged-out
   [(re-frame/inject-cofx :store)]

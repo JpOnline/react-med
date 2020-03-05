@@ -34,6 +34,7 @@
 (re-frame/reg-sub ::selected-patient selected-patient)
 
 (defn share [data filename type]
+  (js/console.log "sharing csv")
   (-> js/navigator
       (.share #js {"files" #js [(new js/File #js [data] filename #js {"type" type})]
                    "title" filename
@@ -44,6 +45,7 @@
       (.catch #(js/console.error "Não conseguiu compartilhar." %))))
 
 (defn download [data filename type]
+  (js/console.log "downloading csv")
   (let [file (new js/Blob #js [data] #js {"type" type})
         url (.createObjectURL js/URL file)
         anchor (.createElement js/document "a")]
@@ -57,6 +59,13 @@
                      ) 0)))
 
 (defn share-or-download [data filename type]
+  (js/console.log "share-or-download csv")
+  (js/console.log ".-canShare csv" (.-canShare js/navigator))
+  (js/console.log ".canShare csv" (.canShare
+                                     js/navigator
+                                     {"files" #js [(new js/File #js [data]
+                                                        filename #js
+                                                        {"type" type})]}))
   (if (and (.-canShare js/navigator)
            (.canShare js/navigator {"files" #js [(new js/File #js [data]
                                                       filename #js
@@ -152,6 +161,7 @@
   (let [{:keys [nome]} (selected-patient app-state)
         nome-without-accents (replace-accents nome)
         csv-data (app-state->csv-data app-state)]
+    (js/console.log "export-to-csv csv-data" csv-data)
     (share-or-download csv-data (str "avaliacoes-"nome-without-accents".csv") "text/csv"))
   app-state)
 (re-frame/reg-event-db :export-to-csv export-to-csv)
