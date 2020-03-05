@@ -145,7 +145,7 @@
             [:> material-menu-item
              {:onClick #(>evt [::selected-population population])
               :style item-style}
-             [:> radio {:checked checked?}]
+             [:> material-radio {:checked checked?}]
              label])
           items)]))
 
@@ -155,4 +155,5 @@
    [points-selection-component]])
 
 (defn view []
-  [:h2 "config"])
+  [shell/default
+   {:component [component]}])

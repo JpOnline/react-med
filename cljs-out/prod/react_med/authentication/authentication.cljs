@@ -72,10 +72,12 @@
   ;; Verifica se o email logado é o mesmo que tá no local-storage
   (if (not= email (get-in store [:authentication :user-email]))
     ;; Restaura os dados do firebase, sobreescrevendo o local-storage.
-    {:store nil
+    {:db (assoc-in db [:ui :state] "loading")
+     :store nil
      :dispatch [::fb-module/restore-domain-from-firebase]}
     ;; Carrega dados do local-storage
-    {:dispatch [::local-storage/load-domain-from-local-storage]}))
+    {:db (assoc-in db [:ui :state] "loading")
+     :dispatch [::local-storage/load-domain-from-local-storage]}))
 (re-frame/reg-event-fx
   ::user-logged-in
   [(re-frame/inject-cofx :store)]

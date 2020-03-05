@@ -10,6 +10,7 @@
     [react-med.screens.login :as login]
     [react-med.screens.paciente-avaliacao :as pa]
     [react-med.screens.paciente-relatorio.ellipses :as ellipses]
+    [react-med.screens.paciente-relatorio.ellipses-config :as ellipses-config]
     [react-med.screens.paciente-relatorio.paciente-relatorio :as paciente-relatorio]
     [react-med.screens.patient-info.core :as pi]
     [react-med.shell-components :as shell]
@@ -310,6 +311,7 @@
     "edit-coleta" [pa/editing-view]
     "relatorio" [paciente-relatorio/view]
     "ellipses" [ellipses/view]
+    "ellipses-config" [ellipses-config/view]
     "loading" [loading/view]
     "login" [login/view]
     [pi/patient-info]))

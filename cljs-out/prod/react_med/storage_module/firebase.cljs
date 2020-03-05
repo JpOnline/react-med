@@ -46,10 +46,12 @@
 
 ;; TODO: delete
 (re-frame/reg-event-fx
-  ::test2
+  :test2
   (fn-traced
-    [_ [_ snapshot]]
-    (js/console.log snapshot)))
+    [{:keys [db]} [_ snapshot]]
+    (js/console.log snapshot)
+    {}
+    ))
 
 ;; TODO: delete
 (re-frame/reg-event-fx
@@ -67,21 +69,21 @@
                  (js/console.log "firebase erro" e))))
     {}))
 
-(re-frame/reg-event-db
+(re-frame/reg-event-fx
   ::restore-domain-from-firebase
   (fn-traced
-    [app-state _]
-    (let [user (-> fb .auth .-currentUser)
-          user-email (.-email user)
-          name-in-email (first (clojure.string/split user-email "@"))
-          user-fb-uid (.-uid user)]
-      (-> firebase-db
-          (.ref (str "users/"name-in-email"-"user-fb-uid))
-          (.once "value"
-                 (fn [snapshot]
-                   (re-frame/dispatch-sync
-                     [::restore-domain-from-firebase-callback snapshot])))))
-    (assoc-in app-state [:ui :state] "loading")))
+    [{:keys [db]} _]
+    (when-let [user (some-> fb .auth .-currentUser)]
+      (let [user-email (.-email user)
+            name-in-email (first (clojure.string/split user-email "@"))
+            user-fb-uid (.-uid user)]
+        (-> firebase-db
+            (.ref (str "users/"name-in-email"-"user-fb-uid))
+            (.once "value"
+                   (fn [snapshot]
+                     (re-frame/dispatch-sync
+                       [::restore-domain-from-firebase-callback snapshot]))))))
+    {:db (assoc-in db [:ui :state] "loading")}))
 
 (re-frame/reg-event-fx
   ::restore-domain-from-firebase-callback

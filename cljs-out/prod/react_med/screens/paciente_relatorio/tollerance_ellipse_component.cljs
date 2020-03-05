@@ -1,5 +1,6 @@
 (ns react-med.screens.paciente-relatorio.tollerance-ellipse-component
   (:require
+    [circular-progress :as material-circular-progress]
     [google-charts]
     [react-med.util :as util :refer [<sub >evt]]
     ))
@@ -115,7 +116,8 @@
        [:div
         {:id id
          :style #js {:height height :width width}
-         :component-did-mount (draw-chart id data-array options)}])]))
+         :component-did-mount (draw-chart id data-array options)}
+        [:> material-circular-progress]])]))
 
 (defn ellipse-chart-component2 [{:keys [style height series options]}]
   (let [id (str "ellipse-chart" (random-uuid))
@@ -124,4 +126,5 @@
        [:div
         {:id id
          :style style
-         :component-did-mount (draw-chart id data-array options)}])]))
+         :component-did-mount (draw-chart id data-array options)}
+        [:> material-circular-progress]])]))

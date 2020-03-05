@@ -20,7 +20,7 @@
   (fn-traced [{:keys [db store]} _]
     ;; Only save data if there's already data in the local-storage,
     ;; otherwise restore from the firebase.
-    (if (:domain store)
+    (if (and (:domain store) (:domain db))
       {:store (assoc store :domain (:domain db))
        :dispatch [::fb-module/save-to-firebase (assoc store :domain (:domain db))]}
       {:dispatch [::fb-module/restore-domain-from-firebase]})))
@@ -35,5 +35,6 @@
     ;; Restore from the firebase if there's nothing in the local-storage.
     (if (:domain store)
       {:db (merge store initial-state/ui-initial-state)}
-      {:dispatch [::fb-module/restore-domain-from-firebase]})))
+      {:db (assoc-in db [:ui :state] "loading")
+       :dispatch [::fb-module/restore-domain-from-firebase]})))
 
