@@ -27,7 +27,7 @@ var G__20070__$1 = (((G__20070 == null))?null:G__20070.serviceWorker);
 if((G__20070__$1 == null)){
 return null;
 } else {
-return G__20070__$1.register("/sw.js");
+return G__20070__$1.register("sw.js");
 }
 }));
 
