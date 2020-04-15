@@ -10,12 +10,6 @@
     [testdouble.cljs.csv :as csv]
     ))
 
-(defn years-difference [initial-date final-date]
-  (-> (js/Date. final-date)
-      (- (js/Date. initial-date))
-      (/ 1000 60 60 24 365)
-      (js/Math.floor)))
-
 (def paciente-default
   {:id 99999999999
    :nome "Paciente não encontrado"
@@ -28,13 +22,12 @@
   [app-state]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
         patient-info (get-in app-state [:domain :patients paciente-id] paciente-default)
-        idade (years-difference (patient-info :nascimento) (js/Date.))]
+        idade (util/years-difference (patient-info :nascimento) (js/Date.))]
     (-> patient-info
         (assoc :idade idade))))
 (re-frame/reg-sub ::selected-patient selected-patient)
 
 (defn share [data filename type]
-  (js/console.log "sharing csv")
   (-> js/navigator
       (.share #js {"files" #js [(new js/File #js [data] filename #js {"type" type})]
                    "title" filename
@@ -45,7 +38,6 @@
       (.catch #(js/console.error "Não conseguiu compartilhar." %))))
 
 (defn download [data filename type]
-  (js/console.log "downloading csv")
   (let [file (new js/Blob #js [data] #js {"type" type})
         url (.createObjectURL js/URL file)
         anchor (.createElement js/document "a")]
@@ -59,13 +51,6 @@
                      ) 0)))
 
 (defn share-or-download [data filename type]
-  (js/console.log "share-or-download csv")
-  (js/console.log ".-canShare csv" (.-canShare js/navigator))
-  (js/console.log ".canShare csv" (.canShare
-                                     js/navigator
-                                     #js {"files" #js [(new js/File #js [data]
-                                                            filename #js
-                                                            {"type" type})]}))
   (if (and (.-canShare js/navigator)
            (.canShare js/navigator #js {"files" #js [(new js/File #js [data]
                                                           filename #js
@@ -92,7 +77,7 @@
                circunferencia-braco circunferencia-perna]
         :as aval}]
     (try
-      (let [idade (years-difference nascimento data)
+      (let [idade (util/years-difference nascimento data)
           formated-date (util/yyyy-mm-dd->dd-mm-yyyy data)
           avaliacao-info (merge aval paciente-info)
           format-num #(some-> % (.toFixed 2) (dot->comma))
@@ -102,7 +87,8 @@
                                (.toFixed 1)
                                (js/parseFloat))
           gordura-corporal-absoluta (->> avaliacao-info
-                                         (bioimpedance/massa-livre-de-gordura)
+                                         (bioimpedance/massa-livre-de-gordura
+                                           (<sub [:react-med.screens.paciente-relatorio.config/equacao-massa-livre-de-gordura]))
                                          (- (:peso avaliacao-info)))
           gordura-corporal-relativa (em-relacao-peso gordura-corporal-absoluta)
           massa-musculoesqueletica (-> (bioimpedance/massa-musculoesqueletica avaliacao-info)
@@ -110,9 +96,13 @@
                                        (* 10000)
                                        (.toFixed 1)
                                        (js/parseFloat))
-          agua-corporal-total (em-relacao-peso (bioimpedance/agua-corporal avaliacao-info))
-          agua-extracelular (em-relacao-peso (bioimpedance/agua-extracelular avaliacao-info))
-          agua-intracelular (em-relacao-peso (bioimpedance/agua-intracelular avaliacao-info))]
+          act (bioimpedance/agua-corporal
+                (<sub [:react-med.screens.paciente-relatorio.config/equacao-agua-corporal-total])
+                avaliacao-info)
+          agua-corporal-total (em-relacao-peso act)
+          ae (bioimpedance/agua-extracelular avaliacao-info)
+          agua-extracelular (em-relacao-peso ae)
+          agua-intracelular (em-relacao-peso (- act ae))]
       (array-map ;; Array map is used to keep the order
         "Data da Avaliação" formated-date
         "Idade" idade
@@ -161,7 +151,6 @@
   (let [{:keys [nome]} (selected-patient app-state)
         nome-without-accents (replace-accents nome)
         csv-data (app-state->csv-data app-state)]
-    (js/console.log "export-to-csv csv-data" csv-data)
     (share-or-download csv-data (str "avaliacoes-"nome-without-accents".csv") "text/csv"))
   app-state)
 (re-frame/reg-event-db :export-to-csv export-to-csv)
@@ -298,8 +287,8 @@
 
 (defn patient-info []
   [shell/default
-   {:component [patient-info-component]}])
+   [patient-info-component]])
 
 (defn editing-patient-info []
   [shell/default
-   {:component [editing-patient-info-component]}])
+   [editing-patient-info-component]])

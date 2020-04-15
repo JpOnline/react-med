@@ -25,6 +25,9 @@ return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.updat
 });})(vec__15726,n,map__15729,map__15729__$1,component_did_mount,to_render))
 ,new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),component_did_mount], null));
 });
+react_med.util.valid_QMARK_ = (function react_med$util$valid_QMARK_(spec,input){
+return cljs.spec.alpha.valid_QMARK_.call(null,spec,input);
+});
 react_med.util.validate = (function react_med$util$validate(spec,input,message){
 
 var or__4131__auto__ = cljs.spec.alpha.valid_QMARK_.call(null,spec,input);
@@ -200,6 +203,12 @@ var year = cljs.core.nth.call(null,vec__15746,(1),null);
 var month = cljs.core.nth.call(null,vec__15746,(2),null);
 var day = cljs.core.nth.call(null,vec__15746,(3),null);
 return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(day),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(month),"/",cljs.core.str.cljs$core$IFn$_invoke$arity$1(year)].join('');
+});
+/**
+ * Age calculator. Inputs should be in the format yyyy-mm-dd.
+ */
+react_med.util.years_difference = (function react_med$util$years_difference(initial_date,final_date){
+return Math.floor((((((((new Date(final_date)) - (new Date(initial_date))) / (1000)) / (60)) / (60)) / (24)) / (365)));
 });
 
 //# sourceMappingURL=util.js.map

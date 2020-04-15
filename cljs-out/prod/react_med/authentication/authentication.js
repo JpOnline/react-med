@@ -86,6 +86,10 @@ case "auth/network-request-failed":
 return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.authentication.authentication","login-error","react-med.authentication.authentication/login-error",999966691),new cljs.core.Keyword(null,"email-error","email-error",1024363999),"Problemas com a conex\u00E3o. \uD83D\uDE1E"], null));
 
 break;
+case "auth/user-disabled":
+return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.authentication.authentication","login-error","react-med.authentication.authentication/login-error",999966691),new cljs.core.Keyword(null,"email-error","email-error",1024363999),"Sua conta foi desabilitada. Contacte a React Med \uD83D\uDE1E"], null));
+
+break;
 default:
 react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.authentication.authentication","login-error","react-med.authentication.authentication/login-error",999966691),new cljs.core.Keyword(null,"email-error","email-error",1024363999),error.message], null));
 

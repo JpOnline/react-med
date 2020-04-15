@@ -156,4 +156,4 @@
 
 (defn view []
   [shell/default
-   {:component [component]}])
+   [component]])

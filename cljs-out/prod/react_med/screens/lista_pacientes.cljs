@@ -69,7 +69,7 @@
 
 (defn view []
   [shell/default
-   {:component [list-component]}])
+   [list-component]])
 
 (defn-traced check-paciente
   [app-state [event paciente-id]]
@@ -131,4 +131,4 @@
 ;; novas reg-subs internamente.
 (defn selecting-view []
   [shell/default
-   {:component [selecionando-component]}])
+   [selecionando-component]])

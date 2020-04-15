@@ -14,6 +14,7 @@
     [re-frame.core :as re-frame]
     [react-med.authentication.authentication :as auth]
     [react-med.motivation-sentences]
+    [react-med.pwa-install-component :as pwa-install]
     [react-med.util :as util :refer [<sub >evt]]
     [reagent.core :as reagent]
     [tab :as material-tab]
@@ -81,7 +82,7 @@
            {:key %})
         menu-options)])
 
-(defn bottom-bar [& actions]
+(defn bottom-bar []
   [:div.bottom-bar
    {:style #js {:color "white"
                 :backgroundColor util/primary-color
@@ -102,19 +103,6 @@
     {:color "inherit"
      :onClick #(>evt [::open-actions-menu])}
     [:> more-vert-icon]]])
-
-;; (defn actions
-;;   [state]
-;;   (case state
-;;     "info" [{:name "Voltar" :event ::back}
-;;             {:name "Editar" :event ::edit}]
-;;     "info/edit" [{:name "Pronto" :event ::ok}
-;;                  {:name "Cancelar" :event ::cancel}]
-;;     [{:name "Sem ações pra esse estado" :event :nil}]))
-;; (re-frame/reg-sub
-;;   ::actions
-;;   :<- [::util/state]
-;;   actions)
 
 (defn-traced open-actions-menu
   [app-state]
@@ -210,12 +198,12 @@
                      :flexDirection "column"}}
         (map structure->menu-item menu-structure)
         [:> material-button
-         {:style #js {:backgroundColor "#caca30"
-                      :margin "50px 15px 10px 15px"
-                      :color "white"}
-          :variant "contained"
+         {:style #js {:margin "50px 15px 10px 15px"
+                      :color "#caca30"}
+          :variant "outlined"
           :onClick #(auth/logout)}
-         "Logout"]]
+         "Logout"]
+        [pwa-install/button]] ;; Show only when not installed.
        [:div.drawer-footer
         {:style #js {:height "64px"
                      :display "flex"
@@ -304,7 +292,7 @@
     {:if-error [main-error-view]}
     (map-indexed #(with-meta %2 {:key %1}) children)]])
 
-(defn default [{:keys [component]}]
+(defn default [& children]
   (let [menu-structure (<sub [:react-med.routes/side-menu])
         tabs (<sub [:react-med.routes/tabs])
         title (<sub [:react-med.routes/title])
@@ -321,7 +309,7 @@
         [tabs-menu
          {:menu-options tabs}])]
      [main-content
-      component]
+      (map-indexed #(with-meta %2 {:key %1}) children)]
      [drawer-menu
       {:menu-structure menu-structure}]
      [actions-menu

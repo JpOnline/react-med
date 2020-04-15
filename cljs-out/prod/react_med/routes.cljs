@@ -8,11 +8,12 @@
     [react-med.screens.lista-pacientes :as lista-pacientes]
     [react-med.screens.loading :as loading]
     [react-med.screens.login :as login]
-    [react-med.screens.paciente-avaliacao :as pa]
+    [react-med.screens.paciente-avaliacao :as paciente-avaliacao]
     [react-med.screens.paciente-relatorio.ellipses :as ellipses]
     [react-med.screens.paciente-relatorio.ellipses-config :as ellipses-config]
     [react-med.screens.paciente-relatorio.paciente-relatorio :as paciente-relatorio]
-    [react-med.screens.patient-info.core :as pi]
+    [react-med.screens.paciente-relatorio.config :as relatorio-config]
+    [react-med.screens.patient-info.core :as paciente-info]
     [react-med.shell-components :as shell]
     [react-med.util :as util :refer [<sub >evt]]
     ))
@@ -100,6 +101,9 @@
   ::state
   (fn [app-state] (get-in app-state [:ui :state])))
 
+;; Improvement: Ao invés de somente o pŕoximo estado, poderia indicar ações
+;; extras executadas, então a ação :edit poderia ter
+;; {:next-state "edit-info" :extra-actions [:backup-domain]}
 (def state-machine
   {nil {:init "info"}
    "pacientes" {}
@@ -119,6 +123,7 @@
                   :back "coleta"
                   :cancel "coleta"}
    "relatorio" {:back "info"}
+   "relatorio-config" {:back "info"}
    "ellipses" {:back "pacientes"}
    "ellipses-config" {:back "pacientes"}})
 
@@ -136,13 +141,14 @@
       "coleta" (str "Avaliação" preposição patient-name)
       "edit-coleta" (str "Avaliação" preposição patient-name)
       "relatorio" (str "Avaliação" preposição patient-name)
+      "relatorio-config" "Escolha de Equações"
       "ellipses" "Gráfico RXc"
-      "ellipses-config" "Gráfico"
+      "ellipses-config" "Gráfico RXc"
       "??")))
 (re-frame/reg-sub
   ::title
   :<- [::state]
-  :<- [:react-med.screens.patient-info.core/selected-patient]
+  :<- [::paciente-info/selected-patient]
   title)
 
 (defn top-bar-icon
@@ -157,6 +163,7 @@
     "coleta" "<-"
     "edit-coleta" "X"
     "relatorio" "<-"
+    "relatorio-config" "<-"
     "ellipses" "<-"
     "ellipses-config" "<-"
     ""))
@@ -176,45 +183,43 @@
     "coleta" "Coleta"
     "edit-coleta" "Coleta"
     "relatorio" "Relatório"
-    "ellipses" "Gráfico"
+    "relatorio-config" "Configuração"
+    "ellipses" "Gráfico RXc"
     "ellipses-config" "Configuração"
     "???"))
 
 (defn tabs
   [state]
-  (case state
-    "info" [{:label (tab-title "info")
-             :state "info"}
-            {:label (tab-title "avaliacoes")
-             :state "avaliacoes"}]
-    "edit-info" [{:label (tab-title "info")
-                  :state "edit-info"}
-                 {:label (tab-title "avaliacoes")
-                  :state "avaliacoes"}]
-    "avaliacoes" [{:label (tab-title "info")
-                   :state "info"}
-                  {:label (tab-title "avaliacoes")
-                   :state "avaliacoes"}]
-    "selecionando-avaliacoes" [{:label (tab-title "info")
-                                :state "info"}
-                               {:label (tab-title "avaliacoes")
-                                :state "selecionando-avaliacoes"}]
-    "coleta" [{:label (tab-title "coleta")
-               :state "coleta"}
-              {:label (tab-title "relatorio")
-               :state "relatorio"}]
-    "edit-coleta" [{:label (tab-title "coleta")
+  (condp #(%1 %2) state
+    #{"info" "avaliacoes"} [{:label (tab-title "info")
+                             :state "info"}
+                            {:label (tab-title "avaliacoes")
+                             :state "avaliacoes"}]
+    #{"edit-info"} [{:label (tab-title "info")
+                     :state "edit-info"}
+                    {:label (tab-title "avaliacoes")
+                     :state "avaliacoes"}]
+    #{"selecionando-avaliacoes"} [{:label (tab-title "info")
+                                   :state "info"}
+                                  {:label (tab-title "avaliacoes")
+                                   :state "selecionando-avaliacoes"}]
+    #{"coleta"
+      "relatorio"
+      "relatorio-config"} [{:label (tab-title "coleta")
+                            :state "coleta"}
+                           {:label (tab-title "relatorio")
+                            :state "relatorio"}
+                           {:label (tab-title "relatorio-config")
+                            :state "relatorio-config"}]
+    #{"edit-coleta"} [{:label (tab-title "coleta")
                     :state "edit-coleta"}
                    {:label (tab-title "relatorio")
-                    :state "relatorio"}]
-    "relatorio" [{:label (tab-title "coleta")
-                  :state "coleta"}
-                 {:label (tab-title "relatorio")
-                  :state "relatorio"}]
-    "ellipses" [{:label "gráfico" :state "ellipses"}
-                {:label "Configuração" :state "ellipses-config"}]
-    "ellipses-config" [{:label "Gráfico" :state "ellipses"}
-                       {:label "Configuração" :state "ellipses-config"}]
+                    :state "relatorio"}
+                   {:label (tab-title "relatorio-config")
+                    :state "relatorio-config"}]
+    #{"ellipses"
+      "ellipses-config"} [{:label "Gráfico" :state "ellipses"}
+                          {:label "Configuração" :state "ellipses-config"}]
     nil))
 (re-frame/reg-sub
   ::tabs
@@ -230,42 +235,47 @@
                        :selected (= state s)
                        :sub-menus (map m->m sub-menus)})
         menu-model (condp #(%1 %2) state
-                     #{"pacientes"} [#_ {:s "grupos"} {:s "pacientes"} {:s "ellipses"}]
-                     #{"info" "edit-info" "avaliacoes"}
-                     [{:s "pacientes"
-                       :extra-label (when selected-patient
-                                      (str" ("(:nome selected-patient)")"))
-                       :sub-menus
-                       [{:s "info"}
-                        {:s "avaliacoes"
-                         :extra-label (when selected-avaliacao
-                                        (str" ("day"/"month")"))}]}
-                      {:s "ellipses"}]
-                     #{"coleta" "edit-coleta" "relatorio"}
-                     [{:s "pacientes"
-                       :extra-label (when selected-patient
-                                      (str" ("(:nome selected-patient)")"))
-                       :sub-menus
-                       [{:s "info"}
-                        {:s "avaliacoes"
-                         :extra-label (when selected-avaliacao
-                                        (str" ("day"/"month")"))
-                         :sub-menus
-                         [{:s "coleta"}
-                          {:s "relatorio"}]}]}
-                      {:s "ellipses"}]
-                     #{"ellipses" "ellipses-config"}
-                     [{:s "pacientes"}
-                      {:s "ellipses"
-                       :sub-menus [{:s "ellipses-config"}]}]
-                     [#_ {:s "grupos"} {:s "pacientes"}])]
-    (map model->menu menu-model)
-    ))
+                     #{"pacientes"} [#_ {:s "grupos"}
+                                     {:s "pacientes"}
+                                     {:s "ellipses"}]
+                     #{"info"
+                       "edit-info"
+                       "avaliacoes"} [{:s "pacientes"
+                                       :extra-label (when selected-patient
+                                                      (str" ("(:nome selected-patient)")"))
+                                       :sub-menus
+                                       [{:s "info"}
+                                        {:s "avaliacoes"
+                                         :extra-label (when selected-avaliacao
+                                                        (str" ("day"/"month")"))}]}
+                                      {:s "ellipses"}]
+                     #{"coleta"
+                       "edit-coleta"
+                       "relatorio-config"
+                       "relatorio"} [{:s "pacientes"
+                                      :extra-label (when selected-patient
+                                                     (str" ("(:nome selected-patient)")"))
+                                      :sub-menus
+                                      [{:s "info"}
+                                       {:s "avaliacoes"
+                                        :extra-label (when selected-avaliacao
+                                                       (str" ("day"/"month")"))
+                                        :sub-menus
+                                        [{:s "coleta"}
+                                         {:s "relatorio"}
+                                         {:s "relatorio-config"}]}]}
+                                     {:s "ellipses"}]
+                     #{"ellipses"
+                       "ellipses-config"} [{:s "pacientes"}
+                                           {:s "ellipses"
+                                            :sub-menus [{:s "ellipses-config"}]}]
+                     [#_{:s "grupos"} {:s "pacientes"}])]
+    (map model->menu menu-model)))
 (re-frame/reg-sub
   ::side-menu
   :<- [::state]
-  :<- [:react-med.screens.patient-info.core/selected-patient]
-  :<- [:react-med.screens.paciente-avaliacao/selected-avaliacao]
+  :<- [::paciente-info/selected-patient]
+  :<- [::paciente-avaliacao/selected-avaliacao]
   side-menu)
 
 (defn actions
@@ -280,17 +290,18 @@
                  {:name "Cancelar" :event :cancel}]
     "avaliacoes" [{:name "Exportar para Excel" :event :export-to-csv}
                   {:name "Voltar" :event :back}
-                  {:name "Selecionar" :event :react-med.screens.lista-avaliacoes/show-avaliacoes-checkbox}
-                  {:name "Nova Avaliação" :event :react-med.screens.lista-avaliacoes/nova-avaliacao}]
+                  {:name "Selecionar" :event ::lista-avaliacoes/show-avaliacoes-checkbox}
+                  {:name "Nova Avaliação" :event ::lista-avaliacoes/nova-avaliacao}]
     "selecionando-avaliacoes" [{:name "Ok" :event :ok}
-                               {:name "Excluir" :event :react-med.screens.lista-avaliacoes/delete-avaliacoes}]
+                               {:name "Excluir" :event ::lista-avaliacoes/delete-avaliacoes}]
     "coleta" [{:name "Exportar para Excel" :event :export-to-csv}
               {:name "Voltar" :event :back}
               {:name "Editar" :event :edit}]
     "edit-coleta" [{:name "Pronto" :event :ok}
                    {:name "Cancelar" :event :cancel}]
-    "relatorio" [#_{:name "Compartilhar" :event :share-report-img}
+    "relatorio" [{:name "Versão em PDF" :event ::paciente-relatorio/imprimir-relatorio}
                  {:name "Voltar" :event :back}]
+    "relatorio-config" [{:name "Voltar" :event :back}]
     "ellipses" [{:name "Voltar" :event :back}]
     "ellipses-config" [{:name "Voltar" :event :back}]
     [{:name "Sem ações pra essa tela"}]))
@@ -303,15 +314,16 @@
   (case (<sub [::state])
     "pacientes" [lista-pacientes/view]
     "selecionando-pacientes" [lista-pacientes/selecting-view]
-    "info" [pi/patient-info]
-    "edit-info" [pi/editing-patient-info]
+    "info" [paciente-info/patient-info]
+    "edit-info" [paciente-info/editing-patient-info]
     "avaliacoes" [lista-avaliacoes/view]
     "selecionando-avaliacoes" [lista-avaliacoes/selecting-view]
-    "coleta" [pa/detail-view]
-    "edit-coleta" [pa/editing-view]
+    "coleta" [paciente-avaliacao/detail-view]
+    "edit-coleta" [paciente-avaliacao/editing-view]
     "relatorio" [paciente-relatorio/view]
+    "relatorio-config" [relatorio-config/view]
     "ellipses" [ellipses/view]
     "ellipses-config" [ellipses-config/view]
     "loading" [loading/view]
     "login" [login/view]
-    [pi/patient-info]))
+    [paciente-info/patient-info]))

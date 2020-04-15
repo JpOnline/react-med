@@ -87,7 +87,7 @@
 
 (defn view []
   [shell/default
-   {:component [error-wrapper [list-component]]}])
+   [error-wrapper [list-component]]])
 
 (defn-traced delete-avaliacoes
   [app-state]
@@ -162,4 +162,4 @@
 
 (defn selecting-view []
   [shell/default
-   {:component [selecting-component]}])
+   [selecting-component]])

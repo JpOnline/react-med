@@ -4,6 +4,7 @@
     [goog.dom :as gdom]
     [re-frame.core :as re-frame]
     [react-med.orientation :as orientation]
+    [react-med.pwa-install-component :as pwa-install]
     [react-med.routes :as routes]
     [react-med.storage-module.components :as storage-components]
     [react-med.storage-module.local-storage :as local-storage]
@@ -26,14 +27,17 @@
 ;; this is particularly helpful for testing this ns without launching the app
 (defonce startup
   (do
-    (-> js/window
-        (.addEventListener "load" #(some-> js/navigator
-                                           .-serviceWorker
-                                           (.register "/sw.js"))))
+    (.addEventListener js/window "load" #(some-> js/navigator
+                                                 .-serviceWorker
+                                                 (.register "/sw.js")))
+
+    (pwa-install/add-before-install-prompt-event-listener)
 
     (re-frame/clear-subscription-cache!)
+
     (re-frame/dispatch-sync [::local-storage/load-domain-from-local-storage])
-    ;; ;; Uncomment this to avoid the Local Storage and Firebase
+    ;; ;; Uncomment this to avoid the Local Storage and Firebase and comment the
+    ;; ;; line above.
     ;; (re-frame/dispatch-sync [::initialize-app-state (merge domain-initial-state
     ;;                                                        ui-initial-state)])
 
@@ -113,11 +117,10 @@
                                                  :reatancia 49
                                                  :atividade-fisica "Ativo"}]}]}
                                 :ui {:paciente-selecionado 0
-                                     :avaliacao-selecionada 2
-                                     :checkboxed-avaliacoes [false true]
+                                     :avaliacao-selecionada 0
                                      :actions-menu {:opened? false}
                                      :drawer-menu {:opened? false}
-                                     :state "ellipses"}})
+                                     :state "relatorio"}})
   (react-med.main/reset-state! react-med.main/default-state)
   (react-med.main/reset-state! avaliacoes-test-state)
 

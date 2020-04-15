@@ -129,8 +129,10 @@
    {:style #js {:height "100%" :width "100%"}
     :series (<sub [::ellipses-graph-series])
     :options #js {:hAxis #js {:textPosition "in"
+                              :viewWindowMode "maximized"
                               :title "Resistência"}
                   :vAxis #js {:textPosition "in"
+                              :viewWindowMode "maximized"
                               :title "Reatância"}
                   :series series-options}}])
 
@@ -145,11 +147,13 @@
                                }
                   :hAxis #js {:textPosition "in"
                               :title "Resistência"
+                              :viewWindowMode "maximized"
                               ;; :maxValue 1000
-                              ;; :minValue 0
+                              ;; :minValue -100
                               }
                   :vAxis #js {:textPosition "in"
                               :title "Reatância"
+                              :viewWindowMode "maximized"
                               ;; :maxValue 100
                               ;; :minValue 0
                               }
@@ -157,8 +161,7 @@
 
 (defn desktop-view []
   [shell/default
-   {:component [desktop-ellipses-chart]}
-   ])
+   [desktop-ellipses-chart]])
 
 (defn top-bar [& children]
   [:div.top-bar

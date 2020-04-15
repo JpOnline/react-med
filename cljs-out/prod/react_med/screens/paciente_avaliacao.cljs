@@ -1,11 +1,12 @@
 (ns react-med.screens.paciente-avaliacao
   (:require
+    [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
+    [re-frame.core :as re-frame]
+    [react-med.screens.components :as screens.components]
+    [react-med.screens.paciente-relatorio.bioimpedance :as bioimpedance]
     [react-med.shell-components :as shell]
     [react-med.util :as util :refer [<sub >evt]]
-    [re-frame.core :as re-frame]
-    [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
     [reagent.core :as reagent]
-    [react-med.screens.components :as screens.components]
     [tick.alpha.api :as tick]
     ))
 
@@ -13,8 +14,10 @@
   [app-state]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
         avaliacao-id (get-in app-state [:ui :avaliacao-selecionada])
-        avaliacao (get-in app-state [:domain :patients paciente-id :avaliacoes avaliacao-id])]
-    avaliacao))
+        avaliacao (get-in app-state [:domain :patients paciente-id :avaliacoes avaliacao-id])
+        paciente-nascimento (get-in app-state [:domain :patients paciente-id :nascimento] "1900-01-01")
+        idade-quando-avaliado (util/years-difference paciente-nascimento (get avaliacao :data "1900-01-01"))]
+    (assoc avaliacao :idade-quando-avaliado idade-quando-avaliado)))
 (re-frame/reg-sub ::selected-avaliacao selected-avaliacao)
 
 (defn date->ddMMyyyy [date]
@@ -32,7 +35,9 @@
 (defn details-component []
   (let [{:keys [data peso circunferencia-cintura circunferencia-braco
                 circunferencia-perna estatura resistencia reatancia
+                idade-quando-avaliado
                 atividade-fisica circunferencia-quadril]} (<sub [::selected-avaliacao])
+        impedancia (Math/round (bioimpedance/impedancia {:resistencia resistencia :reatancia reatancia}))
         line-style #js {:display "flex"
                         :alignItems "center"
                         :height 48
@@ -41,6 +46,10 @@
      [:div
       {:style line-style}
       [:b "Data: "] (date->ddMMyyyy data)]
+     [:div
+      {:style line-style}
+      [:b "Idade: "] (when (should-show? idade-quando-avaliado)
+                       (str idade-quando-avaliado " anos"))]
      [:div
       {:style line-style}
       [:b "Peso: "] (when (should-show? peso)
@@ -52,11 +61,15 @@
      [:div
       {:style line-style}
       [:b "Resistência: "] (when (should-show? resistencia)
-                             (.replace (str resistencia) "." ","))]
+                             (.replace (str resistencia " Ohms/m") "." ","))]
      [:div
       {:style line-style}
       [:b "Reatância: "] (when (should-show? reatancia)
-                           (.replace (str reatancia) "." ","))]
+                           (.replace (str reatancia " Ohms/m") "." ","))]
+     [:div
+      {:style line-style}
+      [:b "Impedância: "] (when (and (should-show? reatancia) (should-show? resistencia))
+                            (str impedancia " Ohms/m"))]
      [:div
       {:style line-style}
       [:b "Nível de Atividade Física: "] atividade-fisica]
@@ -90,7 +103,9 @@
 (defn editing-component []
   (let [{:keys [data peso circunferencia-cintura circunferencia-braco
                 circunferencia-perna estatura resistencia reatancia
+                idade-quando-avaliado
                 atividade-fisica circunferencia-quadril]} (<sub [::selected-avaliacao])
+        impedancia (Math/round (bioimpedance/impedancia {:resistencia resistencia :reatancia reatancia}))
         line-style #js {:display "flex"
                         :alignItems "center"
                         :height 48
@@ -127,6 +142,11 @@
              (set! (-> (reagent/dom-node this) .-onchange)
                    #(>evt [::change-avaliacao :data (-> % .-target .-value)])))}])]]
      [:div
+      {:style (clj->js
+                (merge (js->clj line-style)
+                       {:color "rgba(0, 0, 0, 0.4)"}))}
+      [:b "Idade: "] idade-quando-avaliado " anos"]
+     [:div
       {:style line-style}
       [:b "Peso: "]
       [screens.components/gray-input
@@ -146,6 +166,7 @@
       [screens.components/gray-input
        {:defaultValue resistencia
         :onBlur #(>evt [::change-avaliacao :resistencia (-> % .-target .-value)])
+        :suffix " Ohms/m"
         :max 20000}]]
      [:div
       {:style line-style}
@@ -153,7 +174,14 @@
       [screens.components/gray-input
        {:defaultValue reatancia
         :onBlur #(>evt [::change-avaliacao :reatancia (-> % .-target .-value)])
+        :suffix " Ohms/m"
         :max 20000}]]
+     [:div
+      {:style (clj->js
+                (merge (js->clj line-style)
+                       {:color "rgba(0, 0, 0, 0.4)"}))}
+      [:b "Impedância: "] (when (and (should-show? reatancia) (should-show? resistencia))
+                            (str impedancia " Ohms/m"))]
      [:div
       {:style #js {:display "flex"
                    :flexWrap "wrap"
@@ -207,9 +235,9 @@
 (defn detail-view []
   (let [actions (<sub [:react-med.routes/actions])]
     [shell/default
-     {:component [details-component]}]))
+     [details-component]]))
 
 (defn editing-view []
   (let [actions (<sub [:react-med.routes/actions])]
     [shell/default
-     {:component [editing-component]}]))
+     [editing-component]]))

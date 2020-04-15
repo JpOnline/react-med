@@ -46,6 +46,7 @@
                   "auth/wrong-password" (>evt [::login-error :password-error "Senha errada ou inexistente"])
                   "auth/argument-error" (>evt [::login-error :email-error "Email inválido"])
                   "auth/network-request-failed" (>evt [::login-error :email-error "Problemas com a conexão. 😞"])
+                  "auth/user-disabled" (>evt [::login-error :email-error "Sua conta foi desabilitada. Contacte a React Med 😞"])
                   (do
                     (>evt [::login-error :email-error (.-message error)])
                     (>evt [::login-error :password-error (.-message error)])

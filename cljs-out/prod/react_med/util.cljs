@@ -21,6 +21,9 @@
                                           dissoc :component-did-mount))
      :component-did-mount component-did-mount}))
 
+(defn valid? [spec input]
+  (spec/valid? spec input))
+
 (defn validate [spec input message]
   "Throw a message when the input don't conform to the spec."
   (or (spec/valid? spec input)
@@ -109,4 +112,12 @@
 (defn yyyy-mm-dd->dd-mm-yyyy [date]
   (let [[_ year month day] (re-find #"(\d{4})\D(\d{1,2})\D(\d{1,2})" date)]
      (str day"/"month"/"year)))
+
+(defn years-difference
+  "Age calculator. Inputs should be in the format yyyy-mm-dd."
+  [initial-date final-date]
+  (-> (js/Date. final-date)
+      (- (js/Date. initial-date))
+      (/ 1000 60 60 24 365)
+      (js/Math.floor)))
 
