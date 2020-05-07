@@ -28,7 +28,7 @@ var G__20131__$1 = (((G__20131 == null))?null:G__20131.serviceWorker);
 if((G__20131__$1 == null)){
 return null;
 } else {
-return G__20131__$1.register("/sw.js");
+return G__20131__$1.register("/react-med/sw.js");
 }
 }));
 
