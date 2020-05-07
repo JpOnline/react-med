@@ -101,9 +101,6 @@
   ::state
   (fn [app-state] (get-in app-state [:ui :state])))
 
-;; Improvement: Ao invés de somente o pŕoximo estado, poderia indicar ações
-;; extras executadas, então a ação :edit poderia ter
-;; {:next-state "edit-info" :extra-actions [:backup-domain]}
 (def state-machine
   {nil {:init "info"}
    "pacientes" {}

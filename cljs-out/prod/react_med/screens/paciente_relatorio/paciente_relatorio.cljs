@@ -3,6 +3,7 @@
     [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
     [re-frame.core :as re-frame]
     [react-med.screens.paciente-relatorio.bioimpedance :as bioimpedance]
+    [react-med.screens.paciente-relatorio.tollerance-ellipse-component]
     [react-med.shell-components :as shell]
     [react-med.util :as util :refer [<sub >evt]]
     [slider :as material-slider]

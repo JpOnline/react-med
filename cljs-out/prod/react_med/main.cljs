@@ -20,7 +20,7 @@
                                ;; changed.
                                [storage-components/save-element]
                                ;; Set if the display is on landscape or portrait
-                               [orientation/set-landscape-or-portrait]
+                               ;; [orientation/set-landscape-or-portrait]
                                ] el)))
 
 ;; conditionally start your application based on the presence of an "app" element

@@ -69,7 +69,6 @@
               :display "flex"
               :flexDirection "column"
               :justifyContent "center"}}
-     [paciente-relatorio/relatorio-style]
      [paciente-relatorio/measurement-no-print-view
       massa-livre-de-gordura]
      [paciente-relatorio/measurement-no-print-view
@@ -88,4 +87,6 @@
 
 (defn view []
   [shell/default
-   [component]])
+   [component]
+   ]
+  )

@@ -14,7 +14,7 @@ react_med.main.mount_app_element = (function react_med$main$mount_app_element(){
 var temp__5735__auto__ = goog.dom.getElement("app");
 if(cljs.core.truth_(temp__5735__auto__)){
 var el = temp__5735__auto__;
-return reagent.core.render_component.call(null,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.routes.selected_view], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.storage_module.components.save_element], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.orientation.set_landscape_or_portrait], null)], null),el);
+return reagent.core.render_component.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.routes.selected_view], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.storage_module.components.save_element], null)], null),el);
 } else {
 return null;
 }
