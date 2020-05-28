@@ -86,7 +86,7 @@
      [selecao-agua-corporal]]))
 
 (defn view []
-  [shell/default
-   [component]
-   ]
-  )
+  [:<>
+   [paciente-relatorio/relatorio-style]
+   [shell/default
+    [component]]])

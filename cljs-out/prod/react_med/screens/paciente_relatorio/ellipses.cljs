@@ -182,7 +182,9 @@
    [shell/main-content
     [shell/error-boundary
      {:if-error [:h4 "erro"]}
-     [mobile-ellipses-chart]]]])
+     [mobile-ellipses-chart]]]
+   [shell/drawer-menu
+    {:menu-structure (<sub [:react-med.routes/side-menu])}]])
 
 (defn view []
   (if (= "landscape" (<sub [:react-med.orientation/orientation]))

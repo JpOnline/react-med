@@ -225,7 +225,7 @@
 
 (defn side-menu
   [[state selected-patient selected-avaliacao]]
-  (let [[_ month day] (re-find #"\d+-(\d+)-(\d+)" (or (:data selected-avaliacao) ""))
+  (let [[_ month day] (when (:data selected-avaliacao) (re-find #"\d+-(\d+)-(\d+)" (:data selected-avaliacao)))
         model->menu (fn m->m [{:keys [s sub-menus extra-label]}]
                       {:label (str (tab-title s) extra-label)
                        :state s
@@ -242,9 +242,7 @@
                                                       (str" ("(:nome selected-patient)")"))
                                        :sub-menus
                                        [{:s "info"}
-                                        {:s "avaliacoes"
-                                         :extra-label (when selected-avaliacao
-                                                        (str" ("day"/"month")"))}]}
+                                        {:s "avaliacoes"}]}
                                       {:s "ellipses"}]
                      #{"coleta"
                        "edit-coleta"
@@ -255,7 +253,7 @@
                                       :sub-menus
                                       [{:s "info"}
                                        {:s "avaliacoes"
-                                        :extra-label (when selected-avaliacao
+                                        :extra-label (when (and selected-avaliacao day month)
                                                        (str" ("day"/"month")"))
                                         :sub-menus
                                         [{:s "coleta"}

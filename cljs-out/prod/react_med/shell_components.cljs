@@ -26,8 +26,6 @@
    {:style #js {:color "white"
                 :backgroundColor util/primary-color
                 :width "100%"
-                :display "flex"
-                :flexDirection "column"
                 :zIndex 1100
                 :boxShadow "0px 2px 4px -1px #0003,
                             0px 4px 5px 0px #00000024,
@@ -36,7 +34,7 @@
 
 (defn top-bar [& children]
   [:div.top-bar
-   {:style #js {:minHeight 64
+   {:style #js {:height "64px"
                 :padding "0 24px"
                 :display "flex"
                 :alignItems "center"}}
@@ -73,7 +71,8 @@
     :variant "scrollable"
     :scrollButtons (if (> (count menu-options) 3) "on" "off")
     :onChange #(>evt [:react-med.routes/set-route %2])
-    :style #js {:overflowX "hidden"}}
+    :style #js {:overflowX "hidden"
+                :height "48px"}}
    (map #(with-meta
            [:> material-tab
             {:label (:label %)
@@ -87,7 +86,7 @@
    {:style #js {:color "white"
                 :backgroundColor util/primary-color
                 :width "100%"
-                :height 64
+                :minHeight 64
                 :display "flex"
                 :alignItems "center"
                 :justifyContent "space-between"
@@ -257,7 +256,7 @@
   (util/replace-if-some attrs
     [:main
      ;; Default attributes, it's replaced if attrs is set.
-     {:style #js {:flexGrow 1
+     {:style #js {:flex 1
                   :padding 12
                   :overflow "auto"}}
      [error-boundary

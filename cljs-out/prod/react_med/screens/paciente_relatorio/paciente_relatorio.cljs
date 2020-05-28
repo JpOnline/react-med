@@ -67,8 +67,8 @@
 
      .slider-root-no-print{
        background: linear-gradient(90deg, rgba(183,141,130,0.3) 0%,
-                                          rgba(25,252,3,0) 25%,
-                                          rgba(25,252,3,0) 75%,
+                                          rgba(255,252,255,0) 25%,
+                                          rgba(255,252,255,0) 75%,
                                           rgba(183,141,130,0.3) 100%);
        height: 30px;
        border-radius: 6px;

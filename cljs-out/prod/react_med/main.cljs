@@ -29,7 +29,7 @@
   (do
     (.addEventListener js/window "load" #(some-> js/navigator
                                                  .-serviceWorker
-                                                 (.register "/sw.js")))
+                                                 (.register "/react-med/sw.js")))
 
     (pwa-install/add-before-install-prompt-event-listener)
 
