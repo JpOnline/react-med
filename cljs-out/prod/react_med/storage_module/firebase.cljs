@@ -1,5 +1,11 @@
+;; I was saving and reading with clj->js and js->clj, but I wasn not confident
+;; that the conversion back would be the same. So using transit it doesn't save
+;; a human readable json, but maybe I can have human readability back in the
+;; future with a better solution and running a script to convert all user data
+;; back.
 (ns react-med.storage-module.firebase
   (:require
+    [cognitect.transit :as transit]
     [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
     [firebase :as fb]
     [re-frame.core :as re-frame]
@@ -23,10 +29,8 @@
     (-> fb (.database))))
 
 (defn firebase-save [db-map]
-  (let [json (clj->js db-map)]
-    (assert
-      (= db-map (js->clj json :keywordize-keys true))
-      "The given map is different if converted back from JSON.")
+  (let [writer (transit/writer :json)
+        t-json (transit/write writer db-map)]
     ;; TODO: Falta incluir a lógica dos casos em que o usuário foi bloqueado, ou
     ;; seja, não tem permissão para gravar.
     (when-let [user (-> fb .auth .-currentUser)]
@@ -35,7 +39,7 @@
             user-fb-uid (.-uid user)]
         (-> firebase-db
             (.ref (str "users/"name-in-email"-"user-fb-uid))
-            (.set (clj->js db-map)))))))
+            (.set t-json))))))
 
 (re-frame/reg-event-db
   ::save-to-firebase
@@ -43,31 +47,6 @@
     [app-state [event to-save]]
     (firebase-save to-save)
     app-state))
-
-;; TODO: delete
-(re-frame/reg-event-fx
-  :test2
-  (fn-traced
-    [{:keys [db]} [_ snapshot]]
-    (js/console.log snapshot)
-    {}
-    ))
-
-;; TODO: delete
-(re-frame/reg-event-fx
-  :test-fb
-  [(re-frame/inject-cofx :store)]
-  (fn-traced
-    [_ _]
-    #_(-> firebase-db
-        (.ref)
-        (.once "value"
-               (fn [snapshot]
-                 (re-frame/dispatch-sync
-                   [::test2 snapshot]))
-               (fn [e]
-                 (js/console.log "firebase erro" e))))
-    {}))
 
 (re-frame/reg-event-fx
   ::restore-domain-from-firebase
@@ -86,13 +65,19 @@
         {:db (assoc-in db [:ui :state] "loading")})
       {:db (assoc-in db [:ui :state] "login")})))
 
+(defn read-json [json]
+  (try
+    (transit/read (transit/reader :json) json)
+    (catch js/Object e
+      (js/console.warn "Problema lendo com transit." e))))
+
 (re-frame/reg-event-fx
   ::restore-domain-from-firebase-callback
   (fn-traced
     [_ [_ snapshot]]
-    (let [restored-from-firebase (some-> snapshot
+    (let [restored-from-firebase (some->> snapshot
                                          (.val)
-                                         (js->clj :keywordize-keys true))
+                                         (read-json))
           restored-state (merge restored-from-firebase
                                 initial-state/ui-initial-state
                                 {:authentication {:user-email (-> fb .auth .-currentUser .-email)}})

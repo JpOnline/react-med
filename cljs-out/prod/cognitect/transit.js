@@ -76,7 +76,7 @@ com.cognitect.transit.types.UUID.prototype.cljs$core$IHash$ = cljs.core.PROTOCOL
 
 com.cognitect.transit.types.UUID.prototype.cljs$core$IHash$_hash$arity$1 = (function (this$){
 var this$__$1 = this;
-return com.cognitect.transit.eq.hashCode(this$__$1);
+return cljs.core.hash.call(null,this$__$1.toString());
 });
 
 com.cognitect.transit.types.TaggedValue.prototype.cljs$core$IHash$ = cljs.core.PROTOCOL_SENTINEL;
@@ -254,8 +254,10 @@ return (new cognitect.transit.VectorBuilder());
 /**
  * Return a transit reader. type may be either :json or :json-verbose.
  * opts may be a map optionally containing a :handlers entry. The value
- * of :handlers should be map from tag to a decoder function which returns
- * then in-memory representation of the semantic transit value.
+ * of :handlers should be map from string tag to a decoder function of one
+ * argument which returns the in-memory representation of the semantic transit
+ * value. If a :default handler is provided, it will be used when no matching
+ * read handler can be found.
  */
 cognitect.transit.reader = (function cognitect$transit$reader(var_args){
 var G__15779 = arguments.length;
@@ -279,7 +281,7 @@ return cognitect.transit.reader.call(null,type,null);
 });
 
 cognitect.transit.reader.cljs$core$IFn$_invoke$arity$2 = (function (type,opts){
-return com.cognitect.transit.reader(cljs.core.name.call(null,type),cognitect.transit.opts_merge.call(null,({"handlers": cljs.core.clj__GT_js.call(null,cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 5, ["$",(function (v){
+return com.cognitect.transit.reader(cljs.core.name.call(null,type),cognitect.transit.opts_merge.call(null,({"handlers": cljs.core.clj__GT_js.call(null,cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 6, ["$",(function (v){
 return cljs.core.symbol.call(null,v);
 }),":",(function (v){
 return cljs.core.keyword.call(null,v);
@@ -302,7 +304,9 @@ return cljs.core.persistent_BANG_.call(null,ret);
 }
 break;
 }
-})], null),new cljs.core.Keyword(null,"handlers","handlers",79528781).cljs$core$IFn$_invoke$arity$1(opts))), "mapBuilder": (new cognitect.transit.MapBuilder()), "arrayBuilder": (new cognitect.transit.VectorBuilder()), "prefersStrings": false}),cljs.core.clj__GT_js.call(null,cljs.core.dissoc.call(null,opts,new cljs.core.Keyword(null,"handlers","handlers",79528781)))));
+}),"with-meta",(function (v){
+return cljs.core.with_meta.call(null,(v[(0)]),(v[(1)]));
+})], null),cljs.core.dissoc.call(null,new cljs.core.Keyword(null,"handlers","handlers",79528781).cljs$core$IFn$_invoke$arity$1(opts),new cljs.core.Keyword(null,"default","default",-1987822328)))), "defaultHandler": new cljs.core.Keyword(null,"default","default",-1987822328).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"handlers","handlers",79528781).cljs$core$IFn$_invoke$arity$1(opts)), "mapBuilder": (new cognitect.transit.MapBuilder()), "arrayBuilder": (new cognitect.transit.VectorBuilder()), "prefersStrings": false}),cljs.core.clj__GT_js.call(null,cljs.core.dissoc.call(null,opts,new cljs.core.Keyword(null,"handlers","handlers",79528781)))));
 });
 
 cognitect.transit.reader.cljs$lang$maxFixedArity = 2;
@@ -790,10 +794,87 @@ cognitect.transit.__GT_UUIDHandler = (function cognitect$transit$__GT_UUIDHandle
 return (new cognitect.transit.UUIDHandler());
 });
 
+
+/**
+* @constructor
+*/
+cognitect.transit.WithMeta = (function (value,meta){
+this.value = value;
+this.meta = meta;
+});
+
+cognitect.transit.WithMeta.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"value","value",1946509744,null),new cljs.core.Symbol(null,"meta","meta",-1154898805,null)], null);
+});
+
+cognitect.transit.WithMeta.cljs$lang$type = true;
+
+cognitect.transit.WithMeta.cljs$lang$ctorStr = "cognitect.transit/WithMeta";
+
+cognitect.transit.WithMeta.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
+return cljs.core._write.call(null,writer__4375__auto__,"cognitect.transit/WithMeta");
+});
+
+/**
+ * Positional factory function for cognitect.transit/WithMeta.
+ */
+cognitect.transit.__GT_WithMeta = (function cognitect$transit$__GT_WithMeta(value,meta){
+return (new cognitect.transit.WithMeta(value,meta));
+});
+
+
+/**
+* @constructor
+ * @implements {cognitect.transit.Object}
+*/
+cognitect.transit.WithMetaHandler = (function (){
+});
+cognitect.transit.WithMetaHandler.prototype.tag = (function (v){
+var self__ = this;
+var _ = this;
+return "with-meta";
+});
+
+cognitect.transit.WithMetaHandler.prototype.rep = (function (v){
+var self__ = this;
+var _ = this;
+return com.cognitect.transit.tagged("array",[v.value,v.meta]);
+});
+
+cognitect.transit.WithMetaHandler.prototype.stringRep = (function (v){
+var self__ = this;
+var _ = this;
+return null;
+});
+
+cognitect.transit.WithMetaHandler.getBasis = (function (){
+return cljs.core.PersistentVector.EMPTY;
+});
+
+cognitect.transit.WithMetaHandler.cljs$lang$type = true;
+
+cognitect.transit.WithMetaHandler.cljs$lang$ctorStr = "cognitect.transit/WithMetaHandler";
+
+cognitect.transit.WithMetaHandler.cljs$lang$ctorPrWriter = (function (this__4374__auto__,writer__4375__auto__,opt__4376__auto__){
+return cljs.core._write.call(null,writer__4375__auto__,"cognitect.transit/WithMetaHandler");
+});
+
+/**
+ * Positional factory function for cognitect.transit/WithMetaHandler.
+ */
+cognitect.transit.__GT_WithMetaHandler = (function cognitect$transit$__GT_WithMetaHandler(){
+return (new cognitect.transit.WithMetaHandler());
+});
+
 /**
  * Return a transit writer. type maybe either :json or :json-verbose.
- *   opts is a map containing a :handlers entry. :handlers is a map of
- *   type constructors to handler instances.
+ *   opts is a map with the following optional keys:
+ * 
+ *  :handlers  - a map of type constructors to handler instances. Can optionally
+ *               provide a :default write handler which will be used if no
+ *               matching handler can be found.
+ *  :transform - a function of one argument returning a transformed value. Will
+ *               be invoked on a value before it is written.
  */
 cognitect.transit.writer = (function cognitect$transit$writer(var_args){
 var G__15859 = arguments.length;
@@ -824,20 +905,21 @@ var map_handler = (new cognitect.transit.MapHandler());
 var set_handler = (new cognitect.transit.SetHandler());
 var vector_handler = (new cognitect.transit.VectorHandler());
 var uuid_handler = (new cognitect.transit.UUIDHandler());
-var handlers = cljs.core.merge.call(null,cljs.core.PersistentHashMap.fromArrays([cljs.core.PersistentHashMap,cljs.core.Cons,cljs.core.PersistentArrayMap,cljs.core.NodeSeq,cljs.core.PersistentQueue,cljs.core.IndexedSeq,cljs.core.Keyword,cljs.core.EmptyList,cljs.core.LazySeq,cljs.core.Subvec,cljs.core.PersistentQueueSeq,cljs.core.ArrayNodeSeq,cljs.core.ValSeq,cljs.core.PersistentArrayMapSeq,cljs.core.PersistentVector,cljs.core.List,cljs.core.RSeq,cljs.core.PersistentHashSet,cljs.core.PersistentTreeMap,cljs.core.KeySeq,cljs.core.ChunkedSeq,cljs.core.PersistentTreeSet,cljs.core.ChunkedCons,cljs.core.Symbol,cljs.core.UUID,cljs.core.Range,cljs.core.PersistentTreeMapSeq],[map_handler,list_handler,map_handler,list_handler,list_handler,list_handler,keyword_handler,list_handler,list_handler,vector_handler,list_handler,list_handler,list_handler,list_handler,vector_handler,list_handler,list_handler,set_handler,map_handler,list_handler,list_handler,set_handler,list_handler,symbol_handler,uuid_handler,list_handler,list_handler]),new cljs.core.Keyword(null,"handlers","handlers",79528781).cljs$core$IFn$_invoke$arity$1(opts));
-return com.cognitect.transit.writer(cljs.core.name.call(null,type),cognitect.transit.opts_merge.call(null,({"objectBuilder": ((function (keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers){
+var meta_handler = (new cognitect.transit.WithMetaHandler());
+var handlers = cljs.core.merge.call(null,cljs.core.PersistentHashMap.fromArrays([cljs.core.PersistentHashMap,cljs.core.Cons,cljs.core.PersistentArrayMap,cljs.core.NodeSeq,cljs.core.PersistentQueue,cljs.core.IndexedSeq,cljs.core.Keyword,cljs.core.EmptyList,cljs.core.LazySeq,cljs.core.Subvec,cljs.core.PersistentQueueSeq,cljs.core.ArrayNodeSeq,cljs.core.ValSeq,cognitect.transit.WithMeta,cljs.core.PersistentArrayMapSeq,cljs.core.PersistentVector,cljs.core.List,cljs.core.RSeq,cljs.core.PersistentHashSet,cljs.core.PersistentTreeMap,cljs.core.KeySeq,cljs.core.ChunkedSeq,cljs.core.PersistentTreeSet,cljs.core.ChunkedCons,cljs.core.Symbol,cljs.core.UUID,cljs.core.Range,cljs.core.PersistentTreeMapSeq],[map_handler,list_handler,map_handler,list_handler,list_handler,list_handler,keyword_handler,list_handler,list_handler,vector_handler,list_handler,list_handler,list_handler,meta_handler,list_handler,vector_handler,list_handler,list_handler,set_handler,map_handler,list_handler,list_handler,set_handler,list_handler,symbol_handler,uuid_handler,list_handler,list_handler]),(((typeof cljs !== 'undefined') && (typeof cljs.core !== 'undefined') && (typeof cljs.core.Eduction !== 'undefined'))?cljs.core.PersistentArrayMap.createAsIfByAssoc([cljs.core.Eduction,list_handler]):null),(((typeof cljs !== 'undefined') && (typeof cljs.core !== 'undefined') && (typeof cljs.core.Repeat !== 'undefined'))?cljs.core.PersistentArrayMap.createAsIfByAssoc([cljs.core.Repeat,list_handler]):null),(((typeof cljs !== 'undefined') && (typeof cljs.core !== 'undefined') && (typeof cljs.core.MapEntry !== 'undefined'))?cljs.core.PersistentArrayMap.createAsIfByAssoc([cljs.core.MapEntry,vector_handler]):null),new cljs.core.Keyword(null,"handlers","handlers",79528781).cljs$core$IFn$_invoke$arity$1(opts));
+return com.cognitect.transit.writer(cljs.core.name.call(null,type),cognitect.transit.opts_merge.call(null,({"objectBuilder": ((function (keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers){
 return (function (m,kfn,vfn){
-return cljs.core.reduce_kv.call(null,((function (keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers){
+return cljs.core.reduce_kv.call(null,((function (keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers){
 return (function (obj,k,v){
 var G__15860 = obj;
 G__15860.push(kfn.call(null,k),vfn.call(null,v));
 
 return G__15860;
-});})(keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers))
+});})(keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers))
 ,["^ "],m);
-});})(keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers))
+});})(keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers))
 , "handlers": (function (){var x15861 = cljs.core.clone.call(null,handlers);
-x15861.forEach = ((function (x15861,keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers){
+x15861.forEach = ((function (x15861,keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers){
 return (function (f){
 var coll = this;
 var seq__15862 = cljs.core.seq.call(null,coll);
@@ -849,7 +931,11 @@ if((i__15865 < count__15864)){
 var vec__15872 = cljs.core._nth.call(null,chunk__15863,i__15865);
 var k = cljs.core.nth.call(null,vec__15872,(0),null);
 var v = cljs.core.nth.call(null,vec__15872,(1),null);
+if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"default","default",-1987822328),k)){
+f.call(null,v,"default");
+} else {
 f.call(null,v,k);
+}
 
 
 var G__15879 = seq__15862;
@@ -880,7 +966,11 @@ continue;
 var vec__15875 = cljs.core.first.call(null,seq__15862__$1);
 var k = cljs.core.nth.call(null,vec__15875,(0),null);
 var v = cljs.core.nth.call(null,vec__15875,(1),null);
+if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"default","default",-1987822328),k)){
+f.call(null,v,"default");
+} else {
 f.call(null,v,k);
+}
 
 
 var G__15887 = cljs.core.next.call(null,seq__15862__$1);
@@ -899,18 +989,18 @@ return null;
 }
 break;
 }
-});})(x15861,keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers))
+});})(x15861,keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers))
 ;
 
 return x15861;
-})(), "unpack": ((function (keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers){
+})(), "unpack": ((function (keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers){
 return (function (x){
 if((x instanceof cljs.core.PersistentArrayMap)){
 return x.arr;
 } else {
 return false;
 }
-});})(keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,handlers))
+});})(keyword_handler,symbol_handler,list_handler,map_handler,set_handler,vector_handler,uuid_handler,meta_handler,handlers))
 }),cljs.core.clj__GT_js.call(null,cljs.core.dissoc.call(null,opts,new cljs.core.Keyword(null,"handlers","handlers",79528781)))));
 });
 
@@ -1174,6 +1264,21 @@ return com.cognitect.transit.types.link(x);
  */
 cognitect.transit.link_QMARK_ = (function cognitect$transit$link_QMARK_(x){
 return com.cognitect.transit.types.isLink(x);
+});
+/**
+ * For :transform. Will write any metadata present on the value.
+ */
+cognitect.transit.write_meta = (function cognitect$transit$write_meta(x){
+if((((!((x == null))))?(((((x.cljs$lang$protocol_mask$partition0$ & (131072))) || ((cljs.core.PROTOCOL_SENTINEL === x.cljs$core$IMeta$))))?true:false):false)){
+var m = cljs.core._meta.call(null,x);
+if((!((m == null)))){
+return (new cognitect.transit.WithMeta(cljs.core._with_meta.call(null,x,null),m));
+} else {
+return x;
+}
+} else {
+return x;
+}
 });
 
 //# sourceMappingURL=transit.js.map

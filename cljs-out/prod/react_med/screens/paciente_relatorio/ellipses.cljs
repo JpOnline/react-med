@@ -71,12 +71,13 @@
 
 (defn filter-selected [avals avals-checked]
   (->> avals
-       (map (fn [{:keys [id reatancia resistencia data]}]
-              {:id id
-               :data (util/yyyy-mm-dd->dd-mm-yyyy data)
-               :reatancia reatancia
-               :resistencia resistencia
-               :checked? (get avals-checked id)}))
+       (map (fn [{:keys [id reatancia resistencia data deleted?]}]
+              (when (not deleted?)
+                {:id id
+                 :data (util/yyyy-mm-dd->dd-mm-yyyy data)
+                 :reatancia reatancia
+                 :resistencia resistencia
+                 :checked? (get avals-checked id)})))
        (filter :checked?)))
 
 (defn pacientes-avaliacoes-pontos
@@ -84,6 +85,7 @@
   [[pacientes avals-checked]]
   (->> pacientes
        (map #(select-keys % [:id :nome :avaliacoes]))
+       (map #(update % :avaliacoes vals))
        (map #(update-in % [:avaliacoes] filter-selected (get-in avals-checked [(:id %) :avals])))
        ;; Filtra pacientes com avaliacoes.
        (filter #(seq (:avaliacoes %)))

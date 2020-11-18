@@ -11,12 +11,12 @@
 
 (defn pacientes
   [app-state]
-  (filter :id (get-in app-state [:domain :patients])))
+  (filter :id (vals (get-in app-state [:domain :patients]))))
 (re-frame/reg-sub ::pacientes pacientes)
 
 (defn checkboxed-patients
   [app-state]
-  (let [patients (get-in app-state [:domain :patients])
+  (let [patients (vals (get-in app-state [:domain :patients]))
         checks (-> (get-in app-state [:ui :checkboxed-patients])
                    (or (util/repeat-as patients false)))]
     (->> (map (fn [p c] (assoc p :checked? c)) patients checks)
@@ -101,7 +101,7 @@
 
 (defn-traced delete-patients
   [app-state]
-  (let [pats (get-in app-state [:domain :patients])
+  (let [pats (vals (get-in app-state [:domain :patients]))
         checks (get-in app-state [:ui :checkboxed-patients])
         patients (map (fn [p c] (assoc p :checked? c)) pats checks)
         checked-patients (filter :checked? patients)
@@ -120,7 +120,7 @@
 (re-frame/reg-event-db ::delete-patients delete-patients)
 
 (def selecting-actions
-  [{:name "Ok" :event :ok}
+  [{:name "Cancelar" :event :ok}
    {:name "Excluir" :event ::delete-patients}])
 
 ;; - Uma outra possibilidade é usar só uma view, mas criar outros reg-subs

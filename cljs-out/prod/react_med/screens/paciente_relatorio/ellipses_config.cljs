@@ -39,15 +39,17 @@
 
 (defn update-avaliacoes [avals avals-checked]
   (->> avals
-       (map (fn [{:keys [id data]}]
-              {:id id
-               :label (util/yyyy-mm-dd->dd-mm-yyyy data)
-               :checked? (get avals-checked id)}))))
+       (map (fn [{:keys [id data deleted?]}]
+              (when (not deleted?)
+                {:id id
+                 :label (util/yyyy-mm-dd->dd-mm-yyyy data)
+                 :checked? (get avals-checked id)})))))
 
 (defn pacientes-e-avals
   [[pacientes avals-checked]]
   (->> pacientes
        (map #(select-keys % [:id :nome :avaliacoes]))
+       (map #(update % :avaliacoes (comp (partial filter :id) vals)))
        (map #(clojure.set/rename-keys % {:nome :label}))
        (map #(assoc % :checked? (get-in avals-checked [(:id %) :checked?])))
        (map #(update-in % [:avaliacoes] update-avaliacoes (get-in avals-checked [(:id %) :avals])))))

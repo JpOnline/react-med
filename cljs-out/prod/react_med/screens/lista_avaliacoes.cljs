@@ -14,14 +14,15 @@
 (defn avaliacoes
   [app-state]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
-        avaliacoes (get-in app-state [:domain :patients paciente-id :avaliacoes])]
+        avaliacoes (vals (get-in app-state [:domain :patients paciente-id :avaliacoes]))]
     (filter :id avaliacoes)))
 (re-frame/reg-sub ::avaliacoes avaliacoes)
 
 (defn-traced show-avaliacoes-checkbox
   [app-state [event]]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
-        avaliacoes (get-in app-state [:domain :patients paciente-id :avaliacoes])]
+        avaliacoes (get-in app-state [:domain :patients paciente-id :avaliacoes])
+        ]
     (-> app-state
         (assoc-in [:ui :state] "selecionando-avaliacoes")
         (assoc-in [:ui :checkboxed-avaliacoes] (util/repeat-as avaliacoes false)))))
@@ -92,7 +93,7 @@
 (defn-traced delete-avaliacoes
   [app-state]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
-        avals (get-in app-state [:domain :patients paciente-id :avaliacoes])
+        avals (vals (get-in app-state [:domain :patients paciente-id :avaliacoes]))
         checks (get-in app-state [:ui :checkboxed-avaliacoes])
         avaliacoes (map (fn [p c] (assoc p :checked? c)) avals checks)
         checked-avaliacoes (filter :checked? avaliacoes)
@@ -119,17 +120,19 @@
 (defn checkboxed-avaliacoes
   [app-state]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
-        avaliacoes (get-in app-state [:domain :patients paciente-id :avaliacoes])
+        avaliacoes (vals (get-in app-state [:domain :patients paciente-id :avaliacoes]))
         checks (-> (get-in app-state [:ui :checkboxed-avaliacoes])
                    (or (util/repeat-as avaliacoes false)))]
-    (->> (map (fn [p c] (assoc p :checked? c)) avaliacoes checks)
+    (->> (map (fn [p c]
+                (assoc p :checked? c))
+              avaliacoes checks)
          (filter :id))))
 (re-frame/reg-sub ::checkboxed-avaliacoes checkboxed-avaliacoes)
 
 (defn-traced check-avaliacao
   [app-state [event avaliacao-id]]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
-        avaliacoes (get-in app-state [:domain :patients paciente-id :avaliacoes])
+        avaliacoes (vals (get-in app-state [:domain :patients paciente-id :avaliacoes]))
         checks (get-in app-state [:ui :checkboxed-avaliacoes])]
     (as-> app-state $
       ;; Arruma a estrutura de checkboxes caso tenha sido adicionado ou

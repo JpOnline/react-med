@@ -129,7 +129,7 @@
   (let [patient-name (:nome selected-patient)
         preposição (if (= (:sexo selected-patient) "Feminino") " da " " do ")]
     (case state
-      "pacientes" "Pacientes"
+      "pacientes" "Lista de Pacientes"
       "selecionando-pacientes" "Pacientes"
       "info" patient-name
       "edit-info" patient-name
@@ -287,7 +287,7 @@
                   {:name "Voltar" :event :back}
                   {:name "Selecionar" :event ::lista-avaliacoes/show-avaliacoes-checkbox}
                   {:name "Nova Avaliação" :event ::lista-avaliacoes/nova-avaliacao}]
-    "selecionando-avaliacoes" [{:name "Ok" :event :ok}
+    "selecionando-avaliacoes" [{:name "Cancelar" :event :ok}
                                {:name "Excluir" :event ::lista-avaliacoes/delete-avaliacoes}]
     "coleta" [{:name "Exportar para Excel" :event :export-to-csv}
               {:name "Voltar" :event :back}
