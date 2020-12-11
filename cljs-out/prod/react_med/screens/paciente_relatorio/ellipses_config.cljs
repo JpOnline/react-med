@@ -76,18 +76,9 @@
                        :tabIndex -1
                        (when checked? :checked) checked?
                        }]
-                     label]
-                    #_[:> material-menu-item
-                     {:style (merge item-style
-                                    {:paddingLeft (* 10 padding)})
-                     :onClick #(>evt [::check-aval parent-id id])}
-                     [:> material-checkbox
-                      {:tabIndex -1
-                       :checked checked?
-                       }]
                      label]]
                    (mapcat s->cb avaliacoes (repeat (inc padding)) (repeat id))
-                   [^{:key (str label "-paciente-separator")}
+                   [^{:key (str parent-id id "-paciente-separator")}
                     [:div.paciente-separator {:style {:height "5px"}}]]
                    )))
         pacientes-e-avals (<sub [::pacientes-e-avals])]

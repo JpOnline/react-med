@@ -169,8 +169,11 @@
                 :root (str "slider-root"style-mode)}}]))
 
 (defn avaliacao-info
-  [[selected-patient selected-avaliacao]]
-  (merge selected-avaliacao (dissoc selected-patient :avaliacoes)))
+  [[selected-avaliacao selected-patient]]
+  (-> selected-patient
+      (dissoc :avaliacoes)
+      (merge selected-avaliacao)
+      (update :estatura #(if (> % 0) % (:estatura selected-patient)))))
 (re-frame/reg-sub
   ::avaliacao-info
   :<- [:react-med.screens.paciente-avaliacao/selected-avaliacao]
@@ -354,15 +357,14 @@
       (update :resistencia (partial format-num " Ohms/m"))
       (update :reatancia (partial format-num " Ohms/m"))
       (update :circunferencia-cintura (partial format-num " cm"))
-      (update :circunferencia-quadril (partial format-num " cm"))
       (update :circunferencia-braco (partial format-num " cm"))
-      (update :circunferencia-perna (partial format-num " cm"))
+      (update :circunferencia-panturrilha (partial format-num " cm"))
       (assoc :populacao-referencia-first-line (first populacao-referencia))
       (assoc :populacao-referencia-second-line (str "["(second populacao-referencia)"]"))
       (assoc :pontos-rxc-chart (cons (:nome selected-patient)
-                                     (mapv (fn [{:keys [resistencia reatancia]}]
-                                             [resistencia reatancia])
-                                           (:avaliacoes selected-patient))))))
+                                     (mapv (fn [avaliacao-info]
+                                             [(bioimpedance/rsp avaliacao-info) (bioimpedance/xcsp avaliacao-info)])
+                                           (vals (:avaliacoes selected-patient)))))))
 (re-frame/reg-sub
   ::print-version-data
   :<- [:react-med.screens.patient-info.core/selected-patient]
@@ -374,8 +376,8 @@
   (let [additional-margin-for-text-boxes 3
         {:keys [nome estatura idade data peso resistencia reatancia
                 atividade-fisica circunferencia-cintura pontos-rxc-chart
-                circunferencia-quadril circunferencia-braco
-                circunferencia-perna populacao-referencia-first-line
+                circunferencia-braco
+                circunferencia-panturrilha populacao-referencia-first-line
                 populacao-referencia-second-line]} (<sub [::print-version-data])]
     [:div.show-only-on-printing
      {:style {:position "relative"
@@ -384,8 +386,8 @@
      [:img
       {:src "images/LogoReactmed.png"
        :style {:position "absolute"
-               :width "80mm"
-               :left "5mm"
+               :width "88mm"
+               :left "3mm"
                :top "11mm"}}]
      [:a
       {:style {:position "absolute"
@@ -579,47 +581,27 @@
              :fontWeight "bold"
              :left "10mm"
              :top (str (+ table-top (* 5 line-distance))"mm")}}
-    "Circunferência de Quadril"]
-   [:span
-    {:style {:position "absolute"
-             :textAlign "center"
-             :width "40mm"
-             :left "76.5mm"
-             :top (str (+ table-top (* 5 line-distance))"mm")}}
-    circunferencia-quadril]
-   [:span
-    {:style {:position "absolute"
-             :fontWeight "bold"
-             :left "10mm"
-             :top (str (+ table-top (* 6 line-distance))"mm")}}
     "Circunferência de Braço"]
    [:span
     {:style {:position "absolute"
              :textAlign "center"
              :width "40mm"
              :left "76.5mm"
-             :top (str (+ table-top (* 6 line-distance))"mm")}}
+             :top (str (+ table-top (* 5 line-distance))"mm")}}
     circunferencia-braco]
-   [:span.gray-background
-    {:style {:position "absolute"
-             :backgroundColor some-gray
-             :height "13.5mm"
-             :width "107mm"
-             :left "9.5mm"
-             :top (str (+ gray-background-top (* 7 line-distance))"mm")}}]
    [:span
     {:style {:position "absolute"
              :fontWeight "bold"
              :left "10mm"
-             :top (str (+ table-top (* 7 line-distance))"mm")}}
-    "Circunferência de Perna"]
+             :top (str (+ table-top (* 6 line-distance))"mm")}}
+    "Circunferência de Panturrilha"]
    [:span
     {:style {:position "absolute"
              :textAlign "center"
              :width "40mm"
              :left "76.5mm"
-             :top (str (+ table-top (* 7 line-distance))"mm")}}
-    circunferencia-perna]])
+             :top (str (+ table-top (* 6 line-distance))"mm")}}
+    circunferencia-panturrilha]])
      [:div.vertical-line
       {:style {:position "absolute"
                :backgroundColor some-light-green
@@ -672,10 +654,10 @@
        :options #js {:chartArea #js {:top 0 :left 20
                                      :width "65%" :height "92%"}
                   :hAxis #js {:textPosition "in"
-                              :title "Resistência"
+                              :title "Resistência Específica (RSP)"
                               :viewWindowMode "maximized"}
                   :vAxis #js {:textPosition "in"
-                              :title "Reatância"
+                              :title "Reatância Específica (XcSP)"
                               :viewWindowMode "maximized"}
                   :series #js {"0" #js {:enableInteractivity false
                                         :lineWidth 2 :pointSize 0}
@@ -726,7 +708,7 @@
                :top "294mm"}}]
      ]))
 
-(defn view []
+(defn relatorio-view []
   (let [paciente-selectionado (<sub [:react-med.screens.patient-info.core/selected-patient])
         menu-structure (<sub [:react-med.routes/side-menu])
         actions (<sub [:react-med.routes/actions])
@@ -756,3 +738,8 @@
       [shell/actions-menu
        {:actions actions}]
       [shell/bottom-bar]]]))
+
+(defn view []
+  [shell/error-boundary
+   {:if-error [shell/default [invalid-avaliacao-error]]}
+   [relatorio-view]])

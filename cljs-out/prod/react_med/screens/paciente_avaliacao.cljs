@@ -34,9 +34,9 @@
 
 (defn details-component []
   (let [{:keys [data peso circunferencia-cintura circunferencia-braco
-                circunferencia-perna estatura resistencia reatancia
+                circunferencia-panturrilha estatura resistencia reatancia
                 idade-quando-avaliado
-                atividade-fisica circunferencia-quadril]} (<sub [::selected-avaliacao])
+                atividade-fisica]} (<sub [::selected-avaliacao])
         impedancia (Math/round (bioimpedance/impedancia {:resistencia resistencia :reatancia reatancia}))
         line-style #js {:display "flex"
                         :alignItems "center"
@@ -79,32 +79,34 @@
                                            (.replace (str circunferencia-cintura " cm") "." ","))]
      [:div
       {:style line-style}
-      [:b "Circunferência da Quadril "] (when (should-show? circunferencia-quadril)
-                                          (.replace (str circunferencia-quadril " cm") "." ","))]
-     [:div
-      {:style line-style}
       [:b "Circunferência de Braço: "] (when (should-show? circunferencia-braco)
                                          (.replace (str circunferencia-braco " cm") "." ","))]
      [:div
       {:style line-style}
-      [:b "Circunferência de Perna: "] (when (should-show? circunferencia-perna)
-                                         (.replace (str circunferencia-perna " cm") "." ","))]]))
+      [:b "Circunferência de Panturrilha: "] (when (should-show? circunferencia-panturrilha)
+                                         (.replace (str circunferencia-panturrilha " cm") "." ","))]]))
 
 (defn-traced change-avaliacao
   [app-state [event attr new-value-input]]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])
         avaliacao-id (get-in app-state [:ui :avaliacao-selecionada])
-        new-value (if (#{:data :atividade-fisica} attr)
+        new-value (cond
+                    (#{:data :atividade-fisica} attr)
                     new-value-input
+
+                    (empty? new-value-input)
+                    nil
+
+                    :else
                     (js/parseFloat (.replace new-value-input "," ".")))]
     (assoc-in app-state [:domain :patients paciente-id :avaliacoes avaliacao-id attr] new-value)))
 (re-frame/reg-event-db ::change-avaliacao change-avaliacao)
 
 (defn editing-component []
   (let [{:keys [data peso circunferencia-cintura circunferencia-braco
-                circunferencia-perna estatura resistencia reatancia
+                circunferencia-panturrilha estatura resistencia reatancia
                 idade-quando-avaliado
-                atividade-fisica circunferencia-quadril]} (<sub [::selected-avaliacao])
+                atividade-fisica]} (<sub [::selected-avaliacao])
         impedancia (Math/round (bioimpedance/impedancia {:resistencia resistencia :reatancia reatancia}))
         line-style #js {:display "flex"
                         :alignItems "center"
@@ -212,13 +214,6 @@
         :suffix " cm"}]]
      [:div
       {:style line-style}
-      [:b "Circunferência da Quadril "]
-      [screens.components/gray-input
-       {:defaultValue circunferencia-quadril
-        :onBlur #(>evt [::change-avaliacao :circunferencia-quadril (-> % .-target .-value)])
-        :suffix " cm"}]]
-     [:div
-      {:style line-style}
       [:b "Circunferência de Braço: "]
       [screens.components/gray-input
        {:defaultValue circunferencia-braco
@@ -226,10 +221,10 @@
         :suffix " cm"}]]
      [:div
       {:style line-style}
-      [:b "Circunferência de Perna: "]
+      [:b "Circunferência de Panturrilha: "]
       [screens.components/gray-input
-       {:defaultValue circunferencia-perna
-        :onBlur #(>evt [::change-avaliacao :circunferencia-perna (-> % .-target .-value)])
+       {:defaultValue circunferencia-panturrilha
+        :onBlur #(>evt [::change-avaliacao :circunferencia-panturrilha (-> % .-target .-value)])
         :suffix " cm"}]]]))
 
 (defn detail-view []

@@ -18,8 +18,8 @@ cljs.tools.reader.impl.commons.read_past = (function cljs$tools$reader$impl$comm
 var ch = cljs.tools.reader.reader_types.read_char.call(null,rdr);
 while(true){
 if(pred.call(null,ch)){
-var G__8577 = cljs.tools.reader.reader_types.read_char.call(null,rdr);
-ch = G__8577;
+var G__11021 = cljs.tools.reader.reader_types.read_char.call(null,rdr);
+ch = G__11021;
 continue;
 } else {
 return ch;
@@ -82,8 +82,8 @@ return parseFloat(s);
 }
 });
 cljs.tools.reader.impl.commons.matches_QMARK_ = (function cljs$tools$reader$impl$commons$matches_QMARK_(pattern,s){
-var vec__8578 = cljs.core.re_find.call(null,pattern,s);
-var match = cljs.core.nth.call(null,vec__8578,(0),null);
+var vec__11022 = cljs.core.re_find.call(null,pattern,s);
+var match = cljs.core.nth.call(null,vec__11022,(0),null);
 return (match === s);
 });
 cljs.tools.reader.impl.commons.match_number = (function cljs$tools$reader$impl$commons$match_number(s){
@@ -133,14 +133,14 @@ return null;
 });
 cljs.tools.reader.impl.commons.read_comment = (function cljs$tools$reader$impl$commons$read_comment(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___8583 = arguments.length;
-var i__4731__auto___8584 = (0);
+var len__4730__auto___11027 = arguments.length;
+var i__4731__auto___11028 = (0);
 while(true){
-if((i__4731__auto___8584 < len__4730__auto___8583)){
-args__4736__auto__.push((arguments[i__4731__auto___8584]));
+if((i__4731__auto___11028 < len__4730__auto___11027)){
+args__4736__auto__.push((arguments[i__4731__auto___11028]));
 
-var G__8585 = (i__4731__auto___8584 + (1));
-i__4731__auto___8584 = G__8585;
+var G__11029 = (i__4731__auto___11028 + (1));
+i__4731__auto___11028 = G__11029;
 continue;
 } else {
 }
@@ -158,34 +158,34 @@ return cljs.tools.reader.impl.commons.skip_line.call(null,rdr);
 cljs.tools.reader.impl.commons.read_comment.cljs$lang$maxFixedArity = (1);
 
 /** @this {Function} */
-cljs.tools.reader.impl.commons.read_comment.cljs$lang$applyTo = (function (seq8581){
-var G__8582 = cljs.core.first.call(null,seq8581);
-var seq8581__$1 = cljs.core.next.call(null,seq8581);
+cljs.tools.reader.impl.commons.read_comment.cljs$lang$applyTo = (function (seq11025){
+var G__11026 = cljs.core.first.call(null,seq11025);
+var seq11025__$1 = cljs.core.next.call(null,seq11025);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__8582,seq8581__$1);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__11026,seq11025__$1);
 });
 
 cljs.tools.reader.impl.commons.throwing_reader = (function cljs$tools$reader$impl$commons$throwing_reader(msg){
 return (function() { 
-var G__8586__delegate = function (rdr,_){
+var G__11030__delegate = function (rdr,_){
 return cljs.tools.reader.impl.errors.reader_error.call(null,rdr,msg);
 };
-var G__8586 = function (rdr,var_args){
+var G__11030 = function (rdr,var_args){
 var _ = null;
 if (arguments.length > 1) {
-var G__8587__i = 0, G__8587__a = new Array(arguments.length -  1);
-while (G__8587__i < G__8587__a.length) {G__8587__a[G__8587__i] = arguments[G__8587__i + 1]; ++G__8587__i;}
-  _ = new cljs.core.IndexedSeq(G__8587__a,0,null);
+var G__11031__i = 0, G__11031__a = new Array(arguments.length -  1);
+while (G__11031__i < G__11031__a.length) {G__11031__a[G__11031__i] = arguments[G__11031__i + 1]; ++G__11031__i;}
+  _ = new cljs.core.IndexedSeq(G__11031__a,0,null);
 } 
-return G__8586__delegate.call(this,rdr,_);};
-G__8586.cljs$lang$maxFixedArity = 1;
-G__8586.cljs$lang$applyTo = (function (arglist__8588){
-var rdr = cljs.core.first(arglist__8588);
-var _ = cljs.core.rest(arglist__8588);
-return G__8586__delegate(rdr,_);
+return G__11030__delegate.call(this,rdr,_);};
+G__11030.cljs$lang$maxFixedArity = 1;
+G__11030.cljs$lang$applyTo = (function (arglist__11032){
+var rdr = cljs.core.first(arglist__11032);
+var _ = cljs.core.rest(arglist__11032);
+return G__11030__delegate(rdr,_);
 });
-G__8586.cljs$core$IFn$_invoke$arity$variadic = G__8586__delegate;
-return G__8586;
+G__11030.cljs$core$IFn$_invoke$arity$variadic = G__11030__delegate;
+return G__11030;
 })()
 ;
 });

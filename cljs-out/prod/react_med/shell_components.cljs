@@ -188,7 +188,7 @@
                      :justifyContent "center"}}
         [:img
          {:src "images/LogoReactmed.png"
-          :width 150}]]
+          :width 220}]]
        [:hr {:style #js {:margin 0}}]
        [:> material-menu-list
         {:style #js {:flexGrow 1

@@ -7,7 +7,7 @@
   (:require
     [cognitect.transit :as transit]
     [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
-    [firebase :as fb]
+    [firebase]
     [re-frame.core :as re-frame]
     [react-med.storage-module.initial-state :as initial-state]
     ))
@@ -21,6 +21,9 @@
        :messagingSenderId "734281716491"
        :appId "1:734281716491:web:06b9f356d360f6fcfcc80e"
        :measurementId "G-6HQBPS294N"})
+
+(def fb
+  (.-firebase firebase))
 
 (def firebase-db
   (do

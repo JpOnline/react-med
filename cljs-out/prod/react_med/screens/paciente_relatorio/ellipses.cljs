@@ -1,10 +1,11 @@
 (ns react-med.screens.paciente-relatorio.ellipses
   (:require
     [re-frame.core :as re-frame]
+    [react-med.screens.paciente-relatorio.bioimpedance :as bioimpedance]
+    [react-med.screens.paciente-relatorio.ellipses-config :as ellipses-config]
+    [react-med.screens.paciente-relatorio.tollerance-ellipse-component :as tollerance-ellipse-component]
     [react-med.shell-components :as shell]
     [react-med.util :as util :refer [<sub >evt]]
-    [react-med.screens.paciente-relatorio.tollerance-ellipse-component :as tollerance-ellipse-component]
-    [react-med.screens.paciente-relatorio.ellipses-config :as ellipses-config]
     ))
 
 (def population-data-for-ellipse
@@ -71,13 +72,11 @@
 
 (defn filter-selected [avals avals-checked]
   (->> avals
-       (map (fn [{:keys [id reatancia resistencia data deleted?]}]
+       (map (fn [{:keys [id data deleted?] :as avaliacao-info}]
               (when (not deleted?)
-                {:id id
-                 :data (util/yyyy-mm-dd->dd-mm-yyyy data)
-                 :reatancia reatancia
-                 :resistencia resistencia
-                 :checked? (get avals-checked id)})))
+                (merge avaliacao-info
+                       {:data (util/yyyy-mm-dd->dd-mm-yyyy data)
+                        :checked? (get avals-checked id)}))))
        (filter :checked?)))
 
 (defn pacientes-avaliacoes-pontos
@@ -90,8 +89,8 @@
        ;; Filtra pacientes com avaliacoes.
        (filter #(seq (:avaliacoes %)))
        (map (fn [{:keys [nome avaliacoes]}]
-              (apply concat [[nome] (mapv (fn [{:keys [resistencia reatancia]}]
-                                            [resistencia reatancia])
+              (apply concat [[nome] (mapv (fn [avaliacao-info]
+                                            [(bioimpedance/rsp avaliacao-info) (bioimpedance/xcsp avaliacao-info)])
                                           avaliacoes)])))))
 (re-frame/reg-sub
   ::pacientes-avaliacoes-pontos
@@ -132,10 +131,10 @@
     :series (<sub [::ellipses-graph-series])
     :options #js {:hAxis #js {:textPosition "in"
                               :viewWindowMode "maximized"
-                              :title "Resistência"}
+                              :title "Resistência Específica (RSP)"}
                   :vAxis #js {:textPosition "in"
                               :viewWindowMode "maximized"
-                              :title "Reatância"}
+                              :title "Reatância Específica (XcSP)"}
                   :series series-options}}])
 
 (defn mobile-ellipses-chart []
@@ -148,13 +147,13 @@
                                ;; :alignment "start"
                                }
                   :hAxis #js {:textPosition "in"
-                              :title "Resistência"
+                              :title "Resistência Específica (RSP)"
                               :viewWindowMode "maximized"
                               ;; :maxValue 1000
                               ;; :minValue -100
                               }
                   :vAxis #js {:textPosition "in"
-                              :title "Reatância"
+                              :title "Reatância Específica (XcSP)"
                               :viewWindowMode "maximized"
                               ;; :maxValue 100
                               ;; :minValue 0

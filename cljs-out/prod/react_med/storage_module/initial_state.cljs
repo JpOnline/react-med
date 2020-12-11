@@ -4,15 +4,18 @@
     {:domain
      {:patients
       {0 {:id 0
-          :nome "Meu Paciente Exemplo"
+          :nome "Exemplo de Paciente"
           :nascimento "1991-12-06"
           :sexo "Masculino"
           :estatura 183.5
           :avaliacoes {0 {:id 0
-                          :data "2020-02-17"
+                          :data "2021-02-01"
                           :peso 83.5
-                          :resistencia 471
-                          :reatancia 49
+                          :resistencia 649
+                          :reatancia 80
+                          :circunferencia-braco 28
+                          :circunferencia-cintura 90
+                          :circunferencia-panturrilha 31
                           :atividade-fisica "Ativo"}}}}} })
 
 (def ui-initial-state

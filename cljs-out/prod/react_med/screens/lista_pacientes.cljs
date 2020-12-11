@@ -9,9 +9,23 @@
     [react-med.util :as util :refer [<sub >evt]]
     ))
 
+(def no-value? #(or (= % nil) (= % "") (= % js/undefined)))
+
+(defn update-avaliacao-estatura-se-vazio
+  [{:keys [estatura] :as paciente}]
+  (update paciente :avaliacoes #(into {} (mapv (fn [[k aval]]
+                                                 (if (no-value? (:estatura aval))
+                                                   {k (assoc aval :estatura estatura)}
+                                                   {k aval}))
+                                               %))))
+
 (defn pacientes
   [app-state]
-  (filter :id (vals (get-in app-state [:domain :patients]))))
+  (-> app-state
+      (get-in [:domain :patients])
+      (vals)
+      (->> (filter :id))
+      (->> (map update-avaliacao-estatura-se-vazio))))
 (re-frame/reg-sub ::pacientes pacientes)
 
 (defn checkboxed-patients

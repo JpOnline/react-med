@@ -1,12 +1,15 @@
 (ns react-med.authentication.authentication
   (:require
     [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
-    [firebase :as fb]
+    [firebase]
     [re-frame.core :as re-frame]
     [react-med.storage-module.firebase :as fb-module]
     [react-med.util :as util :refer [<sub >evt]]
     [react-med.storage-module.local-storage :as local-storage]
     ))
+
+(def fb
+  (.-firebase firebase))
 
 (defn-traced login-error
   [app-state [event attr message]]
@@ -46,7 +49,7 @@
                   "auth/wrong-password" (>evt [::login-error :password-error "Senha errada ou inexistente"])
                   "auth/argument-error" (>evt [::login-error :email-error "Email inválido"])
                   "auth/network-request-failed" (>evt [::login-error :email-error "Problemas com a conexão. 😞"])
-                  "auth/user-disabled" (>evt [::login-error :email-error "Sua conta foi desabilitada. Contacte a React Med 😞"])
+                  "auth/user-disabled" (>evt [::login-error :email-error "Sua conta foi desabilitada. Contacte a equipe da BodyLines 😞"])
                   (do
                     (>evt [::login-error :email-error (.-message error)])
                     (>evt [::login-error :password-error (.-message error)])

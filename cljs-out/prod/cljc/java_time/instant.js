@@ -13,8 +13,8 @@ cljc.java_time.instant.range = (function cljc$java_time$instant$range(this2358,j
 return this2358.range(java_time_temporal_TemporalField2359);
 });
 cljc.java_time.instant.of_epoch_second = (function cljc$java_time$instant$of_epoch_second(var_args){
-var G__8294 = arguments.length;
-switch (G__8294) {
+var G__14861 = arguments.length;
+switch (G__14861) {
 case 2:
 return cljc.java_time.instant.of_epoch_second.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -58,8 +58,8 @@ cljc.java_time.instant.plus_nanos = (function cljc$java_time$instant$plus_nanos(
 return this2372.plusNanos(long2373);
 });
 cljc.java_time.instant.plus = (function cljc$java_time$instant$plus(var_args){
-var G__8297 = arguments.length;
-switch (G__8297) {
+var G__14864 = arguments.length;
+switch (G__14864) {
 case 3:
 return cljc.java_time.instant.plus.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -94,8 +94,8 @@ cljc.java_time.instant.is_before = (function cljc$java_time$instant$is_before(th
 return this2382.isBefore(java_time_Instant2383);
 });
 cljc.java_time.instant.minus = (function cljc$java_time$instant$minus(var_args){
-var G__8300 = arguments.length;
-switch (G__8300) {
+var G__14867 = arguments.length;
+switch (G__14867) {
 case 3:
 return cljc.java_time.instant.minus.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -154,8 +154,8 @@ cljc.java_time.instant.adjust_into = (function cljc$java_time$instant$adjust_int
 return this2406.adjustInto(java_time_temporal_Temporal2407);
 });
 cljc.java_time.instant.with$ = (function cljc$java_time$instant$with(var_args){
-var G__8303 = arguments.length;
-switch (G__8303) {
+var G__14870 = arguments.length;
+switch (G__14870) {
 case 2:
 return cljc.java_time.instant.with$.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -181,8 +181,8 @@ return this2410.with(G__2411,G__2412);
 cljc.java_time.instant.with$.cljs$lang$maxFixedArity = 3;
 
 cljc.java_time.instant.now = (function cljc$java_time$instant$now(var_args){
-var G__8306 = arguments.length;
-switch (G__8306) {
+var G__14873 = arguments.length;
+switch (G__14873) {
 case 0:
 return cljc.java_time.instant.now.cljs$core$IFn$_invoke$arity$0();
 

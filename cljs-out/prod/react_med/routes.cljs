@@ -129,7 +129,7 @@
   (let [patient-name (:nome selected-patient)
         preposição (if (= (:sexo selected-patient) "Feminino") " da " " do ")]
     (case state
-      "pacientes" "Lista de Pacientes"
+      "pacientes" "Meus Pacientes"
       "selecionando-pacientes" "Pacientes"
       "info" patient-name
       "edit-info" patient-name

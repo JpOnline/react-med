@@ -9,19 +9,19 @@ testdouble.cljs.csv.wrap_in_quotes = (function testdouble$cljs$csv$wrap_in_quote
 return ["\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(testdouble.cljs.csv.escape_quotes.call(null,s)),"\""].join('');
 });
 testdouble.cljs.csv.separate = (function testdouble$cljs$csv$separate(data,separator,quote_QMARK_){
-return clojure.string.join.call(null,separator,(function (){var G__19871 = data;
-var G__19871__$1 = cljs.core.map.call(null,cljs.core.str,G__19871)
+return clojure.string.join.call(null,separator,(function (){var G__20499 = data;
+var G__20499__$1 = cljs.core.map.call(null,cljs.core.str,G__20499)
 ;
 if(cljs.core.truth_(quote_QMARK_)){
-return cljs.core.map.call(null,testdouble.cljs.csv.wrap_in_quotes,G__19871__$1);
+return cljs.core.map.call(null,testdouble.cljs.csv.wrap_in_quotes,G__20499__$1);
 } else {
-return G__19871__$1;
+return G__20499__$1;
 }
 })());
 });
 testdouble.cljs.csv.write_data = (function testdouble$cljs$csv$write_data(data,separator,newline,quote_QMARK_){
-return clojure.string.join.call(null,newline,cljs.core.map.call(null,(function (p1__19872_SHARP_){
-return testdouble.cljs.csv.separate.call(null,p1__19872_SHARP_,separator,quote_QMARK_);
+return clojure.string.join.call(null,newline,cljs.core.map.call(null,(function (p1__20500_SHARP_){
+return testdouble.cljs.csv.separate.call(null,p1__20500_SHARP_,separator,quote_QMARK_);
 }),data));
 });
 testdouble.cljs.csv.conj_in = (function testdouble$cljs$csv$conj_in(coll,index,x){
@@ -42,14 +42,14 @@ testdouble.cljs.csv.newline_error_message = [":newline must be one of [",cljs.co
  */
 testdouble.cljs.csv.write_csv = (function testdouble$cljs$csv$write_csv(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___19877 = arguments.length;
-var i__4731__auto___19878 = (0);
+var len__4730__auto___20505 = arguments.length;
+var i__4731__auto___20506 = (0);
 while(true){
-if((i__4731__auto___19878 < len__4730__auto___19877)){
-args__4736__auto__.push((arguments[i__4731__auto___19878]));
+if((i__4731__auto___20506 < len__4730__auto___20505)){
+args__4736__auto__.push((arguments[i__4731__auto___20506]));
 
-var G__19879 = (i__4731__auto___19878 + (1));
-i__4731__auto___19878 = G__19879;
+var G__20507 = (i__4731__auto___20506 + (1));
+i__4731__auto___20506 = G__20507;
 continue;
 } else {
 }
@@ -61,11 +61,11 @@ return testdouble.cljs.csv.write_csv.cljs$core$IFn$_invoke$arity$variadic((argum
 });
 
 testdouble.cljs.csv.write_csv.cljs$core$IFn$_invoke$arity$variadic = (function (data,options){
-var map__19875 = options;
-var map__19875__$1 = (((((!((map__19875 == null))))?(((((map__19875.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19875.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19875):map__19875);
-var separator = cljs.core.get.call(null,map__19875__$1,new cljs.core.Keyword(null,"separator","separator",-1628749125),",");
-var newline = cljs.core.get.call(null,map__19875__$1,new cljs.core.Keyword(null,"newline","newline",1790071323),new cljs.core.Keyword(null,"lf","lf",1923784290));
-var quote_QMARK_ = cljs.core.get.call(null,map__19875__$1,new cljs.core.Keyword(null,"quote?","quote?",-1114029317),false);
+var map__20503 = options;
+var map__20503__$1 = (((((!((map__20503 == null))))?(((((map__20503.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20503.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20503):map__20503);
+var separator = cljs.core.get.call(null,map__20503__$1,new cljs.core.Keyword(null,"separator","separator",-1628749125),",");
+var newline = cljs.core.get.call(null,map__20503__$1,new cljs.core.Keyword(null,"newline","newline",1790071323),new cljs.core.Keyword(null,"lf","lf",1923784290));
+var quote_QMARK_ = cljs.core.get.call(null,map__20503__$1,new cljs.core.Keyword(null,"quote?","quote?",-1114029317),false);
 var temp__5733__auto__ = cljs.core.get.call(null,testdouble.cljs.csv.newlines,newline);
 if(cljs.core.truth_(temp__5733__auto__)){
 var newline_char = temp__5733__auto__;
@@ -78,11 +78,11 @@ throw (new Error(testdouble.cljs.csv.newline_error_message));
 testdouble.cljs.csv.write_csv.cljs$lang$maxFixedArity = (1);
 
 /** @this {Function} */
-testdouble.cljs.csv.write_csv.cljs$lang$applyTo = (function (seq19873){
-var G__19874 = cljs.core.first.call(null,seq19873);
-var seq19873__$1 = cljs.core.next.call(null,seq19873);
+testdouble.cljs.csv.write_csv.cljs$lang$applyTo = (function (seq20501){
+var G__20502 = cljs.core.first.call(null,seq20501);
+var seq20501__$1 = cljs.core.next.call(null,seq20501);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19874,seq19873__$1);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__20502,seq20501__$1);
 });
 
 /**
@@ -90,14 +90,14 @@ return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19874,seq19873
  */
 testdouble.cljs.csv.read_csv = (function testdouble$cljs$csv$read_csv(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___19900 = arguments.length;
-var i__4731__auto___19901 = (0);
+var len__4730__auto___20528 = arguments.length;
+var i__4731__auto___20529 = (0);
 while(true){
-if((i__4731__auto___19901 < len__4730__auto___19900)){
-args__4736__auto__.push((arguments[i__4731__auto___19901]));
+if((i__4731__auto___20529 < len__4730__auto___20528)){
+args__4736__auto__.push((arguments[i__4731__auto___20529]));
 
-var G__19902 = (i__4731__auto___19901 + (1));
-i__4731__auto___19901 = G__19902;
+var G__20530 = (i__4731__auto___20529 + (1));
+i__4731__auto___20529 = G__20530;
 continue;
 } else {
 }
@@ -109,10 +109,10 @@ return testdouble.cljs.csv.read_csv.cljs$core$IFn$_invoke$arity$variadic((argume
 });
 
 testdouble.cljs.csv.read_csv.cljs$core$IFn$_invoke$arity$variadic = (function (data,options){
-var map__19882 = options;
-var map__19882__$1 = (((((!((map__19882 == null))))?(((((map__19882.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__19882.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__19882):map__19882);
-var separator = cljs.core.get.call(null,map__19882__$1,new cljs.core.Keyword(null,"separator","separator",-1628749125),",");
-var newline = cljs.core.get.call(null,map__19882__$1,new cljs.core.Keyword(null,"newline","newline",1790071323),new cljs.core.Keyword(null,"lf","lf",1923784290));
+var map__20510 = options;
+var map__20510__$1 = (((((!((map__20510 == null))))?(((((map__20510.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20510.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20510):map__20510);
+var separator = cljs.core.get.call(null,map__20510__$1,new cljs.core.Keyword(null,"separator","separator",-1628749125),",");
+var newline = cljs.core.get.call(null,map__20510__$1,new cljs.core.Keyword(null,"newline","newline",1790071323),new cljs.core.Keyword(null,"lf","lf",1923784290));
 var temp__5733__auto__ = cljs.core.get.call(null,testdouble.cljs.csv.newlines,newline);
 if(cljs.core.truth_(temp__5733__auto__)){
 var newline_char = temp__5733__auto__;
@@ -128,144 +128,144 @@ if((index < data_length)){
 var char$ = cljs.core.nth.call(null,data,index);
 var next_char = (((index < (data_length - (1))))?cljs.core.nth.call(null,data,(index + (1))):null);
 var str_char = cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$);
-var G__19892 = state;
-var G__19892__$1 = (((G__19892 instanceof cljs.core.Keyword))?G__19892.fqn:null);
-switch (G__19892__$1) {
+var G__20520 = state;
+var G__20520__$1 = (((G__20520 instanceof cljs.core.Keyword))?G__20520.fqn:null);
+switch (G__20520__$1) {
 case "in-field":
-var pred__19893 = cljs.core._EQ_;
-var expr__19894 = str_char;
-if(cljs.core.truth_(pred__19893.call(null,"\"",expr__19894))){
+var pred__20521 = cljs.core._EQ_;
+var expr__20522 = str_char;
+if(cljs.core.truth_(pred__20521.call(null,"\"",expr__20522))){
 if(in_quoted_field){
 if(cljs.core._EQ_.call(null,cljs.core.str.cljs$core$IFn$_invoke$arity$1(next_char),"\"")){
-var G__19904 = (index + (2));
-var G__19905 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19906 = true;
-var G__19907 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
-var G__19908 = rows;
-index = G__19904;
-state = G__19905;
-in_quoted_field = G__19906;
-field_buffer = G__19907;
-rows = G__19908;
+var G__20532 = (index + (2));
+var G__20533 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20534 = true;
+var G__20535 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
+var G__20536 = rows;
+index = G__20532;
+state = G__20533;
+in_quoted_field = G__20534;
+field_buffer = G__20535;
+rows = G__20536;
 continue;
 } else {
-var G__19909 = (index + (1));
-var G__19910 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19911 = false;
-var G__19912 = field_buffer;
-var G__19913 = rows;
-index = G__19909;
-state = G__19910;
-in_quoted_field = G__19911;
-field_buffer = G__19912;
-rows = G__19913;
-continue;
-}
-} else {
-var G__19914 = (index + (1));
-var G__19915 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19916 = true;
-var G__19917 = field_buffer;
-var G__19918 = (((cljs.core.count.call(null,rows) > (0)))?rows:cljs.core.conj.call(null,rows,cljs.core.PersistentVector.EMPTY));
-index = G__19914;
-state = G__19915;
-in_quoted_field = G__19916;
-field_buffer = G__19917;
-rows = G__19918;
+var G__20537 = (index + (1));
+var G__20538 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20539 = false;
+var G__20540 = field_buffer;
+var G__20541 = rows;
+index = G__20537;
+state = G__20538;
+in_quoted_field = G__20539;
+field_buffer = G__20540;
+rows = G__20541;
 continue;
 }
 } else {
-if(cljs.core.truth_(pred__19893.call(null,separator,expr__19894))){
+var G__20542 = (index + (1));
+var G__20543 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20544 = true;
+var G__20545 = field_buffer;
+var G__20546 = (((cljs.core.count.call(null,rows) > (0)))?rows:cljs.core.conj.call(null,rows,cljs.core.PersistentVector.EMPTY));
+index = G__20542;
+state = G__20543;
+in_quoted_field = G__20544;
+field_buffer = G__20545;
+rows = G__20546;
+continue;
+}
+} else {
+if(cljs.core.truth_(pred__20521.call(null,separator,expr__20522))){
 if(in_quoted_field){
-var G__19919 = (index + (1));
-var G__19920 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19921 = in_quoted_field;
-var G__19922 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
-var G__19923 = rows;
-index = G__19919;
-state = G__19920;
-in_quoted_field = G__19921;
-field_buffer = G__19922;
-rows = G__19923;
+var G__20547 = (index + (1));
+var G__20548 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20549 = in_quoted_field;
+var G__20550 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
+var G__20551 = rows;
+index = G__20547;
+state = G__20548;
+in_quoted_field = G__20549;
+field_buffer = G__20550;
+rows = G__20551;
 continue;
 } else {
-var G__19924 = (index + (1));
-var G__19925 = new cljs.core.Keyword(null,"end-field","end-field",-163102047);
-var G__19926 = in_quoted_field;
-var G__19927 = "";
-var G__19928 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,field_buffer);
-index = G__19924;
-state = G__19925;
-in_quoted_field = G__19926;
-field_buffer = G__19927;
-rows = G__19928;
+var G__20552 = (index + (1));
+var G__20553 = new cljs.core.Keyword(null,"end-field","end-field",-163102047);
+var G__20554 = in_quoted_field;
+var G__20555 = "";
+var G__20556 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,field_buffer);
+index = G__20552;
+state = G__20553;
+in_quoted_field = G__20554;
+field_buffer = G__20555;
+rows = G__20556;
 continue;
 }
 } else {
-if(cljs.core.truth_(pred__19893.call(null,"\r",expr__19894))){
+if(cljs.core.truth_(pred__20521.call(null,"\r",expr__20522))){
 if(((cljs.core._EQ_.call(null,newline,new cljs.core.Keyword(null,"cr+lf","cr+lf",486534798))) && ((!(in_quoted_field))))){
-var G__19929 = (index + (1));
-var G__19930 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19931 = in_quoted_field;
-var G__19932 = field_buffer;
-var G__19933 = rows;
-index = G__19929;
-state = G__19930;
-in_quoted_field = G__19931;
-field_buffer = G__19932;
-rows = G__19933;
+var G__20557 = (index + (1));
+var G__20558 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20559 = in_quoted_field;
+var G__20560 = field_buffer;
+var G__20561 = rows;
+index = G__20557;
+state = G__20558;
+in_quoted_field = G__20559;
+field_buffer = G__20560;
+rows = G__20561;
 continue;
 } else {
-var G__19934 = (index + (1));
-var G__19935 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19936 = in_quoted_field;
-var G__19937 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
-var G__19938 = rows;
-index = G__19934;
-state = G__19935;
-in_quoted_field = G__19936;
-field_buffer = G__19937;
-rows = G__19938;
+var G__20562 = (index + (1));
+var G__20563 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20564 = in_quoted_field;
+var G__20565 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
+var G__20566 = rows;
+index = G__20562;
+state = G__20563;
+in_quoted_field = G__20564;
+field_buffer = G__20565;
+rows = G__20566;
 continue;
 }
 } else {
-if(cljs.core.truth_(pred__19893.call(null,"\n",expr__19894))){
+if(cljs.core.truth_(pred__20521.call(null,"\n",expr__20522))){
 if(in_quoted_field){
-var G__19939 = (index + (1));
-var G__19940 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19941 = in_quoted_field;
-var G__19942 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
-var G__19943 = rows;
-index = G__19939;
-state = G__19940;
-in_quoted_field = G__19941;
-field_buffer = G__19942;
-rows = G__19943;
+var G__20567 = (index + (1));
+var G__20568 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20569 = in_quoted_field;
+var G__20570 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
+var G__20571 = rows;
+index = G__20567;
+state = G__20568;
+in_quoted_field = G__20569;
+field_buffer = G__20570;
+rows = G__20571;
 continue;
 } else {
-var G__19944 = (index + (1));
-var G__19945 = new cljs.core.Keyword(null,"end-line","end-line",1837326455);
-var G__19946 = in_quoted_field;
-var G__19947 = "";
-var G__19948 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,field_buffer);
-index = G__19944;
-state = G__19945;
-in_quoted_field = G__19946;
-field_buffer = G__19947;
-rows = G__19948;
+var G__20572 = (index + (1));
+var G__20573 = new cljs.core.Keyword(null,"end-line","end-line",1837326455);
+var G__20574 = in_quoted_field;
+var G__20575 = "";
+var G__20576 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,field_buffer);
+index = G__20572;
+state = G__20573;
+in_quoted_field = G__20574;
+field_buffer = G__20575;
+rows = G__20576;
 continue;
 }
 } else {
-var G__19949 = (index + (1));
-var G__19950 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19951 = in_quoted_field;
-var G__19952 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
-var G__19953 = (((cljs.core.count.call(null,rows) > (0)))?rows:cljs.core.conj.call(null,rows,cljs.core.PersistentVector.EMPTY));
-index = G__19949;
-state = G__19950;
-in_quoted_field = G__19951;
-field_buffer = G__19952;
-rows = G__19953;
+var G__20577 = (index + (1));
+var G__20578 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20579 = in_quoted_field;
+var G__20580 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
+var G__20581 = (((cljs.core.count.call(null,rows) > (0)))?rows:cljs.core.conj.call(null,rows,cljs.core.PersistentVector.EMPTY));
+index = G__20577;
+state = G__20578;
+in_quoted_field = G__20579;
+field_buffer = G__20580;
+rows = G__20581;
 continue;
 }
 }
@@ -274,57 +274,57 @@ continue;
 
 break;
 case "end-field":
-var pred__19896 = cljs.core._EQ_;
-var expr__19897 = str_char;
-if(cljs.core.truth_(pred__19896.call(null,"\"",expr__19897))){
-var G__19954 = (index + (1));
-var G__19955 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19956 = true;
-var G__19957 = field_buffer;
-var G__19958 = rows;
-index = G__19954;
-state = G__19955;
-in_quoted_field = G__19956;
-field_buffer = G__19957;
-rows = G__19958;
+var pred__20524 = cljs.core._EQ_;
+var expr__20525 = str_char;
+if(cljs.core.truth_(pred__20524.call(null,"\"",expr__20525))){
+var G__20582 = (index + (1));
+var G__20583 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20584 = true;
+var G__20585 = field_buffer;
+var G__20586 = rows;
+index = G__20582;
+state = G__20583;
+in_quoted_field = G__20584;
+field_buffer = G__20585;
+rows = G__20586;
 continue;
 } else {
-if(cljs.core.truth_(pred__19896.call(null,separator,expr__19897))){
-var G__19959 = (index + (1));
-var G__19960 = new cljs.core.Keyword(null,"end-field","end-field",-163102047);
-var G__19961 = in_quoted_field;
-var G__19962 = "";
-var G__19963 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,"");
-index = G__19959;
-state = G__19960;
-in_quoted_field = G__19961;
-field_buffer = G__19962;
-rows = G__19963;
+if(cljs.core.truth_(pred__20524.call(null,separator,expr__20525))){
+var G__20587 = (index + (1));
+var G__20588 = new cljs.core.Keyword(null,"end-field","end-field",-163102047);
+var G__20589 = in_quoted_field;
+var G__20590 = "";
+var G__20591 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,"");
+index = G__20587;
+state = G__20588;
+in_quoted_field = G__20589;
+field_buffer = G__20590;
+rows = G__20591;
 continue;
 } else {
-if(cljs.core.truth_(pred__19896.call(null,"\n",expr__19897))){
-var G__19964 = (index + (1));
-var G__19965 = new cljs.core.Keyword(null,"end-line","end-line",1837326455);
-var G__19966 = in_quoted_field;
-var G__19967 = "";
-var G__19968 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,field_buffer);
-index = G__19964;
-state = G__19965;
-in_quoted_field = G__19966;
-field_buffer = G__19967;
-rows = G__19968;
+if(cljs.core.truth_(pred__20524.call(null,"\n",expr__20525))){
+var G__20592 = (index + (1));
+var G__20593 = new cljs.core.Keyword(null,"end-line","end-line",1837326455);
+var G__20594 = in_quoted_field;
+var G__20595 = "";
+var G__20596 = testdouble.cljs.csv.conj_in.call(null,rows,last_row_index,field_buffer);
+index = G__20592;
+state = G__20593;
+in_quoted_field = G__20594;
+field_buffer = G__20595;
+rows = G__20596;
 continue;
 } else {
-var G__19969 = (index + (1));
-var G__19970 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19971 = in_quoted_field;
-var G__19972 = str_char;
-var G__19973 = rows;
-index = G__19969;
-state = G__19970;
-in_quoted_field = G__19971;
-field_buffer = G__19972;
-rows = G__19973;
+var G__20597 = (index + (1));
+var G__20598 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20599 = in_quoted_field;
+var G__20600 = str_char;
+var G__20601 = rows;
+index = G__20597;
+state = G__20598;
+in_quoted_field = G__20599;
+field_buffer = G__20600;
+rows = G__20601;
 continue;
 }
 }
@@ -332,52 +332,52 @@ continue;
 
 break;
 case "end-line":
-var G__19899 = str_char;
-switch (G__19899) {
+var G__20527 = str_char;
+switch (G__20527) {
 case "\"":
-var G__19975 = (index + (1));
-var G__19976 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19977 = true;
-var G__19978 = field_buffer;
-var G__19979 = cljs.core.conj.call(null,(function (){var or__4131__auto__ = rows;
+var G__20603 = (index + (1));
+var G__20604 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20605 = true;
+var G__20606 = field_buffer;
+var G__20607 = cljs.core.conj.call(null,(function (){var or__4131__auto__ = rows;
 if(cljs.core.truth_(or__4131__auto__)){
 return or__4131__auto__;
 } else {
 return cljs.core.PersistentVector.EMPTY;
 }
 })(),cljs.core.PersistentVector.EMPTY);
-index = G__19975;
-state = G__19976;
-in_quoted_field = G__19977;
-field_buffer = G__19978;
-rows = G__19979;
+index = G__20603;
+state = G__20604;
+in_quoted_field = G__20605;
+field_buffer = G__20606;
+rows = G__20607;
 continue;
 
 break;
 default:
-var G__19980 = (index + (1));
-var G__19981 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
-var G__19982 = in_quoted_field;
-var G__19983 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
-var G__19984 = cljs.core.conj.call(null,(function (){var or__4131__auto__ = rows;
+var G__20608 = (index + (1));
+var G__20609 = new cljs.core.Keyword(null,"in-field","in-field",1894971643);
+var G__20610 = in_quoted_field;
+var G__20611 = [field_buffer,cljs.core.str.cljs$core$IFn$_invoke$arity$1(char$)].join('');
+var G__20612 = cljs.core.conj.call(null,(function (){var or__4131__auto__ = rows;
 if(cljs.core.truth_(or__4131__auto__)){
 return or__4131__auto__;
 } else {
 return cljs.core.PersistentVector.EMPTY;
 }
 })(),cljs.core.PersistentVector.EMPTY);
-index = G__19980;
-state = G__19981;
-in_quoted_field = G__19982;
-field_buffer = G__19983;
-rows = G__19984;
+index = G__20608;
+state = G__20609;
+in_quoted_field = G__20610;
+field_buffer = G__20611;
+rows = G__20612;
 continue;
 
 }
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__19892__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__20520__$1)].join('')));
 
 }
 } else {
@@ -393,11 +393,11 @@ throw (new Error(testdouble.cljs.csv.newline_error_message));
 testdouble.cljs.csv.read_csv.cljs$lang$maxFixedArity = (1);
 
 /** @this {Function} */
-testdouble.cljs.csv.read_csv.cljs$lang$applyTo = (function (seq19880){
-var G__19881 = cljs.core.first.call(null,seq19880);
-var seq19880__$1 = cljs.core.next.call(null,seq19880);
+testdouble.cljs.csv.read_csv.cljs$lang$applyTo = (function (seq20508){
+var G__20509 = cljs.core.first.call(null,seq20508);
+var seq20508__$1 = cljs.core.next.call(null,seq20508);
 var self__4717__auto__ = this;
-return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19881,seq19880__$1);
+return self__4717__auto__.cljs$core$IFn$_invoke$arity$variadic(G__20509,seq20508__$1);
 });
 
 

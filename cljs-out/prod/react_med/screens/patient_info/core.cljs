@@ -73,8 +73,8 @@
 
 (defn avaliacao->csv-row [{:keys [nascimento] :as paciente-info}]
   (fn [{:keys [data peso estatura resistencia reatancia atividade-fisica
-               circunferencia-cintura circunferencia-quadril
-               circunferencia-braco circunferencia-perna]
+               circunferencia-cintura
+               circunferencia-braco circunferencia-panturrilha]
         :as aval}]
     (try
       (let [idade (util/years-difference nascimento data)
@@ -110,9 +110,8 @@
         "Estatura" (format-num estatura)
         "IMC" (format-num (bioimpedance/imc avaliacao-info))
         "Circunferência Cintura" (format-num circunferencia-cintura)
-        "Circunferência Quadril" (format-num circunferencia-quadril)
         "Circunferência Braço" (format-num circunferencia-braco)
-        "Circunferência Perna" (format-num circunferencia-perna)
+        "Circunferência Panturrilha" (format-num circunferencia-panturrilha)
         "Nível de Atividade Física" atividade-fisica
         "Resistência" resistencia
         "Reatância" reatancia
@@ -139,7 +138,7 @@
                        ["Sexo" sexo]
                        ["Estatura" (dot->comma estatura)]
                        [""]]
-        avals (filter :id avaliacoes)
+        avals (filter :id (vals avaliacoes))
         avals (mapv (avaliacao->csv-row paciente-info) avals)
         avaliacoes (cons (keys (first avals)) (map vals avals))]
     (csv/write-csv (concat paciente-head avaliacoes) :quote? true)))
@@ -180,7 +179,9 @@
   [app-state [event new-height]]
   (let [paciente-id (get-in app-state [:ui :paciente-selecionado])]
     (assoc-in app-state [:domain :patients paciente-id :estatura]
-              (js/parseFloat (.replace  new-height "," ".")))))
+              (if (empty? new-height)
+                nil
+                (js/parseFloat (.replace  new-height "," "."))))))
 (re-frame/reg-event-db ::change-height change-height)
 
 (def date-picker-i18n-pt
