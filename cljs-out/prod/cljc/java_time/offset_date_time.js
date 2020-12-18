@@ -33,8 +33,8 @@ cljc.java_time.offset_date_time.minus_hours = (function cljc$java_time$offset_da
 return this2438.minusHours(long2439);
 });
 cljc.java_time.offset_date_time.of = (function cljc$java_time$offset_date_time$of(var_args){
-var G__15917 = arguments.length;
-switch (G__15917) {
+var G__15933 = arguments.length;
+switch (G__15933) {
 case 2:
 return cljc.java_time.offset_date_time.of.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -98,8 +98,8 @@ cljc.java_time.offset_date_time.get_day_of_year = (function cljc$java_time$offse
 return this2467.dayOfYear();
 });
 cljc.java_time.offset_date_time.plus = (function cljc$java_time$offset_date_time$plus(var_args){
-var G__15920 = arguments.length;
-switch (G__15920) {
+var G__15936 = arguments.length;
+switch (G__15936) {
 case 2:
 return cljc.java_time.offset_date_time.plus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -158,8 +158,8 @@ cljc.java_time.offset_date_time.minus_months = (function cljc$java_time$offset_d
 return this2489.minusMonths(long2490);
 });
 cljc.java_time.offset_date_time.minus = (function cljc$java_time$offset_date_time$minus(var_args){
-var G__15923 = arguments.length;
-switch (G__15923) {
+var G__15939 = arguments.length;
+switch (G__15939) {
 case 2:
 return cljc.java_time.offset_date_time.minus.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -239,8 +239,8 @@ cljc.java_time.offset_date_time.minus_years = (function cljc$java_time$offset_da
 return this2525.minusYears(long2526);
 });
 cljc.java_time.offset_date_time.parse = (function cljc$java_time$offset_date_time$parse(var_args){
-var G__15926 = arguments.length;
-switch (G__15926) {
+var G__15942 = arguments.length;
+switch (G__15942) {
 case 1:
 return cljc.java_time.offset_date_time.parse.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -281,8 +281,8 @@ cljc.java_time.offset_date_time.adjust_into = (function cljc$java_time$offset_da
 return this2535.adjustInto(java_time_temporal_Temporal2536);
 });
 cljc.java_time.offset_date_time.with$ = (function cljc$java_time$offset_date_time$with(var_args){
-var G__15929 = arguments.length;
-switch (G__15929) {
+var G__15945 = arguments.length;
+switch (G__15945) {
 case 2:
 return cljc.java_time.offset_date_time.with$.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -308,8 +308,8 @@ return this2539.with(G__2540,G__2541);
 cljc.java_time.offset_date_time.with$.cljs$lang$maxFixedArity = 3;
 
 cljc.java_time.offset_date_time.now = (function cljc$java_time$offset_date_time$now(var_args){
-var G__15932 = arguments.length;
-switch (G__15932) {
+var G__15948 = arguments.length;
+switch (G__15948) {
 case 1:
 return cljc.java_time.offset_date_time.now.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

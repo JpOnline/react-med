@@ -36,8 +36,8 @@ cljc.java_time.local_date_time.minus_hours = (function cljc$java_time$local_date
 return this1980.minusHours(long1981);
 });
 cljc.java_time.local_date_time.of = (function cljc$java_time$local_date_time$of(var_args){
-var G__15897 = arguments.length;
-switch (G__15897) {
+var G__15913 = arguments.length;
+switch (G__15913) {
 case 6:
 return cljc.java_time.local_date_time.of.cljs$core$IFn$_invoke$arity$6((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),(arguments[(4)]),(arguments[(5)]));
 
@@ -103,8 +103,8 @@ cljc.java_time.local_date_time.get_day_of_year = (function cljc$java_time$local_
 return this2016.dayOfYear();
 });
 cljc.java_time.local_date_time.plus = (function cljc$java_time$local_date_time$plus(var_args){
-var G__15900 = arguments.length;
-switch (G__15900) {
+var G__15916 = arguments.length;
+switch (G__15916) {
 case 3:
 return cljc.java_time.local_date_time.plus.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -157,8 +157,8 @@ cljc.java_time.local_date_time.minus_months = (function cljc$java_time$local_dat
 return this2036.minusMonths(long2037);
 });
 cljc.java_time.local_date_time.minus = (function cljc$java_time$local_date_time$minus(var_args){
-var G__15903 = arguments.length;
-switch (G__15903) {
+var G__15919 = arguments.length;
+switch (G__15919) {
 case 3:
 return cljc.java_time.local_date_time.minus.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -235,8 +235,8 @@ cljc.java_time.local_date_time.get_chronology = (function cljc$java_time$local_d
 return this2073.chronology();
 });
 cljc.java_time.local_date_time.parse = (function cljc$java_time$local_date_time$parse(var_args){
-var G__15906 = arguments.length;
-switch (G__15906) {
+var G__15922 = arguments.length;
+switch (G__15922) {
 case 2:
 return cljc.java_time.local_date_time.parse.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -277,8 +277,8 @@ cljc.java_time.local_date_time.adjust_into = (function cljc$java_time$local_date
 return this2082.adjustInto(java_time_temporal_Temporal2083);
 });
 cljc.java_time.local_date_time.with$ = (function cljc$java_time$local_date_time$with(var_args){
-var G__15909 = arguments.length;
-switch (G__15909) {
+var G__15925 = arguments.length;
+switch (G__15925) {
 case 2:
 return cljc.java_time.local_date_time.with$.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -304,8 +304,8 @@ return this2086.with(G__2087,G__2088);
 cljc.java_time.local_date_time.with$.cljs$lang$maxFixedArity = 3;
 
 cljc.java_time.local_date_time.now = (function cljc$java_time$local_date_time$now(var_args){
-var G__15912 = arguments.length;
-switch (G__15912) {
+var G__15928 = arguments.length;
+switch (G__15928) {
 case 0:
 return cljc.java_time.local_date_time.now.cljs$core$IFn$_invoke$arity$0();
 

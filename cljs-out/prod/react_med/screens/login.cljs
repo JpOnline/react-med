@@ -65,6 +65,7 @@
       {:style #js {:width "100%"}
        :label "Email"
        :onFocus #(>evt [::clear-errors])
+       :onKeyDown #(do (js/console.log "keydown" %) (if (= 13 (.-keyCode %)) (>evt [::auth/email-and-password-login])))
        (when (<sub [::email-error])
          :invalid)
        (when (<sub [::email-error])
@@ -78,6 +79,7 @@
        :style #js {:width "100%"}
        :value (<sub [::password])
        :onFocus #(>evt [::clear-errors])
+       :onKeyDown #(if (= 13 (.-keyCode %)) (>evt [::auth/email-and-password-login]))
        (when (<sub [::password-error])
          :invalid)
        (when (<sub [::password-error])
@@ -91,7 +93,12 @@
                    :color "white"}
        :variant "contained"
        :onClick #(>evt [::auth/email-and-password-login])}
-      "Entrar"]]])
+      "Entrar"]
+     [:p
+      {:style #js {:color "#caca30"
+                   :cursor "pointer"}
+       :onClick #(>evt [::auth/reset-password])}
+      "Esqueci minha senha"]]])
 
 (defn view []
   [shell/main-panel

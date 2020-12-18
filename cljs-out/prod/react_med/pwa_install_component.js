@@ -9,12 +9,12 @@ react_med.pwa_install_component.global$module$button = goog.global["Button"];
 react_med.pwa_install_component.deferred_install_prompt = cljs.core.atom.call(null,null);
 if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
 react_med.pwa_install_component.show_install_prompt = (function react_med$pwa_install_component$show_install_prompt(app_state){
-var _PLUS_debux_dbg_opts_PLUS__14710 = cljs.core.PersistentArrayMap.EMPTY;
+var _PLUS_debux_dbg_opts_PLUS__14724 = cljs.core.PersistentArrayMap.EMPTY;
 try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,".prompt",".prompt",-1247223586,null),cljs.core.list(new cljs.core.Symbol(null,"deref","deref",1494944732,null),new cljs.core.Symbol(null,"deferred-install-prompt","deferred-install-prompt",1331487076,null))));
 
-var opts__14482__auto___14711 = _PLUS_debux_dbg_opts_PLUS__14710;
-var result__14483__auto___14712 = (function (){var opts__14482__auto____$1 = _PLUS_debux_dbg_opts_PLUS__14710;
-var result__14483__auto__ = cljs.core.deref.call(null,(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS__14710;
+var opts__14482__auto___14725 = _PLUS_debux_dbg_opts_PLUS__14724;
+var result__14483__auto___14726 = (function (){var opts__14482__auto____$1 = _PLUS_debux_dbg_opts_PLUS__14724;
+var result__14483__auto__ = cljs.core.deref.call(null,(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS__14724;
 var result__14483__auto__ = react_med.pwa_install_component.deferred_install_prompt;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"deferred-install-prompt","deferred-install-prompt",1331487076,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
@@ -24,10 +24,10 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })().prompt();
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto___14712,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,".prompt",".prompt",-1247223586,null),cljs.core.list(new cljs.core.Symbol("clojure.core","deref","clojure.core/deref",188719157,null),new cljs.core.Symbol(null,"deferred-install-prompt","deferred-install-prompt",1331487076,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto___14726,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,".prompt",".prompt",-1247223586,null),cljs.core.list(new cljs.core.Symbol("clojure.core","deref","clojure.core/deref",188719157,null),new cljs.core.Symbol(null,"deferred-install-prompt","deferred-install-prompt",1331487076,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
-}catch (e14708){var e_14713 = e14708;
-throw e_14713;
+}catch (e14722){var e_14727 = e14722;
+throw e_14727;
 }
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
 try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"->","->",-2139605430,null),cljs.core.list(new cljs.core.Symbol(null,"deref","deref",1494944732,null),new cljs.core.Symbol(null,"deferred-install-prompt","deferred-install-prompt",1331487076,null)),new cljs.core.Symbol(null,".-userChoice",".-userChoice",1070353827,null),cljs.core.list(new cljs.core.Symbol(null,".then",".then",224668574,null),cljs.core.list(new cljs.core.Symbol(null,"fn","fn",465265323,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"choice-result","choice-result",-1029988964,null)], null),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Symbol(null,"=","=",-1501502141,null),"accepted",cljs.core.list(new cljs.core.Symbol(null,".-outcome",".-outcome",-1884449703,null),new cljs.core.Symbol(null,"choice-result","choice-result",-1029988964,null))),cljs.core.list(new cljs.core.Symbol(null,"do","do",1686842252,null),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User accepted the install prompt."),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"show-pwa-install-button?","show-pwa-install-button?",-5206341)], null),false)),cljs.core.list(new cljs.core.Symbol(null,"do","do",1686842252,null),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User dismissed the install prompt."),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"show-pwa-install-button?","show-pwa-install-button?",-5206341)], null),true)))))));
@@ -58,9 +58,9 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 return result__14483__auto__;
 })())?(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = (function (){
-var opts__14482__auto___14714__$3 = _PLUS_debux_dbg_opts_PLUS_;
-var result__14483__auto___14715 = console.log("User accepted the install prompt.");
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto___14715,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User accepted the install prompt."),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
+var opts__14482__auto___14728__$3 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14483__auto___14729 = console.log("User accepted the install prompt.");
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto___14729,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User accepted the install prompt."),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
 
 
 var opts__14482__auto____$3 = _PLUS_debux_dbg_opts_PLUS_;
@@ -85,9 +85,9 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 return result__14483__auto__;
 })():(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = (function (){
-var opts__14482__auto___14716__$3 = _PLUS_debux_dbg_opts_PLUS_;
-var result__14483__auto___14717 = console.log("User dismissed the install prompt.");
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto___14717,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User dismissed the install prompt."),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
+var opts__14482__auto___14730__$3 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14483__auto___14731 = console.log("User dismissed the install prompt.");
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto___14731,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User dismissed the install prompt."),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
 
 
 var opts__14482__auto____$3 = _PLUS_debux_dbg_opts_PLUS_;
@@ -120,7 +120,7 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })()),cljs.core.list(new cljs.core.Symbol(null,".then",".then",224668574,null),cljs.core.list(new cljs.core.Symbol(null,"fn","fn",465265323,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"choice-result","choice-result",-1029988964,null)], null),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Symbol(null,"=","=",-1501502141,null),"accepted",cljs.core.list(new cljs.core.Symbol(null,".-outcome",".-outcome",-1884449703,null),new cljs.core.Symbol(null,"choice-result","choice-result",-1029988964,null))),cljs.core.list(new cljs.core.Symbol(null,"do","do",1686842252,null),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User accepted the install prompt."),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"show-pwa-install-button?","show-pwa-install-button?",-5206341)], null),false)),cljs.core.list(new cljs.core.Symbol(null,"do","do",1686842252,null),cljs.core.list(new cljs.core.Symbol("js","console.log","js/console.log",-2005248266,null),"User dismissed the install prompt."),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"show-pwa-install-button?","show-pwa-install-button?",-5206341)], null),true))))),(0));
-}catch (e14709){var e = e14709;
+}catch (e14723){var e = e14723;
 throw e;
 }});
 } else {
@@ -170,7 +170,7 @@ return result__14483__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"show-pwa-install-button?","show-pwa-install-button?",-5206341)], null),true),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14483__auto__;
-}catch (e14718){var e = e14718;
+}catch (e14732){var e = e14732;
 throw e;
 }});
 } else {
@@ -180,10 +180,10 @@ return cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(nul
 }
 re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.pwa-install-component","show-install-button","react-med.pwa-install-component/show-install-button",2124430632),react_med.pwa_install_component.show_install_button);
 react_med.pwa_install_component.add_before_install_prompt_event_listener = (function react_med$pwa_install_component$add_before_install_prompt_event_listener(){
-return window.addEventListener("beforeinstallprompt",(function (p1__14719_SHARP_){
+return window.addEventListener("beforeinstallprompt",(function (p1__14733_SHARP_){
 console.log("beforeinstallprompt triggered");
 
-cljs.core.reset_BANG_.call(null,react_med.pwa_install_component.deferred_install_prompt,p1__14719_SHARP_);
+cljs.core.reset_BANG_.call(null,react_med.pwa_install_component.deferred_install_prompt,p1__14733_SHARP_);
 
 return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.pwa-install-component","show-install-button","react-med.pwa-install-component/show-install-button",2124430632)], null));
 }));

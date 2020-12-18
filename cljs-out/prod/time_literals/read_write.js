@@ -154,57 +154,57 @@ return java.time.LocalDateTime.parse(t);
 }),(function (t){
 return java.time.ZoneId.of(t);
 })]);
-var seq__15843_15859 = cljs.core.seq.call(null,time_literals.read_write.tags);
-var chunk__15844_15860 = null;
-var count__15845_15861 = (0);
-var i__15846_15862 = (0);
+var seq__15859_15875 = cljs.core.seq.call(null,time_literals.read_write.tags);
+var chunk__15860_15876 = null;
+var count__15861_15877 = (0);
+var i__15862_15878 = (0);
 while(true){
-if((i__15846_15862 < count__15845_15861)){
-var vec__15853_15863 = cljs.core._nth.call(null,chunk__15844_15860,i__15846_15862);
-var tag_15864 = cljs.core.nth.call(null,vec__15853_15863,(0),null);
-var read_fn_15865 = cljs.core.nth.call(null,vec__15853_15863,(1),null);
-cljs.reader.register_tag_parser_BANG_.call(null,tag_15864,read_fn_15865);
+if((i__15862_15878 < count__15861_15877)){
+var vec__15869_15879 = cljs.core._nth.call(null,chunk__15860_15876,i__15862_15878);
+var tag_15880 = cljs.core.nth.call(null,vec__15869_15879,(0),null);
+var read_fn_15881 = cljs.core.nth.call(null,vec__15869_15879,(1),null);
+cljs.reader.register_tag_parser_BANG_.call(null,tag_15880,read_fn_15881);
 
 
-var G__15866 = seq__15843_15859;
-var G__15867 = chunk__15844_15860;
-var G__15868 = count__15845_15861;
-var G__15869 = (i__15846_15862 + (1));
-seq__15843_15859 = G__15866;
-chunk__15844_15860 = G__15867;
-count__15845_15861 = G__15868;
-i__15846_15862 = G__15869;
+var G__15882 = seq__15859_15875;
+var G__15883 = chunk__15860_15876;
+var G__15884 = count__15861_15877;
+var G__15885 = (i__15862_15878 + (1));
+seq__15859_15875 = G__15882;
+chunk__15860_15876 = G__15883;
+count__15861_15877 = G__15884;
+i__15862_15878 = G__15885;
 continue;
 } else {
-var temp__5735__auto___15870 = cljs.core.seq.call(null,seq__15843_15859);
-if(temp__5735__auto___15870){
-var seq__15843_15871__$1 = temp__5735__auto___15870;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__15843_15871__$1)){
-var c__4550__auto___15872 = cljs.core.chunk_first.call(null,seq__15843_15871__$1);
-var G__15873 = cljs.core.chunk_rest.call(null,seq__15843_15871__$1);
-var G__15874 = c__4550__auto___15872;
-var G__15875 = cljs.core.count.call(null,c__4550__auto___15872);
-var G__15876 = (0);
-seq__15843_15859 = G__15873;
-chunk__15844_15860 = G__15874;
-count__15845_15861 = G__15875;
-i__15846_15862 = G__15876;
+var temp__5735__auto___15886 = cljs.core.seq.call(null,seq__15859_15875);
+if(temp__5735__auto___15886){
+var seq__15859_15887__$1 = temp__5735__auto___15886;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__15859_15887__$1)){
+var c__4550__auto___15888 = cljs.core.chunk_first.call(null,seq__15859_15887__$1);
+var G__15889 = cljs.core.chunk_rest.call(null,seq__15859_15887__$1);
+var G__15890 = c__4550__auto___15888;
+var G__15891 = cljs.core.count.call(null,c__4550__auto___15888);
+var G__15892 = (0);
+seq__15859_15875 = G__15889;
+chunk__15860_15876 = G__15890;
+count__15861_15877 = G__15891;
+i__15862_15878 = G__15892;
 continue;
 } else {
-var vec__15856_15877 = cljs.core.first.call(null,seq__15843_15871__$1);
-var tag_15878 = cljs.core.nth.call(null,vec__15856_15877,(0),null);
-var read_fn_15879 = cljs.core.nth.call(null,vec__15856_15877,(1),null);
-cljs.reader.register_tag_parser_BANG_.call(null,tag_15878,read_fn_15879);
+var vec__15872_15893 = cljs.core.first.call(null,seq__15859_15887__$1);
+var tag_15894 = cljs.core.nth.call(null,vec__15872_15893,(0),null);
+var read_fn_15895 = cljs.core.nth.call(null,vec__15872_15893,(1),null);
+cljs.reader.register_tag_parser_BANG_.call(null,tag_15894,read_fn_15895);
 
 
-var G__15880 = cljs.core.next.call(null,seq__15843_15871__$1);
-var G__15881 = null;
-var G__15882 = (0);
-var G__15883 = (0);
-seq__15843_15859 = G__15880;
-chunk__15844_15860 = G__15881;
-count__15845_15861 = G__15882;
-i__15846_15862 = G__15883;
+var G__15896 = cljs.core.next.call(null,seq__15859_15887__$1);
+var G__15897 = null;
+var G__15898 = (0);
+var G__15899 = (0);
+seq__15859_15875 = G__15896;
+chunk__15860_15876 = G__15897;
+count__15861_15877 = G__15898;
+i__15862_15878 = G__15899;
 continue;
 }
 } else {

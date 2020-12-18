@@ -46,10 +46,10 @@
                   "auth/invalid-email" (>evt [::login-error :email-error "Email inválido"])
                   "auth/invalid-password" (>evt [::login-error :password-error "Senha inválida"])
                   "auth/user-not-found" (>evt [::login-error :email-error "Usuário não encontrado"])
-                  "auth/wrong-password" (>evt [::login-error :password-error "Senha errada ou inexistente"])
+                  "auth/wrong-password" (>evt [::login-error :password-error "Senha errada ou inexistente 😞"])
                   "auth/argument-error" (>evt [::login-error :email-error "Email inválido"])
                   "auth/network-request-failed" (>evt [::login-error :email-error "Problemas com a conexão. 😞"])
-                  "auth/user-disabled" (>evt [::login-error :email-error "Sua conta foi desabilitada. Contacte a equipe da BodyLines 😞"])
+                  "auth/user-disabled" (>evt [::login-error :email-error "Sua conta foi desabilitada. Contacte a equipe da BodyLines"])
                   (do
                     (>evt [::login-error :email-error (.-message error)])
                     (>evt [::login-error :password-error (.-message error)])
@@ -98,6 +98,27 @@
   ::user-logged-out
   [(re-frame/inject-cofx :store)]
   user-logged-out)
+
+(defn-traced reset-password
+  [{:keys [db store]} _]
+  (-> fb
+      .auth
+      (.sendPasswordResetEmail (get-in db [:ui :login :email]))
+      (.then (fn []
+                (>evt [::login-error :email-error (str "Email de redefinição de senha enviado para "(get-in db [:ui :login :email]))])))
+      (.catch (fn [error]
+                (case (.-code error)
+                  "auth/invalid-email" (>evt [::login-error :email-error  "Email inválido. Insira seu email para redefinição de senha."])
+                  "auth/user-not-found" (>evt [::login-error :email-error "Usuário não encontrado. Caso não possua uma conta, contate-nos."])
+                  "auth/argument-error" (>evt [::login-error :email-error "Email inválido. Insira seu email para redefinição de senha."])
+                  "auth/network-request-failed" (>evt [::login-error :email-error "Problemas com a conexão. 😞"])
+                  "auth/user-disabled" (>evt [::login-error :email-error  "Sua conta foi desabilitada. Entre em contato conosco para reabilitá-la."])
+                  (>evt [::login-error :email-error (str "Não consegui mandar email para redefinir a senha. "(.-message error))])))))
+  {:db (login-error db [::reset-password :email-error "Enviando email.."])})
+(re-frame/reg-event-fx
+  ::reset-password
+  [(re-frame/inject-cofx :store)]
+  reset-password)
 
 ;; Essa API do firebase também usa o padrão de publisher subscriber assim como o
 ;; reframe. Não tenho certeza quais os eventos podem dar acionar esse onAuthStateChanged

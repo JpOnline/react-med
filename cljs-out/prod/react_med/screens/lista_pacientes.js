@@ -11,29 +11,29 @@ goog.require('react_med.util');
 react_med.screens.lista_pacientes.global$module$checkbox = goog.global["Checkbox"];
 react_med.screens.lista_pacientes.global$module$menu_item = goog.global["MenuItem"];
 react_med.screens.lista_pacientes.global$module$menu_list = goog.global["MenuList"];
-react_med.screens.lista_pacientes.no_value_QMARK_ = (function react_med$screens$lista_pacientes$no_value_QMARK_(p1__14794_SHARP_){
-return ((cljs.core._EQ_.call(null,p1__14794_SHARP_,null)) || (cljs.core._EQ_.call(null,p1__14794_SHARP_,"")) || (cljs.core._EQ_.call(null,p1__14794_SHARP_,undefined)));
+react_med.screens.lista_pacientes.no_value_QMARK_ = (function react_med$screens$lista_pacientes$no_value_QMARK_(p1__14808_SHARP_){
+return ((cljs.core._EQ_.call(null,p1__14808_SHARP_,null)) || (cljs.core._EQ_.call(null,p1__14808_SHARP_,"")) || (cljs.core._EQ_.call(null,p1__14808_SHARP_,undefined)));
 });
-react_med.screens.lista_pacientes.update_avaliacao_estatura_se_vazio = (function react_med$screens$lista_pacientes$update_avaliacao_estatura_se_vazio(p__14796){
-var map__14797 = p__14796;
-var map__14797__$1 = (((((!((map__14797 == null))))?(((((map__14797.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__14797.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14797):map__14797);
-var paciente = map__14797__$1;
-var estatura = cljs.core.get.call(null,map__14797__$1,new cljs.core.Keyword(null,"estatura","estatura",-685084760));
-return cljs.core.update.call(null,paciente,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982),((function (map__14797,map__14797__$1,paciente,estatura){
-return (function (p1__14795_SHARP_){
-return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.mapv.call(null,((function (map__14797,map__14797__$1,paciente,estatura){
-return (function (p__14799){
-var vec__14800 = p__14799;
-var k = cljs.core.nth.call(null,vec__14800,(0),null);
-var aval = cljs.core.nth.call(null,vec__14800,(1),null);
+react_med.screens.lista_pacientes.update_avaliacao_estatura_se_vazio = (function react_med$screens$lista_pacientes$update_avaliacao_estatura_se_vazio(p__14810){
+var map__14811 = p__14810;
+var map__14811__$1 = (((((!((map__14811 == null))))?(((((map__14811.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__14811.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14811):map__14811);
+var paciente = map__14811__$1;
+var estatura = cljs.core.get.call(null,map__14811__$1,new cljs.core.Keyword(null,"estatura","estatura",-685084760));
+return cljs.core.update.call(null,paciente,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982),((function (map__14811,map__14811__$1,paciente,estatura){
+return (function (p1__14809_SHARP_){
+return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.mapv.call(null,((function (map__14811,map__14811__$1,paciente,estatura){
+return (function (p__14813){
+var vec__14814 = p__14813;
+var k = cljs.core.nth.call(null,vec__14814,(0),null);
+var aval = cljs.core.nth.call(null,vec__14814,(1),null);
 if(react_med.screens.lista_pacientes.no_value_QMARK_.call(null,new cljs.core.Keyword(null,"estatura","estatura",-685084760).cljs$core$IFn$_invoke$arity$1(aval))){
 return cljs.core.PersistentArrayMap.createAsIfByAssoc([k,cljs.core.assoc.call(null,aval,new cljs.core.Keyword(null,"estatura","estatura",-685084760),estatura)]);
 } else {
 return cljs.core.PersistentArrayMap.createAsIfByAssoc([k,aval]);
 }
-});})(map__14797,map__14797__$1,paciente,estatura))
-,p1__14795_SHARP_));
-});})(map__14797,map__14797__$1,paciente,estatura))
+});})(map__14811,map__14811__$1,paciente,estatura))
+,p1__14809_SHARP_));
+});})(map__14811,map__14811__$1,paciente,estatura))
 );
 });
 react_med.screens.lista_pacientes.pacientes = (function react_med$screens$lista_pacientes$pacientes(app_state){
@@ -57,10 +57,10 @@ return cljs.core.assoc.call(null,p,new cljs.core.Keyword(null,"checked?","checke
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.screens.lista-pacientes","checkboxed-patients","react-med.screens.lista-pacientes/checkboxed-patients",1924366996),react_med.screens.lista_pacientes.checkboxed_patients);
 if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
-react_med.screens.lista_pacientes.seleciona_paciente = (function react_med$screens$lista_pacientes$seleciona_paciente(app_state,p__14803){
-var vec__14804 = p__14803;
-var event = cljs.core.nth.call(null,vec__14804,(0),null);
-var paciente_id = cljs.core.nth.call(null,vec__14804,(1),null);
+react_med.screens.lista_pacientes.seleciona_paciente = (function react_med$screens$lista_pacientes$seleciona_paciente(app_state,p__14817){
+var vec__14818 = p__14817;
+var event = cljs.core.nth.call(null,vec__14818,(0),null);
+var paciente_id = cljs.core.nth.call(null,vec__14818,(1),null);
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
 try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"->","->",-2139605430,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),"info"),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"paciente-selecionado","paciente-selecionado",863963374)], null),new cljs.core.Symbol(null,"paciente-id","paciente-id",-1126589585,null))));
 
@@ -80,25 +80,25 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })()),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"paciente-selecionado","paciente-selecionado",863963374)], null),new cljs.core.Symbol(null,"paciente-id","paciente-id",-1126589585,null)),(0));
-}catch (e14807){var e = e14807;
+}catch (e14821){var e = e14821;
 throw e;
 }});
 } else {
 /**
  * Entrar na tela de detalhes do paciente selecionado.
  */
-react_med.screens.lista_pacientes.seleciona_paciente = (function react_med$screens$lista_pacientes$seleciona_paciente(app_state,p__14808){
-var vec__14809 = p__14808;
-var event = cljs.core.nth.call(null,vec__14809,(0),null);
-var paciente_id = cljs.core.nth.call(null,vec__14809,(1),null);
+react_med.screens.lista_pacientes.seleciona_paciente = (function react_med$screens$lista_pacientes$seleciona_paciente(app_state,p__14822){
+var vec__14823 = p__14822;
+var event = cljs.core.nth.call(null,vec__14823,(0),null);
+var paciente_id = cljs.core.nth.call(null,vec__14823,(1),null);
 return cljs.core.assoc_in.call(null,cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),"info"),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"paciente-selecionado","paciente-selecionado",863963374)], null),paciente_id);
 });
 }
 re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.screens.lista-pacientes","seleciona-paciente","react-med.screens.lista-pacientes/seleciona-paciente",1586410180),react_med.screens.lista_pacientes.seleciona_paciente);
 if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
-react_med.screens.lista_pacientes.novo_paciente = (function react_med$screens$lista_pacientes$novo_paciente(app_state,p__14812){
-var vec__14813 = p__14812;
-var event = cljs.core.nth.call(null,vec__14813,(0),null);
+react_med.screens.lista_pacientes.novo_paciente = (function react_med$screens$lista_pacientes$novo_paciente(app_state,p__14826){
+var vec__14827 = p__14826;
+var event = cljs.core.nth.call(null,vec__14827,(0),null);
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
 try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"new-id","new-id",-2015599257,null),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null)))], null),cljs.core.list(new cljs.core.Symbol(null,"->","->",-2139605430,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"new-id","new-id",-2015599257,null)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Symbol(null,"new-id","new-id",-2015599257,null),new cljs.core.Keyword(null,"nome","nome",1100401122),"Novo Paciente",new cljs.core.Keyword(null,"nascimento","nascimento",646565528),"1900-01-01"], null)),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),"edit-info"),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"paciente-selecionado","paciente-selecionado",863963374)], null),new cljs.core.Symbol(null,"new-id","new-id",-2015599257,null)))));
 
@@ -159,13 +159,13 @@ return result__14483__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"new-id","new-id",-2015599257,null),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null)))], null),cljs.core.list(new cljs.core.Symbol(null,"quote","quote",1377916282,null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"paciente-selecionado","paciente-selecionado",863963374)], null),new cljs.core.Symbol(null,"new-id","new-id",-2015599257,null)))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14483__auto__;
-}catch (e14816){var e = e14816;
+}catch (e14830){var e = e14830;
 throw e;
 }});
 } else {
-react_med.screens.lista_pacientes.novo_paciente = (function react_med$screens$lista_pacientes$novo_paciente(app_state,p__14817){
-var vec__14818 = p__14817;
-var event = cljs.core.nth.call(null,vec__14818,(0),null);
+react_med.screens.lista_pacientes.novo_paciente = (function react_med$screens$lista_pacientes$novo_paciente(app_state,p__14831){
+var vec__14832 = p__14831;
+var event = cljs.core.nth.call(null,vec__14832,(0),null);
 var new_id = cljs.core.count.call(null,cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null)));
 return cljs.core.assoc_in.call(null,cljs.core.assoc_in.call(null,cljs.core.assoc_in.call(null,app_state,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new_id], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"id","id",-1388402092),new_id,new cljs.core.Keyword(null,"nome","nome",1100401122),"Novo Paciente",new cljs.core.Keyword(null,"nascimento","nascimento",646565528),"1900-01-01"], null)),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),"edit-info"),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"paciente-selecionado","paciente-selecionado",863963374)], null),new_id);
 });
@@ -218,7 +218,7 @@ return result__14483__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"patients","patients",1774783602,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null))], null),cljs.core.list(new cljs.core.Symbol(null,"quote","quote",1377916282,null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null),cljs.core.list(new cljs.core.Symbol("util","repeat-as","util/repeat-as",1828691290,null),new cljs.core.Symbol(null,"patients","patients",1774783602,null),false)))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14483__auto__;
-}catch (e14821){var e = e14821;
+}catch (e14835){var e = e14835;
 throw e;
 }});
 } else {
@@ -248,10 +248,10 @@ react_med.screens.lista_pacientes.view = (function react_med$screens$lista_pacie
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.shell_components.default$,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.lista_pacientes.list_component], null)], null);
 });
 if(day8.re_frame.tracing.is_trace_enabled_QMARK_.call(null)){
-react_med.screens.lista_pacientes.check_paciente = (function react_med$screens$lista_pacientes$check_paciente(app_state,p__14822){
-var vec__14823 = p__14822;
-var event = cljs.core.nth.call(null,vec__14823,(0),null);
-var paciente_id = cljs.core.nth.call(null,vec__14823,(1),null);
+react_med.screens.lista_pacientes.check_paciente = (function react_med$screens$lista_pacientes$check_paciente(app_state,p__14836){
+var vec__14837 = p__14836;
+var event = cljs.core.nth.call(null,vec__14837,(0),null);
+var paciente_id = cljs.core.nth.call(null,vec__14837,(1),null);
 var _PLUS_debux_dbg_opts_PLUS_ = cljs.core.PersistentArrayMap.EMPTY;
 try{debux.common.util.send_form_BANG_.call(null,cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"patients","patients",1774783602,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null)),new cljs.core.Symbol(null,"checks","checks",-2128301132,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null))], null),cljs.core.list(new cljs.core.Symbol(null,"as->","as->",1430690540,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Symbol(null,"$","$",-1580747756,null),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Symbol(null,"=","=",-1501502141,null),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),new cljs.core.Symbol(null,"patients","patients",1774783602,null)),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),new cljs.core.Symbol(null,"checks","checks",-2128301132,null))),new cljs.core.Symbol(null,"$","$",-1580747756,null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"$","$",-1580747756,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null),cljs.core.list(new cljs.core.Symbol("util","repeat-as","util/repeat-as",1828691290,null),new cljs.core.Symbol(null,"patients","patients",1774783602,null),false))),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"$","$",-1580747756,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085),new cljs.core.Symbol(null,"paciente-id","paciente-id",-1126589585,null)], null),new cljs.core.Symbol(null,"not","not",1044554643,null)))));
 
@@ -389,14 +389,14 @@ return result__14483__auto__;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"patients","patients",1774783602,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null)),new cljs.core.Symbol(null,"checks","checks",-2128301132,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null))], null),cljs.core.list(new cljs.core.Symbol(null,"as->","as->",1430690540,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Symbol(null,"$","$",-1580747756,null),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Symbol(null,"=","=",-1501502141,null),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),new cljs.core.Symbol(null,"patients","patients",1774783602,null)),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),new cljs.core.Symbol(null,"checks","checks",-2128301132,null))),new cljs.core.Symbol(null,"$","$",-1580747756,null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"$","$",-1580747756,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null),cljs.core.list(new cljs.core.Symbol("util","repeat-as","util/repeat-as",1828691290,null),new cljs.core.Symbol(null,"patients","patients",1774783602,null),false))),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.Symbol(null,"$","$",-1580747756,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085),new cljs.core.Symbol(null,"paciente-id","paciente-id",-1126589585,null)], null),new cljs.core.Symbol(null,"not","not",1044554643,null)))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14483__auto__;
-}catch (e14826){var e = e14826;
+}catch (e14840){var e = e14840;
 throw e;
 }});
 } else {
-react_med.screens.lista_pacientes.check_paciente = (function react_med$screens$lista_pacientes$check_paciente(app_state,p__14827){
-var vec__14828 = p__14827;
-var event = cljs.core.nth.call(null,vec__14828,(0),null);
-var paciente_id = cljs.core.nth.call(null,vec__14828,(1),null);
+react_med.screens.lista_pacientes.check_paciente = (function react_med$screens$lista_pacientes$check_paciente(app_state,p__14841){
+var vec__14842 = p__14841;
+var event = cljs.core.nth.call(null,vec__14842,(0),null);
+var paciente_id = cljs.core.nth.call(null,vec__14842,(1),null);
 var patients = cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null));
 var checks = cljs.core.get_in.call(null,app_state,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null));
 var $ = app_state;
@@ -408,16 +408,16 @@ re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("react-med.screens.li
 react_med.screens.lista_pacientes.selecionando_component = (function react_med$screens$lista_pacientes$selecionando_component(){
 var pacientes = react_med.util._LT_sub.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.lista-pacientes","checkboxed-patients","react-med.screens.lista-pacientes/checkboxed-patients",1924366996)], null));
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.lista_pacientes.global$module$menu_list,((cljs.core.empty_QMARK_.call(null,pacientes))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.lista_pacientes.global$module$menu_item,"Nenhum paciente cadastrado ainda."], null):cljs.core.map.call(null,((function (pacientes){
-return (function (p__14831){
-var map__14832 = p__14831;
-var map__14832__$1 = (((((!((map__14832 == null))))?(((((map__14832.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__14832.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14832):map__14832);
-var id = cljs.core.get.call(null,map__14832__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var nome = cljs.core.get.call(null,map__14832__$1,new cljs.core.Keyword(null,"nome","nome",1100401122));
-var checked_QMARK_ = cljs.core.get.call(null,map__14832__$1,new cljs.core.Keyword(null,"checked?","checked?",2024809091));
-return cljs.core.with_meta(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.lista_pacientes.global$module$menu_item,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__14832,map__14832__$1,id,nome,checked_QMARK_,pacientes){
+return (function (p__14845){
+var map__14846 = p__14845;
+var map__14846__$1 = (((((!((map__14846 == null))))?(((((map__14846.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__14846.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14846):map__14846);
+var id = cljs.core.get.call(null,map__14846__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var nome = cljs.core.get.call(null,map__14846__$1,new cljs.core.Keyword(null,"nome","nome",1100401122));
+var checked_QMARK_ = cljs.core.get.call(null,map__14846__$1,new cljs.core.Keyword(null,"checked?","checked?",2024809091));
+return cljs.core.with_meta(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.lista_pacientes.global$module$menu_item,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"onClick","onClick",-1991238530),((function (map__14846,map__14846__$1,id,nome,checked_QMARK_,pacientes){
 return (function (){
 return react_med.util._GT_evt.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.lista-pacientes","check-paciente","react-med.screens.lista-pacientes/check-paciente",-966991645),id], null));
-});})(map__14832,map__14832__$1,id,nome,checked_QMARK_,pacientes))
+});})(map__14846,map__14846__$1,id,nome,checked_QMARK_,pacientes))
 ], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,">",">",-555517146),react_med.screens.lista_pacientes.global$module$checkbox,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"checked","checked",-50955819),checked_QMARK_,new cljs.core.Keyword(null,"tabIndex","tabIndex",-169286716),(-1)], null)], null),nome], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),nome], null));
 });})(pacientes))
 ,pacientes))], null);
@@ -516,7 +516,7 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 return result__14483__auto__;
 })();
 var confirm_text = (function (){var opts__14482__auto____$1 = _PLUS_debux_dbg_opts_PLUS_;
-var result__14483__auto__ = (function (){var G__14838 = (function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+var result__14483__auto__ = (function (){var G__14852 = (function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = cljs.core.count.call(null,(function (){var opts__14482__auto____$3 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = checked_patients;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
@@ -527,7 +527,7 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })();
-switch (G__14838) {
+switch (G__14852) {
 case (0):
 return "Nenhum paciente selecionado.";
 
@@ -554,20 +554,20 @@ return result__14483__auto__;
 })(),(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = cljs.core.map.call(null,(function (){var opts__14482__auto____$3 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = ((function (opts__14482__auto____$3,opts__14482__auto____$2,opts__14482__auto____$1,pats,checks,patients,checked_patients,confirm_text,opts__14482__auto__,_PLUS_debux_dbg_opts_PLUS_){
-return (function (p1__14834_SHARP_){
+return (function (p1__14848_SHARP_){
 var opts__14482__auto____$4 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = ["\n- ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var opts__14482__auto____$5 = _PLUS_debux_dbg_opts_PLUS_;
-var result__14483__auto__ = p1__14834_SHARP_;
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(6)], null));
+var result__14483__auto__ = p1__14848_SHARP_;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(6)], null));
 
 return result__14483__auto__;
 })())].join('');
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(5)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(5)], null));
 
 return result__14483__auto__;
 });})(opts__14482__auto____$3,opts__14482__auto____$2,opts__14482__auto____$1,pats,checks,patients,checked_patients,confirm_text,opts__14482__auto__,_PLUS_debux_dbg_opts_PLUS_))
 ;
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(4)], null));
 
 return result__14483__auto__;
 })(),(function (){var opts__14482__auto____$3 = _PLUS_debux_dbg_opts_PLUS_;
@@ -581,11 +581,11 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })());
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null))),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(3)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null))),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(3)], null));
 
 return result__14483__auto__;
 })());
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"reduce","reduce",1358839360,null),new cljs.core.Symbol(null,"str","str",-1564826950,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null))),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null)))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"reduce","reduce",1358839360,null),new cljs.core.Symbol(null,"str","str",-1564826950,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null))),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null)))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(2)], null));
 
 return result__14483__auto__;
 })();
@@ -633,21 +633,21 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 return result__14483__auto__;
 })():debux.common.util.spy_first.call(null,cljs.core.update_in.call(null,debux.common.util.spy_first.call(null,cljs.core.assoc_in.call(null,debux.common.util.spy_first.call(null,cljs.core.assoc_in.call(null,debux.common.util.spy_first.call(null,cljs.core.reduce.call(null,(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = ((function (opts__14482__auto____$2,opts__14482__auto____$1,pats,checks,patients,checked_patients,confirm_text,names,ids,opts__14482__auto__,_PLUS_debux_dbg_opts_PLUS_){
-return (function (p1__14835_SHARP_,p2__14836_SHARP_){
+return (function (p1__14849_SHARP_,p2__14850_SHARP_){
 var opts__14482__auto____$3 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = cljs.core.assoc_in.call(null,(function (){var opts__14482__auto____$4 = _PLUS_debux_dbg_opts_PLUS_;
-var result__14483__auto__ = p1__14835_SHARP_;
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"p1__14835#","p1__14835#",328223435,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(8)], null));
+var result__14483__auto__ = p1__14849_SHARP_;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"p1__14849#","p1__14849#",2085429653,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(8)], null));
 
 return result__14483__auto__;
 })(),(function (){var opts__14482__auto____$4 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),(function (){var opts__14482__auto____$5 = _PLUS_debux_dbg_opts_PLUS_;
-var result__14483__auto__ = p2__14836_SHARP_;
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(9)], null));
+var result__14483__auto__ = p2__14850_SHARP_;
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(9)], null));
 
 return result__14483__auto__;
 })()], null);
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(8)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(8)], null));
 
 return result__14483__auto__;
 })(),(function (){var opts__14482__auto____$4 = _PLUS_debux_dbg_opts_PLUS_;
@@ -656,12 +656,12 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })());
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"p1__14835#","p1__14835#",328223435,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(7)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"p1__14849#","p1__14849#",2085429653,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null)),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(7)], null));
 
 return result__14483__auto__;
 });})(opts__14482__auto____$2,opts__14482__auto____$1,pats,checks,patients,checked_patients,confirm_text,names,ids,opts__14482__auto__,_PLUS_debux_dbg_opts_PLUS_))
 ;
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14835#","p1__14835#",328223435,null),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null)], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"p1__14835#","p1__14835#",328223435,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(6)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14849#","p1__14849#",2085429653,null),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null)], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"p1__14849#","p1__14849#",2085429653,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(6)], null));
 
 return result__14483__auto__;
 })(),(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
@@ -674,7 +674,7 @@ var result__14483__auto__ = ids;
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.Symbol(null,"ids","ids",641995731,null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(6)], null));
 
 return result__14483__auto__;
-})()),cljs.core.list(new cljs.core.Symbol(null,"reduce","reduce",1358839360,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14835#","p1__14835#",328223435,null),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null)], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"p1__14835#","p1__14835#",328223435,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14836#","p2__14836#",-86603504,null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Symbol(null,"ids","ids",641995731,null)),(5)),(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
+})()),cljs.core.list(new cljs.core.Symbol(null,"reduce","reduce",1358839360,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14849#","p1__14849#",2085429653,null),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null)], null),cljs.core.list(new cljs.core.Symbol(null,"assoc-in","assoc-in",-113585743,null),new cljs.core.Symbol(null,"p1__14849#","p1__14849#",2085429653,null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),new cljs.core.Symbol(null,"p2__14850#","p2__14850#",890571782,null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.Symbol(null,"ids","ids",641995731,null)),(5)),(function (){var opts__14482__auto____$2 = _PLUS_debux_dbg_opts_PLUS_;
 var result__14483__auto__ = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null);
 debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(5)], null));
 
@@ -699,10 +699,10 @@ debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(nu
 
 return result__14483__auto__;
 })();
-debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 14, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"pats","pats",-1661804100,null),cljs.core.list(new cljs.core.Symbol(null,"vals","vals",-1886377036,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null))),new cljs.core.Symbol(null,"checks","checks",-2128301132,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null)),new cljs.core.Symbol(null,"patients","patients",1774783602,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn","fn",465265323,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p","p",1791580836,null),new cljs.core.Symbol(null,"c","c",-122660552,null)], null),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"p","p",1791580836,null),new cljs.core.Keyword(null,"checked?","checked?",2024809091),new cljs.core.Symbol(null,"c","c",-122660552,null))),new cljs.core.Symbol(null,"pats","pats",-1661804100,null),new cljs.core.Symbol(null,"checks","checks",-2128301132,null)),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null),cljs.core.list(new cljs.core.Symbol(null,"filter","filter",691993593,null),new cljs.core.Keyword(null,"checked?","checked?",2024809091),new cljs.core.Symbol(null,"patients","patients",1774783602,null)),new cljs.core.Symbol(null,"confirm-text","confirm-text",-198962504,null),cljs.core.list(new cljs.core.Symbol(null,"case","case",-1510733573,null),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null)),(0),"Nenhum paciente selecionado.",(1),"Tem certeza que quer excluir esse paciente?","Tem certeza que quer excluir os seguintes pacientes?"),new cljs.core.Symbol(null,"names","names",-302543131,null),cljs.core.list(new cljs.core.Symbol(null,"reduce","reduce",1358839360,null),new cljs.core.Symbol(null,"str","str",-1564826950,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14834#","p1__14834#",1036788175,null))),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null)))),new cljs.core.Symbol(null,"ids","ids",641995731,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null))], null),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Symbol(null,"not","not",1044554643,null),cljs.core.list(new cljs.core.Symbol("js","confirm","js/confirm",-363466706,null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),new cljs.core.Symbol(null,"confirm-text","confirm-text",-198962504,null),new cljs.core.Symbol(null,"names","names",-302543131,null)))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),cljs.core.list(new cljs.core.Symbol(null,"quote","quote",1377916282,null),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085))))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
+debux.common.util.send_trace_BANG_.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"result","result",1415092211),result__14483__auto__,new cljs.core.Keyword(null,"form","form",-1624062471),cljs.core.list(new cljs.core.Symbol(null,"let","let",358118826,null),new cljs.core.PersistentVector(null, 14, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"pats","pats",-1661804100,null),cljs.core.list(new cljs.core.Symbol(null,"vals","vals",-1886377036,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075)], null))),new cljs.core.Symbol(null,"checks","checks",-2128301132,null),cljs.core.list(new cljs.core.Symbol(null,"get-in","get-in",-1965644065,null),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085)], null)),new cljs.core.Symbol(null,"patients","patients",1774783602,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn","fn",465265323,null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p","p",1791580836,null),new cljs.core.Symbol(null,"c","c",-122660552,null)], null),cljs.core.list(new cljs.core.Symbol(null,"assoc","assoc",2071440380,null),new cljs.core.Symbol(null,"p","p",1791580836,null),new cljs.core.Keyword(null,"checked?","checked?",2024809091),new cljs.core.Symbol(null,"c","c",-122660552,null))),new cljs.core.Symbol(null,"pats","pats",-1661804100,null),new cljs.core.Symbol(null,"checks","checks",-2128301132,null)),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null),cljs.core.list(new cljs.core.Symbol(null,"filter","filter",691993593,null),new cljs.core.Keyword(null,"checked?","checked?",2024809091),new cljs.core.Symbol(null,"patients","patients",1774783602,null)),new cljs.core.Symbol(null,"confirm-text","confirm-text",-198962504,null),cljs.core.list(new cljs.core.Symbol(null,"case","case",-1510733573,null),cljs.core.list(new cljs.core.Symbol(null,"count","count",-514511684,null),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null)),(0),"Nenhum paciente selecionado.",(1),"Tem certeza que quer excluir esse paciente?","Tem certeza que quer excluir os seguintes pacientes?"),new cljs.core.Symbol(null,"names","names",-302543131,null),cljs.core.list(new cljs.core.Symbol(null,"reduce","reduce",1358839360,null),new cljs.core.Symbol(null,"str","str",-1564826950,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),cljs.core.list(new cljs.core.Symbol(null,"fn*","fn*",-752876845,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null)], null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),"\n- ",new cljs.core.Symbol(null,"p1__14848#","p1__14848#",828080527,null))),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null)))),new cljs.core.Symbol(null,"ids","ids",641995731,null),cljs.core.list(new cljs.core.Symbol(null,"map","map",-1282745308,null),new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Symbol(null,"checked-patients","checked-patients",-129340820,null))], null),cljs.core.list(new cljs.core.Symbol(null,"if","if",1181717262,null),cljs.core.list(new cljs.core.Symbol(null,"not","not",1044554643,null),cljs.core.list(new cljs.core.Symbol("js","confirm","js/confirm",-363466706,null),cljs.core.list(new cljs.core.Symbol(null,"str","str",-1564826950,null),new cljs.core.Symbol(null,"confirm-text","confirm-text",-198962504,null),new cljs.core.Symbol(null,"names","names",-302543131,null)))),new cljs.core.Symbol(null,"app-state","app-state",130568249,null),cljs.core.list(new cljs.core.Symbol(null,"quote","quote",1377916282,null),cljs.core.list(new cljs.core.Symbol(null,"update-in","update-in",-1445516941,null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645)], null),new cljs.core.Symbol(null,"dissoc","dissoc",1039760994,null),new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085))))),new cljs.core.Keyword(null,"indent-level","indent-level",-258835684),(0)], null));
 
 return result__14483__auto__;
-}catch (e14837){var e = e14837;
+}catch (e14851){var e = e14851;
 throw e;
 }});
 } else {
@@ -715,8 +715,8 @@ return cljs.core.assoc.call(null,p,new cljs.core.Keyword(null,"checked?","checke
 });})(pats,checks))
 ,pats,checks);
 var checked_patients = cljs.core.filter.call(null,new cljs.core.Keyword(null,"checked?","checked?",2024809091),patients);
-var confirm_text = (function (){var G__14839 = cljs.core.count.call(null,checked_patients);
-switch (G__14839) {
+var confirm_text = (function (){var G__14853 = cljs.core.count.call(null,checked_patients);
+switch (G__14853) {
 case (0):
 return "Nenhum paciente selecionado.";
 
@@ -731,8 +731,8 @@ return "Tem certeza que quer excluir os seguintes pacientes?";
 }
 })();
 var names = cljs.core.reduce.call(null,cljs.core.str,cljs.core.map.call(null,((function (pats,checks,patients,checked_patients,confirm_text){
-return (function (p1__14834_SHARP_){
-return ["\n- ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(p1__14834_SHARP_)].join('');
+return (function (p1__14848_SHARP_){
+return ["\n- ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(p1__14848_SHARP_)].join('');
 });})(pats,checks,patients,checked_patients,confirm_text))
 ,cljs.core.map.call(null,new cljs.core.Keyword(null,"nome","nome",1100401122),checked_patients)));
 var ids = cljs.core.map.call(null,new cljs.core.Keyword(null,"id","id",-1388402092),checked_patients);
@@ -740,8 +740,8 @@ if(cljs.core.not.call(null,confirm([cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return app_state;
 } else {
 return cljs.core.update_in.call(null,cljs.core.assoc_in.call(null,cljs.core.assoc_in.call(null,cljs.core.reduce.call(null,((function (pats,checks,patients,checked_patients,confirm_text,names,ids){
-return (function (p1__14835_SHARP_,p2__14836_SHARP_){
-return cljs.core.assoc_in.call(null,p1__14835_SHARP_,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),p2__14836_SHARP_], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null));
+return (function (p1__14849_SHARP_,p2__14850_SHARP_){
+return cljs.core.assoc_in.call(null,p1__14849_SHARP_,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"domain","domain",1847214937),new cljs.core.Keyword(null,"patients","patients",134252075),p2__14850_SHARP_], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"delete?","delete?",789956376),true], null));
 });})(pats,checks,patients,checked_patients,confirm_text,names,ids))
 ,app_state,ids),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"state","state",-1988618099)], null),"pacientes"),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"actions-menu","actions-menu",-124297398),new cljs.core.Keyword(null,"opened?","opened?",1096959669)], null),false),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ui","ui",-469653645)], null),cljs.core.dissoc,new cljs.core.Keyword(null,"checkboxed-patients","checkboxed-patients",708069085));
 }

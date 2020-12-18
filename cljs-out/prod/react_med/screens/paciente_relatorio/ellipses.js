@@ -9,36 +9,36 @@ goog.require('react_med.shell_components');
 goog.require('react_med.util');
 react_med.screens.paciente_relatorio.ellipses.population_data_for_ellipse = new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"population","population",-1209901867),"women-21-49-buffa",new cljs.core.Keyword(null,"size","size",1098693007),(754),new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564),(492),new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629),95.9,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083),55.4,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882),12.3,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628),0.88], null),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"population","population",-1209901867),"men-21-49-buffa",new cljs.core.Keyword(null,"size","size",1098693007),(836),new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564),402.4,new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629),62.9,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083),52.5,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882),9.5,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628),0.84], null),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"population","population",-1209901867),"women-65-100-saragat",new cljs.core.Keyword(null,"size","size",1098693007),(295),new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564),(462),new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629),80.1,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083),47.9,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882),11.2,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628),0.75], null),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"population","population",-1209901867),"men-65-100-saragat",new cljs.core.Keyword(null,"size","size",1098693007),(265),new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564),391.8,new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629),57.9,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083),42.6,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882),9.9,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628),0.6], null),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"population","population",-1209901867),"women-18-30-ibanez",new cljs.core.Keyword(null,"size","size",1098693007),(213),new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564),332.7,new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629),41.7,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083),44.4,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882),6.8,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628),0.77], null),new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"population","population",-1209901867),"men-18-30-ibanez",new cljs.core.Keyword(null,"size","size",1098693007),(227),new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564),388.6,new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629),(60),new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083),43.7,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882),7.5,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628),0.79], null)], null);
 react_med.screens.paciente_relatorio.ellipses.tollerance_ellipses_series = (function react_med$screens$paciente_relatorio$ellipses$tollerance_ellipses_series(chosen_population){
-var map__20462 = react_med.util.get_pred.call(null,(function (p1__20461_SHARP_){
-return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"population","population",-1209901867).cljs$core$IFn$_invoke$arity$1(p1__20461_SHARP_),chosen_population);
+var map__20478 = react_med.util.get_pred.call(null,(function (p1__20477_SHARP_){
+return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"population","population",-1209901867).cljs$core$IFn$_invoke$arity$1(p1__20477_SHARP_),chosen_population);
 }),react_med.screens.paciente_relatorio.ellipses.population_data_for_ellipse);
-var map__20462__$1 = (((((!((map__20462 == null))))?(((((map__20462.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20462.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20462):map__20462);
-var rsp_mean = cljs.core.get.call(null,map__20462__$1,new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564));
-var xcsp_mean = cljs.core.get.call(null,map__20462__$1,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083));
-var rsp_sd = cljs.core.get.call(null,map__20462__$1,new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629));
-var xcsp_sd = cljs.core.get.call(null,map__20462__$1,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882));
-var correlation_r = cljs.core.get.call(null,map__20462__$1,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628));
-var vec__20463 = react_med.screens.paciente_relatorio.tollerance_ellipse_component.tolerance_ellipses_params.call(null,rsp_sd,xcsp_sd,correlation_r);
-var vec__20466 = cljs.core.nth.call(null,vec__20463,(0),null);
-var tol_50_x = cljs.core.nth.call(null,vec__20466,(0),null);
-var tol_75_x = cljs.core.nth.call(null,vec__20466,(1),null);
-var tol_95_x = cljs.core.nth.call(null,vec__20466,(2),null);
-var vec__20469 = cljs.core.nth.call(null,vec__20463,(1),null);
-var tol_50_y = cljs.core.nth.call(null,vec__20469,(0),null);
-var tol_75_y = cljs.core.nth.call(null,vec__20469,(1),null);
-var tol_95_y = cljs.core.nth.call(null,vec__20469,(2),null);
-var rotation = cljs.core.nth.call(null,vec__20463,(2),null);
+var map__20478__$1 = (((((!((map__20478 == null))))?(((((map__20478.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20478.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20478):map__20478);
+var rsp_mean = cljs.core.get.call(null,map__20478__$1,new cljs.core.Keyword(null,"rsp-mean","rsp-mean",733542564));
+var xcsp_mean = cljs.core.get.call(null,map__20478__$1,new cljs.core.Keyword(null,"xcsp-mean","xcsp-mean",-1168783083));
+var rsp_sd = cljs.core.get.call(null,map__20478__$1,new cljs.core.Keyword(null,"rsp-sd","rsp-sd",1061002629));
+var xcsp_sd = cljs.core.get.call(null,map__20478__$1,new cljs.core.Keyword(null,"xcsp-sd","xcsp-sd",633266882));
+var correlation_r = cljs.core.get.call(null,map__20478__$1,new cljs.core.Keyword(null,"correlation-r","correlation-r",2086447628));
+var vec__20479 = react_med.screens.paciente_relatorio.tollerance_ellipse_component.tolerance_ellipses_params.call(null,rsp_sd,xcsp_sd,correlation_r);
+var vec__20482 = cljs.core.nth.call(null,vec__20479,(0),null);
+var tol_50_x = cljs.core.nth.call(null,vec__20482,(0),null);
+var tol_75_x = cljs.core.nth.call(null,vec__20482,(1),null);
+var tol_95_x = cljs.core.nth.call(null,vec__20482,(2),null);
+var vec__20485 = cljs.core.nth.call(null,vec__20479,(1),null);
+var tol_50_y = cljs.core.nth.call(null,vec__20485,(0),null);
+var tol_75_y = cljs.core.nth.call(null,vec__20485,(1),null);
+var tol_95_y = cljs.core.nth.call(null,vec__20485,(2),null);
+var rotation = cljs.core.nth.call(null,vec__20479,(2),null);
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.paciente_relatorio.tollerance_ellipse_component.ellipse.call(null,"95% Toler\u00E2ncia",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rsp_mean,xcsp_mean], null),tol_95_x,tol_95_y,rotation),react_med.screens.paciente_relatorio.tollerance_ellipse_component.ellipse.call(null,"75% Toler\u00E2ncia",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rsp_mean,xcsp_mean], null),tol_75_x,tol_75_y,rotation),react_med.screens.paciente_relatorio.tollerance_ellipse_component.ellipse.call(null,"50% Toler\u00E2ncia",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rsp_mean,xcsp_mean], null),tol_50_x,tol_50_y,rotation)], null);
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses","tollerance-ellipses-series","react-med.screens.paciente-relatorio.ellipses/tollerance-ellipses-series",321830151),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses-config","chosen-population","react-med.screens.paciente-relatorio.ellipses-config/chosen-population",-970669786)], null),react_med.screens.paciente_relatorio.ellipses.tollerance_ellipses_series);
 react_med.screens.paciente_relatorio.ellipses.filter_selected = (function react_med$screens$paciente_relatorio$ellipses$filter_selected(avals,avals_checked){
-return cljs.core.filter.call(null,new cljs.core.Keyword(null,"checked?","checked?",2024809091),cljs.core.map.call(null,(function (p__20473){
-var map__20474 = p__20473;
-var map__20474__$1 = (((((!((map__20474 == null))))?(((((map__20474.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20474.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20474):map__20474);
-var avaliacao_info = map__20474__$1;
-var id = cljs.core.get.call(null,map__20474__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var data = cljs.core.get.call(null,map__20474__$1,new cljs.core.Keyword(null,"data","data",-232669377));
-var deleted_QMARK_ = cljs.core.get.call(null,map__20474__$1,new cljs.core.Keyword(null,"deleted?","deleted?",-486602771));
+return cljs.core.filter.call(null,new cljs.core.Keyword(null,"checked?","checked?",2024809091),cljs.core.map.call(null,(function (p__20489){
+var map__20490 = p__20489;
+var map__20490__$1 = (((((!((map__20490 == null))))?(((((map__20490.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20490.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20490):map__20490);
+var avaliacao_info = map__20490__$1;
+var id = cljs.core.get.call(null,map__20490__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var data = cljs.core.get.call(null,map__20490__$1,new cljs.core.Keyword(null,"data","data",-232669377));
+var deleted_QMARK_ = cljs.core.get.call(null,map__20490__$1,new cljs.core.Keyword(null,"deleted?","deleted?",-486602771));
 if(cljs.core.not.call(null,deleted_QMARK_)){
 return cljs.core.merge.call(null,avaliacao_info,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"data","data",-232669377),react_med.util.yyyy_mm_dd__GT_dd_mm_yyyy.call(null,data),new cljs.core.Keyword(null,"checked?","checked?",2024809091),cljs.core.get.call(null,avals_checked,id)], null));
 } else {
@@ -49,45 +49,45 @@ return null;
 /**
  * Returns points in the chart like [paciente-name [p1x p1y] [p2x p2y]]
  */
-react_med.screens.paciente_relatorio.ellipses.pacientes_avaliacoes_pontos = (function react_med$screens$paciente_relatorio$ellipses$pacientes_avaliacoes_pontos(p__20480){
-var vec__20481 = p__20480;
-var pacientes = cljs.core.nth.call(null,vec__20481,(0),null);
-var avals_checked = cljs.core.nth.call(null,vec__20481,(1),null);
-return cljs.core.map.call(null,((function (vec__20481,pacientes,avals_checked){
-return (function (p__20484){
-var map__20485 = p__20484;
-var map__20485__$1 = (((((!((map__20485 == null))))?(((((map__20485.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20485.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20485):map__20485);
-var nome = cljs.core.get.call(null,map__20485__$1,new cljs.core.Keyword(null,"nome","nome",1100401122));
-var avaliacoes = cljs.core.get.call(null,map__20485__$1,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982));
-return cljs.core.apply.call(null,cljs.core.concat,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [nome], null),cljs.core.mapv.call(null,((function (map__20485,map__20485__$1,nome,avaliacoes,vec__20481,pacientes,avals_checked){
+react_med.screens.paciente_relatorio.ellipses.pacientes_avaliacoes_pontos = (function react_med$screens$paciente_relatorio$ellipses$pacientes_avaliacoes_pontos(p__20496){
+var vec__20497 = p__20496;
+var pacientes = cljs.core.nth.call(null,vec__20497,(0),null);
+var avals_checked = cljs.core.nth.call(null,vec__20497,(1),null);
+return cljs.core.map.call(null,((function (vec__20497,pacientes,avals_checked){
+return (function (p__20500){
+var map__20501 = p__20500;
+var map__20501__$1 = (((((!((map__20501 == null))))?(((((map__20501.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20501.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__20501):map__20501);
+var nome = cljs.core.get.call(null,map__20501__$1,new cljs.core.Keyword(null,"nome","nome",1100401122));
+var avaliacoes = cljs.core.get.call(null,map__20501__$1,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982));
+return cljs.core.apply.call(null,cljs.core.concat,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [nome], null),cljs.core.mapv.call(null,((function (map__20501,map__20501__$1,nome,avaliacoes,vec__20497,pacientes,avals_checked){
 return (function (avaliacao_info){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [react_med.screens.paciente_relatorio.bioimpedance.rsp.call(null,avaliacao_info),react_med.screens.paciente_relatorio.bioimpedance.xcsp.call(null,avaliacao_info)], null);
-});})(map__20485,map__20485__$1,nome,avaliacoes,vec__20481,pacientes,avals_checked))
+});})(map__20501,map__20501__$1,nome,avaliacoes,vec__20497,pacientes,avals_checked))
 ,avaliacoes)], null));
-});})(vec__20481,pacientes,avals_checked))
-,cljs.core.filter.call(null,((function (vec__20481,pacientes,avals_checked){
-return (function (p1__20479_SHARP_){
-return cljs.core.seq.call(null,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982).cljs$core$IFn$_invoke$arity$1(p1__20479_SHARP_));
-});})(vec__20481,pacientes,avals_checked))
-,cljs.core.map.call(null,((function (vec__20481,pacientes,avals_checked){
-return (function (p1__20478_SHARP_){
-return cljs.core.update_in.call(null,p1__20478_SHARP_,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982)], null),react_med.screens.paciente_relatorio.ellipses.filter_selected,cljs.core.get_in.call(null,avals_checked,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__20478_SHARP_),new cljs.core.Keyword(null,"avals","avals",659695120)], null)));
-});})(vec__20481,pacientes,avals_checked))
-,cljs.core.map.call(null,((function (vec__20481,pacientes,avals_checked){
-return (function (p1__20477_SHARP_){
-return cljs.core.update.call(null,p1__20477_SHARP_,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982),cljs.core.vals);
-});})(vec__20481,pacientes,avals_checked))
-,cljs.core.map.call(null,((function (vec__20481,pacientes,avals_checked){
-return (function (p1__20476_SHARP_){
-return cljs.core.select_keys.call(null,p1__20476_SHARP_,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982)], null));
-});})(vec__20481,pacientes,avals_checked))
+});})(vec__20497,pacientes,avals_checked))
+,cljs.core.filter.call(null,((function (vec__20497,pacientes,avals_checked){
+return (function (p1__20495_SHARP_){
+return cljs.core.seq.call(null,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982).cljs$core$IFn$_invoke$arity$1(p1__20495_SHARP_));
+});})(vec__20497,pacientes,avals_checked))
+,cljs.core.map.call(null,((function (vec__20497,pacientes,avals_checked){
+return (function (p1__20494_SHARP_){
+return cljs.core.update_in.call(null,p1__20494_SHARP_,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982)], null),react_med.screens.paciente_relatorio.ellipses.filter_selected,cljs.core.get_in.call(null,avals_checked,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__20494_SHARP_),new cljs.core.Keyword(null,"avals","avals",659695120)], null)));
+});})(vec__20497,pacientes,avals_checked))
+,cljs.core.map.call(null,((function (vec__20497,pacientes,avals_checked){
+return (function (p1__20493_SHARP_){
+return cljs.core.update.call(null,p1__20493_SHARP_,new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982),cljs.core.vals);
+});})(vec__20497,pacientes,avals_checked))
+,cljs.core.map.call(null,((function (vec__20497,pacientes,avals_checked){
+return (function (p1__20492_SHARP_){
+return cljs.core.select_keys.call(null,p1__20492_SHARP_,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"nome","nome",1100401122),new cljs.core.Keyword(null,"avaliacoes","avaliacoes",-1489161982)], null));
+});})(vec__20497,pacientes,avals_checked))
 ,pacientes)))));
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses","pacientes-avaliacoes-pontos","react-med.screens.paciente-relatorio.ellipses/pacientes-avaliacoes-pontos",705507049),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.lista-pacientes","pacientes","react-med.screens.lista-pacientes/pacientes",-1185597765)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses-config","avals-checked","react-med.screens.paciente-relatorio.ellipses-config/avals-checked",-1303395027)], null),react_med.screens.paciente_relatorio.ellipses.pacientes_avaliacoes_pontos);
-react_med.screens.paciente_relatorio.ellipses.ellipses_graph_series = (function react_med$screens$paciente_relatorio$ellipses$ellipses_graph_series(p__20487){
-var vec__20488 = p__20487;
-var ellipses = cljs.core.nth.call(null,vec__20488,(0),null);
-var pacientes_pontos = cljs.core.nth.call(null,vec__20488,(1),null);
+react_med.screens.paciente_relatorio.ellipses.ellipses_graph_series = (function react_med$screens$paciente_relatorio$ellipses$ellipses_graph_series(p__20503){
+var vec__20504 = p__20503;
+var ellipses = cljs.core.nth.call(null,vec__20504,(0),null);
+var pacientes_pontos = cljs.core.nth.call(null,vec__20504,(1),null);
 return cljs.core.concat.call(null,ellipses,pacientes_pontos);
 });
 re_frame.core.reg_sub.call(null,new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses","ellipses-graph-series","react-med.screens.paciente-relatorio.ellipses/ellipses-graph-series",-536028230),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses","tollerance-ellipses-series","react-med.screens.paciente-relatorio.ellipses/tollerance-ellipses-series",321830151)], null),new cljs.core.Keyword(null,"<-","<-",760412998),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("react-med.screens.paciente-relatorio.ellipses","pacientes-avaliacoes-pontos","react-med.screens.paciente-relatorio.ellipses/pacientes-avaliacoes-pontos",705507049)], null),react_med.screens.paciente_relatorio.ellipses.ellipses_graph_series);
@@ -103,14 +103,14 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 });
 react_med.screens.paciente_relatorio.ellipses.top_bar = (function react_med$screens$paciente_relatorio$ellipses$top_bar(var_args){
 var args__4736__auto__ = [];
-var len__4730__auto___20494 = arguments.length;
-var i__4731__auto___20495 = (0);
+var len__4730__auto___20510 = arguments.length;
+var i__4731__auto___20511 = (0);
 while(true){
-if((i__4731__auto___20495 < len__4730__auto___20494)){
-args__4736__auto__.push((arguments[i__4731__auto___20495]));
+if((i__4731__auto___20511 < len__4730__auto___20510)){
+args__4736__auto__.push((arguments[i__4731__auto___20511]));
 
-var G__20496 = (i__4731__auto___20495 + (1));
-i__4731__auto___20495 = G__20496;
+var G__20512 = (i__4731__auto___20511 + (1));
+i__4731__auto___20511 = G__20512;
 continue;
 } else {
 }
@@ -122,17 +122,17 @@ return react_med.screens.paciente_relatorio.ellipses.top_bar.cljs$core$IFn$_invo
 });
 
 react_med.screens.paciente_relatorio.ellipses.top_bar.cljs$core$IFn$_invoke$arity$variadic = (function (children){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.top-bar","div.top-bar",-1606146455),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"minHeight": (48), "padding": "0 24px", "display": "flex", "alignItems": "center"})], null),cljs.core.map_indexed.call(null,(function (p1__20492_SHARP_,p2__20491_SHARP_){
-return cljs.core.with_meta.call(null,p2__20491_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__20492_SHARP_], null));
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.top-bar","div.top-bar",-1606146455),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),({"minHeight": (48), "padding": "0 24px", "display": "flex", "alignItems": "center"})], null),cljs.core.map_indexed.call(null,(function (p1__20508_SHARP_,p2__20507_SHARP_){
+return cljs.core.with_meta.call(null,p2__20507_SHARP_,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),p1__20508_SHARP_], null));
 }),children)], null);
 });
 
 react_med.screens.paciente_relatorio.ellipses.top_bar.cljs$lang$maxFixedArity = (0);
 
 /** @this {Function} */
-react_med.screens.paciente_relatorio.ellipses.top_bar.cljs$lang$applyTo = (function (seq20493){
+react_med.screens.paciente_relatorio.ellipses.top_bar.cljs$lang$applyTo = (function (seq20509){
 var self__4718__auto__ = this;
-return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq20493));
+return self__4718__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq20509));
 });
 
 react_med.screens.paciente_relatorio.ellipses.mobile_view = (function react_med$screens$paciente_relatorio$ellipses$mobile_view(){
